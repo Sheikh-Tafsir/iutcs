@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import "./style.css"; // Import your CSS file
+import { useState } from "react";
+import "../../../styles/InterCompetition.css"; // Import your CSS file
+import Navbar from '../../navbar/Navbar';
+
 
 function InterCompetition() {
   const [registrationData, setRegistrationData] = useState({
@@ -92,50 +94,54 @@ function InterCompetition() {
   );
 
   return (
-    <div className="App">
-      <h1>Inter-University Competition Registration</h1>
-      <form onSubmit={handleSubmit} className="form">
-        <div className="form-group">
-          <label htmlFor="universityName">University Name:</label>
-          <input
-            type="text"
-            id="universityName"
-            name="universityName"
-            value={registrationData.universityName}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="teamName">Team Name:</label>
-          <input
-            type="text"
-            id="teamName"
-            name="teamName"
-            value={registrationData.teamName}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="numberOfParticipants">Number of Participants:</label>
-          <select
-            id="numberOfParticipants"
-            name="numberOfParticipants"
-            value={registrationData.numberOfParticipants}
-            onChange={handleNumberOfParticipantsChange}
-          >
-            {numOptions.map((num) => (
-              <option key={num} value={num}>
-                {num}
-              </option>
-            ))}
-          </select>
-        </div>
-        {renderTeamMemberInputs()}
-        <button type="submit">Register</button>
-      </form>
+    <div>
+      <Navbar />
+      <div className="App">
+        <h1>Inter-University Competition Registration</h1>
+        <form onSubmit={handleSubmit} className="form">
+          <div className="form-group">
+            <label htmlFor="universityName">University Name:</label>
+            <input
+              type="text"
+              id="universityName"
+              name="universityName"
+              value={registrationData.universityName}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="teamName">Team Name:</label>
+            <input
+              type="text"
+              id="teamName"
+              name="teamName"
+              value={registrationData.teamName}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="numberOfParticipants">Number of Participants:</label>
+            <select
+              id="numberOfParticipants"
+              name="numberOfParticipants"
+              value={registrationData.numberOfParticipants}
+              onChange={handleNumberOfParticipantsChange}
+            >
+              {numOptions.map((num) => (
+                <option key={num} value={num}>
+                  {num}
+                </option>
+              ))}
+            </select>
+          </div>
+          {renderTeamMemberInputs()}
+          <button type="submit">Register</button>
+        </form>
+      </div>
     </div>
+    
   );
 }
 
