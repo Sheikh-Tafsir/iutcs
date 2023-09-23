@@ -11,7 +11,7 @@ const About = () => {
     <>
         <div className='about'>
             <Navbar />
-            <div className='topBar'>
+            <div className='topBarAbout'>
                 <div className='textBar'>
                     <h2>HISTORY</h2>
                     <p>We Finally Got A Piece Of The Pie. Fleeing From The Cylon Tyranny The Last Battlestar.</p>
@@ -28,7 +28,7 @@ const About = () => {
                         <Button>BUY TICKETS </Button>
                     </div>
                     <div className='aboutImageBar'>
-                        <img src='https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80' alt='' className='h-full w-full'/>
+                        <img src='../../../public/event.jpg' alt='' className='h-full w-full'/>
                     </div>
                 </div>
             </div>

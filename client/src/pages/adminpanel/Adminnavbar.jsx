@@ -1,9 +1,7 @@
 import React, {useState} from 'react'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-// import Link from '@mui/material/Link';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
@@ -12,7 +10,7 @@ import Drawer from '@mui/material/Drawer';
 import '../../styles/Navbar.css';
 import {Link} from 'react-router-dom'
 
-const Navbar = () => {
+const Adminnavbar = () => {
     const [anchorEl, setAnchorEl] = useState(null);
     const [submenuAnchorEl, setSubmenuAnchorEl] = useState(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,6 +33,12 @@ const Navbar = () => {
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const logoutFunc = () => {
+        localStorage.setItem("localStorageUsername",null);
+        window.location.href = "/admin/login";
+
+    }
   return (
     <>
         <div className=' navbar'>
@@ -46,34 +50,19 @@ const Navbar = () => {
                     <Toolbar className='navMenuSubBar' >
                         <div className='desktopMenu'>
                           <Button color="inherit">
-                              <Link to='/'>HOME</Link>
-                          </Button>
-                          <Button color="inherit" onClick={handleSubmenuClick}>
-                              Pages
+                              <Link to='/admin/panel'>userinfo</Link>
                           </Button>
                           <Button color="inherit">
-                              <Link to='/blogs'>Blogs</Link>
-                          </Button>
-                          <Menu
-                              anchorEl={submenuAnchorEl}
-                              open={Boolean(submenuAnchorEl)}
-                              onClose={handleSubmenuClose}
-                          >
-                              <MenuItem onClick={handleSubmenuClose}><Link to='/achievements'>Achievements</Link></MenuItem>
-                              <MenuItem onClick={handleSubmenuClose}><Link to='/executives'>Executives</Link></MenuItem>
-                              <MenuItem onClick={handleSubmenuClose}><Link to='/activities'>Activities</Link></MenuItem>
-                          </Menu>
-                          <Button color="inherit">
-                            <Link to='/about'>ABOUT</Link>
+                              <Link to='/admin/blogwrite'>Blogs</Link>
                           </Button>
                           <Button color="inherit">
-                            <Link to='/competitions'>Competitions</Link>
+                            <Link to='/admin/events'>events</Link>
                           </Button>
-                          {/* <Button color="inherit">
-                            <Link to='/admin/login'>Admin</Link>
-                          </Button> */}
                           <Button color="inherit">
-                            <Link to='/leaderboard'>Leaderboard</Link>
+                            <Link to='/admin/judge'>judge</Link>
+                          </Button>
+                          <Button color="inherit" onClick={()=>logoutFunc()} >
+                            <p className='bg-red-600 p-2 rounded-lg'>Logout</p>
                           </Button>
                         </div>
                         <IconButton
@@ -106,4 +95,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Adminnavbar

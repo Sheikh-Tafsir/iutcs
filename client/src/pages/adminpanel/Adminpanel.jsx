@@ -1,12 +1,30 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../../styles/Adminpanel.css'
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar'
+import Adminnavbar from './Adminnavbar'
 
 const Adminpanel = () => {
+    const [festName, setFestName] = useState("");
+    const [eventName, setEventName] = useState("");
   return (
     <div className='adminpanel'>
-        <Navbar />
+        <Adminnavbar />
+        <div className='userFilterBox'>
+            <select className="userFilter h-12 outline-none mr-4" value={festName} onChange={(event) => {setFestName(event.target.value);}}>
+                <option value="">Select fest</option>
+                <option value="App">ICT Fest</option>
+                <option value="Soft">Code Rush</option>
+                <option value="ml">Web Off</option>
+            </select>
+            <select className="userFilter h-12 outline-none " value={eventName} onChange={(event) => {setEventName(event.target.value);}}>
+                <option value="">Select event</option>
+                <option value="App">Hackathon</option>
+                <option value="Soft">CTF</option>
+                <option value="ml">PC</option>
+                <option value="ml">Datathon</option>
+            </select>
+        </div>
         <div className='viewUserData'>
             <table>
                 <tr>

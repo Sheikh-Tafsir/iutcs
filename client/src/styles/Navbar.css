@@ -1,6 +1,7 @@
 .navbar{
     height: 10vh;
     display: flex;
+    background-color: black;
 }
 .navImageBar{
     width: 33vw;
@@ -29,6 +30,8 @@
     height: 100%;
     color:black;
     background-color: white;
+    color: white;
+    background-color: black;
 }
 @media screen and (min-width: 992px) {
     .navLeftBarButton{

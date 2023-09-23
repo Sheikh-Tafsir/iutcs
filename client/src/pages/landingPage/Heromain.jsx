@@ -62,9 +62,9 @@ const Heromain = () => {
     <div className='heromain'>
         <div className="heromainslider">
             <div className="heromainslides">
-                <img src="https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/370299391_682867783880359_5440058257807981304_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeGH8i-TNrsj06uOiTMk5FqcesXHS7554jF6xcdLvnniMXppo-hniQ1-QK2zP1hGWwNgQwr9jOdrD2r7sNVtGmca&_nc_ohc=5mbFQgE5ypcAX9CZZ4_&_nc_ht=scontent.fdac5-1.fna&cb_e2o_trans=q&oh=00_AfB0xbVWzVqWp4Eln3VzzoXu29mzVHRs1LNtMJo9YYr17A&oe=650F65EB" className="heromainSlideImage"/>
-                <img src="https://scontent.fdac5-2.fna.fbcdn.net/v/t39.30808-6/368456235_683939710439833_4649983758464445012_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeFn8AdgVz2wpdW5QnbFih4t6diRvHnP8hPp2JG8ec_yE4NhoFd0c6iw07p-OsCxDbWg1JwJR9XtJed9x2DJZ4xx&_nc_ohc=DywVPbwNedkAX96T5mp&_nc_ht=scontent.fdac5-2.fna&cb_e2o_trans=q&oh=00_AfBC84YB4HnipJPqR9Scr47qnLZHZuKh6zJPYJkUA9pJ-g&oe=65107991" className="heromainSlideImage"/>
-                <img src="https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/308357816_5635805536458017_8984775943962037152_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeEnXjrc5ow-y0Qw3lL_GvYQFC9FBqktarkUL0UGqS1qudzugZObukOSW_ETdmbJIYU0w9tL_3V4io2Jy-v0AVS0&_nc_ohc=WPlKYiHBSCwAX-SWsVw&_nc_ht=scontent.fdac5-1.fna&cb_e2o_trans=q&oh=00_AfBMZYuJK-6j14JaiEvPwGwMI0E6EOTh-C4RBLKFwD8o9A&oe=651068F2" className="heromainSlideImage"/>
+                <img src="/public/slider.png" className="heromainSlideImage"/>
+                <img src="/public/slider 3.jpg" className="heromainSlideImage"/>
+                <img src="/public/slider 4.jpg" className="heromainSlideImage"/>
             </div>
         </div>
         <div className='heromainSliderTop'>

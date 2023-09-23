@@ -10,7 +10,7 @@ const EventsLanding = () => {
             <p className='subTitle'>The movie star the professor and Mary Ann here on Gilligans Isle. Just sit right back and youll hear.</p>
             <div className='lg:flex w-full lg:w-3/4 mx-auto justify-between'>
                 <div className='eventCard'>
-                    <img src='https://premiumlayers.com/wpthemes/museum/wp-content/uploads/2015/10/event-img-4-289x365.jpg' alt=''/>
+                    <img src='/public/event 1.jpg' alt=''/>
                     <div className='cardTexts'>
                         <h2>LETS CELEBRATE 25TH MUSEUM DAYY</h2>
                         <p>Melbourne, Australia</p>
@@ -20,7 +20,7 @@ const EventsLanding = () => {
                     </div>
                 </div>
                 <div className='eventCard'>
-                    <img src='https://premiumlayers.com/wpthemes/museum/wp-content/uploads/2015/10/event-img-4-289x365.jpg' alt=''/>
+                    <img src='../../../public/event 2.jpg' alt=''/>
                     <div className='cardTexts'>
                         <h2>LETS CELEBRATE 25TH MUSEUM DAYY</h2>
                         <p>Melbourne, Australia</p>

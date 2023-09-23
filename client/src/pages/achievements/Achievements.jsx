@@ -21,7 +21,7 @@ const Achievements = () => {
   return (
     <>
         <Navbar />
-        <div className='topBar'>
+        <div className='topBarAchievements'>
             <h2>Achievements</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quibusdam doloribus hic doloremque facilis debitis porro</p>
         </div>

@@ -2,17 +2,21 @@
     width: 100%;
     overflow: hidden;
 }
-.topBar{
+.topBarAbout{
     height: 43vh;
     width: 100%;
     color:white;
     text-align: center;
+    background-image: url('/public/slider 2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 992px) {
     .textBar{
         height: 86%;
-        padding-top: 0%;
+        padding-top: 5%;
+        color:black;
     }
     .textBar h2{
         margin-bottom: 2%;

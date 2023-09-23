@@ -9,6 +9,8 @@ import Competitions from './pages/competitions/Competitions';
 import InterCompetition from '../src/components/teamRegistration/interCompetition/InterCompetition';
 import IntraCompetition from '../src/components/teamRegistration/intraCompetition/IntraCompetition';
 import Adminpanel from './pages/adminpanel/Adminpanel';
+import Adminlogin from './pages/adminpanel/Adminlogin';
+import Leaderboard from './pages/leaderboard/Leaderboard';
 
 const App = () => {
   return (
@@ -24,7 +26,9 @@ const App = () => {
           <Route path="/competitions" element={<Competitions/>} />
           <Route path="/interCompetition/:event_id" element={<InterCompetition/>} />
           <Route path="/intraCompetition/:event_id" element={<IntraCompetition/>} />
-          <Route path="/adminpanel" element={<Adminpanel/>} />
+          <Route path="/admin/panel" element={<Adminpanel/>} />
+          <Route path="/admin/login" element={<Adminlogin/>} />
+          <Route path="/leaderboard" element={<Leaderboard/>} />
         </Routes>
       </BrowserRouter>
     </>

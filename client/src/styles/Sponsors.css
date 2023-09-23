@@ -15,10 +15,10 @@
         width: 12vw;
         height: 100%;
         margin: 0 3vw;
-        background-color: blue;
         display: flex;
         align-items: center;
         justify-content: center; /* Center the image horizontally and vertically */
+        
     }
 }
 @media screen and (max-width: 991px) {
@@ -26,7 +26,6 @@
         width: 50vw;
         height: 100%;
         margin: 0 10vw;
-        background-color: blue;
         display: flex;
         align-items: center;
         justify-content: center; /* Center the image horizontally and vertically */
@@ -39,6 +38,9 @@
     max-height: 100%; /* Ensure the image doesn't exceed its parent's height */
     height: auto; /* Maintain the image's aspect ratio */
     width: 100%;
+}
+.slider{
+    overflow: hidden;
 }
 
 .slider::-webkit-scrollbar {

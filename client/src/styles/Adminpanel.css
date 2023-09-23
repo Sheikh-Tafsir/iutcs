@@ -1,4 +1,16 @@
-
+.userFilterBox{
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+    margin: auto;
+    margin-top: 7vh;
+}
+.userFilter{
+    width: 10vw;
+    border: 1px solid black;
+    font-weight: 600;
+    padding-left: 1vw;
+}
 .viewUserData{
     width: 90%;
     margin: auto;
@@ -15,6 +27,7 @@ table{
         height: 5vh;
         border:1px solid black;
         display: flex;
+        line-height: 4vh;
     }
 }
 @media screen and (max-width: 991px) {
