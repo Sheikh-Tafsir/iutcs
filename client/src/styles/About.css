@@ -1,0 +1,155 @@
+.about{
+    width: 100%;
+    overflow: hidden;
+}
+.topBar{
+    height: 43vh;
+    width: 100%;
+    color:white;
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    .textBar{
+        height: 86%;
+        padding-top: 0%;
+    }
+    .textBar h2{
+        margin-bottom: 2%;
+        font-size: 3.7vh;
+    }
+    .textBar p{
+        font-size: 2.3vh;
+    }
+}
+@media screen and (max-width: 991px) {
+    .textBar{
+        height: 86%;
+        padding-top: 10%;
+        width: 85%;
+        margin: auto;
+    }
+    .textBar h2{
+        margin-bottom: 4%;
+        font-size: 3.7vh;
+    }
+    .textBar p{
+        font-size: 2vh;
+    }
+}
+
+
+
+.footerBar{
+    background-color: black;
+    height: 14%;
+    display: flex;
+}
+.footerBar p{
+    margin: auto;
+    font-size: 2vh;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 992px) {
+    .aboutSection{
+        height: 59vh;
+        display: flex;
+    }
+    .aboutSubSection{
+        width: 76%;
+        height: 63%;
+        margin:auto;
+        display: flex;
+    }
+    .aboutTextbar{
+        width: 56%;
+        margin-right: 4%;
+    }
+    .aboutTextbar h2{
+        font-size: 2.7vh;
+        position: relative;
+        padding-bottom: 2vh;
+        margin-top: 3vh;
+    }
+}
+@media screen and (max-width: 991px) {
+    .aboutSection{
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .aboutSubSection{
+        width: 90%;
+        height: 100%;
+        margin:auto;
+    }
+    .aboutTextbar{
+        width: 96%;
+        margin: auto;
+    }
+    .aboutTextbar h2{
+        font-size: 2.7vh;
+        position: relative;
+        padding-bottom: 2vh;
+        margin-top: 9vh;
+    }
+}
+
+
+
+.aboutTextbar h2:after{
+    content: "";
+    position: absolute;
+    bottom: 0; /* Adjust this value to control the distance between the h2 and the line */
+    left: 0;
+    height: 0.2vh;
+    background-color: blue;
+    width: 38%;
+}
+.aboutTextbar p{
+    font-size: 2.1vh;
+    margin-top: 2vh;
+}
+.aboutTextbar Button{
+    font-size: 2.3vh;
+    color: blue;
+    margin-top: 2vh;
+}
+
+
+@media screen and (min-width: 992px) {
+    .aboutImageBar{
+        width: 40%;
+    }
+    .aboutLastSection{
+        height: 53vh;
+        font-size: 3.7vh;
+        font-weight: 200;
+        font-style: italic;
+        padding: 5vh 19vw;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 991px) {
+    .aboutImageBar{
+        width: 100%;
+        margin-top: 4vh;
+    }
+    .aboutLastSection{
+        height: 78vh;
+        font-size: 3.7vh;
+        font-weight: 200;
+        font-style: italic;
+        padding: 5vh 9vw;
+        text-align: center;
+    }
+}
+.quoteRight{
+    height: 4vh;
+    width: 4vh;
+    color: blue;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}

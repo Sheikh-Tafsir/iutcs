@@ -1,0 +1,132 @@
+/* .heromainBackground{
+    height:100vh;
+    width:100%;
+} */
+.heromain{
+    position: relative;
+}
+.heromainslider{
+    overflow-x: hidden;
+    height: 91vh;
+}
+.heromainslides{
+    width:300vw;
+    display:flex;   
+}
+@media screen and (min-width: 992px) {
+    .heromainSlideImage{
+        width:98.9vw;
+        height:91vh;
+    }
+}
+@media screen and (max-width: 991px) {
+    .heromainSlideImage{
+        width:100vw;
+        height:91vh;
+    }
+}
+
+.heromainSliderTop{
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height:91vh;
+    /* backdrop-filter: blur(2px); */
+    /* background-color: rgba(0,0,0,0.5); */
+}
+.heromainArrowBar{
+    width: 96%;
+    height: 15%;
+    margin: auto;
+    margin-top: 37vh;
+    margin-bottom: 11vh;
+}
+@media screen and (min-width: 992px) {
+    .arrowIcons{
+        display: flex;
+        height: 100%;
+        width: 1.7vw;
+        /* background-color: rgba(0,0,0,0.5); */
+        transition: linear 0.1s;
+    }
+}
+@media screen and (max-width: 991px) {
+    .arrowIcons{
+        display: flex;
+        height: 100%;
+        width: 7vw;
+        background-color: rgba(0,0,0,0.5);
+        transition: linear 0.1s;
+    }
+}
+.arrowIcons:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+@media screen and (min-width: 992px) {
+    .heromainButtonBar{
+        width: 22vw;
+        height: 7vh;
+        color: white;
+        font-size: 2vh;
+        margin-bottom: 16vh;
+    }
+}
+@media screen and (max-width: 991px) {
+    .heromainButtonBar{
+        width: 70vw;
+        height: 6vh;
+        color: white;
+        font-size: 2vh;
+        margin-bottom: 16vh;
+    }
+}
+.heromainButtonBar Button{
+    height: 100%;
+    width: 43%;
+    border: 0.2vh solid white;
+    border-radius: 3.5vh;    
+    font-weight: 700;
+    transition: linear 0.1s;
+}
+.heromainButtonBar button:nth-child(1):hover {
+    background-color: white;
+    color: black;
+}
+.heromainButtonBar Button:nth-child(2){
+    border: 0.2vh solid black;   
+}
+.heromainButtonBar button:nth-child(2):hover {
+    background-color: rgb(20,20,20);
+}
+@media screen and (min-width: 992px) {
+    .heromainSlideButtonBar{
+        width:5.5vw;
+        height:4vh;
+        margin:auto;
+        display:flex;
+        justify-content: space-evenly;
+        border-radius: 0.7vh;
+    }
+}
+@media screen and (max-width: 991px) {
+    .heromainSlideButtonBar{
+        width:20vw;
+        height:4vh;
+        margin:auto;
+        display:flex;
+        justify-content: space-evenly;
+        border-radius: 0.7vh;
+    }
+}
+.heromainSlideButton{
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 0.4vh solid white;
+    margin: auto;
+}
+.heromainSlideButton:nth-child(1){
+    background-color: white;
+}

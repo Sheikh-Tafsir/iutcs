@@ -1,0 +1,141 @@
+.footerBar{
+    background-color: black;
+    font-size: 1.7vh;
+    height: 28vh;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+
+}
+@media screen and (min-width: 992px) {
+    .footer1{
+        width: 75vw;
+        margin: auto;
+        height: 10vh;
+        display: flex;
+        position: relative;
+    }
+    .footer1Menu{
+        width: 80%;
+        display: flex;
+    }
+}
+@media screen and (max-width: 991px) {
+    .footer1{
+        width: 75vw;
+        margin: auto;
+        height: 18vh;
+        position: relative;
+    }
+    .footer1Menu{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        padding-top: 8%;
+        
+    }
+}
+
+.footer1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0vw;
+    height: 0.1vh;
+    background-color: rgba(255,255,255,00.5);
+    width: 100%;
+}
+.footer1Menu span{
+    padding: 0 1vw;
+    border-right: 1px solid rgba(255,255,255,0.5);    
+}
+
+.footer1Menu span:nth-child(1){
+    border-left: 1px solid rgba(255,255,255,0.5);
+}
+.footer1Menu a{
+    text-decoration: none;
+    color:white;
+    font-weight: 600;
+}
+@media screen and (min-width: 992px) {
+    .footer1 img{
+        height: 60%;
+        width: 10vw;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 991px) {
+    .footer1 img{
+        height: 30%;
+        width: 50vw;
+        margin: auto;
+        margin-top: 10%;
+    }
+} 
+
+@media screen and (min-width: 992px) {
+    .footer2{
+        width: 75vw;
+        margin: auto;
+        height: 11vh;
+        display: flex;
+        position: relative;
+    }
+    .footer2contacts{
+        width: 70%;
+        display: flex;
+        color: white;
+    }
+    .footer2contacts div{
+        margin-right: 2vw;
+    }
+    .footer2Menu{
+        width: 30%;
+        display: flex;
+    }
+}
+@media screen and (max-width: 991px) {
+    .footer2{
+        height: 24vh;
+        position: relative;
+        padding-top: 2vh;
+        
+    }
+    .footer2contacts{
+        width: 70%;
+        color: white;
+        margin: auto;
+        text-align: center;
+    }
+    .footer2contacts p{
+        margin-bottom: 2vh;
+    }
+    .footer2Menu{
+        width: 80%;
+        margin: auto;
+        display: flex;
+    }
+}
+
+
+.footer2Menu a{
+    text-decoration: none;
+    color:white;
+    font-weight: 600;
+    padding: 0 0.7vw;
+}
+
+
+@media screen and (min-width: 992px) {
+    .footerIcons{
+        margin-right: 0.5vw;
+        margin-top: 0.6vh;
+    }
+}
+@media screen and (max-width: 991px) {
+    .footerIcons{
+        margin-right: 0vw;
+        margin-top: 0.6vh;
+    }
+}

@@ -1,0 +1,58 @@
+
+.viewUserData{
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    min-height: 69vh;
+    
+}
+table{
+    margin-top: 5vh;
+    width: 100%;
+}
+@media screen and (min-width: 992px) {
+    tr{
+        height: 5vh;
+        border:1px solid black;
+        display: flex;
+    }
+}
+@media screen and (max-width: 991px) {
+    tr{
+        height: 5vh;
+        border:1px solid black;
+
+    }
+}
+.teamName{
+    width: 13%;
+    background-color: rgba(255,0,0,0.3);
+    padding-left: 1%;
+}
+.universityName{
+    width: 15%;
+    padding-left: 1%;
+}
+.userName{
+    width: 20%;
+    background-color: rgba(255,0,0,0.3);
+    padding-left: 1%;
+}
+.userId{
+    width: 10%;
+    padding-left: 1%;
+}
+.userDept{
+    width: 10%;
+    background-color: rgba(255,0,0,0.3);
+    padding-left: 1%;
+}
+.userEmail{
+    width: 20%;
+    padding-left: 1%;
+}
+.userPhone{
+    width: 12%;
+    background-color: rgba(255,0,0,0.3);
+    padding-left: 1%;
+}

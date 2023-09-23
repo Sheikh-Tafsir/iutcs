@@ -1,0 +1,19 @@
+@media screen and (min-width: 992px) {
+    .mapBar{
+        height: 60vh;
+        background-color: rgb(247,247,247);
+        padding-top: 0.5%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .mapBar{
+        height: 50vh;
+        background-color: rgb(247,247,247);
+        padding-top: 0.5%;
+    }
+}
+.mapBar iframe{
+    height: 98%;
+    width: 98%;
+    margin: auto;
+}

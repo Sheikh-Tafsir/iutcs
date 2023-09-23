@@ -1,0 +1,68 @@
+@media screen and (min-width: 992px) {
+    .history{
+        height: 75vh;
+        display: flex;
+        color:white;
+    }
+    .writingsBar{
+        padding: 11vh 5vw;
+        background-color: black;
+        font-size: 2vh;
+    }
+    .writings{
+        display: flex;
+    }
+    .writingsHead{
+        width: 27%;
+    }
+    .writingsHead h2{
+        font-size: 1.3vw;
+        position: relative;
+        padding-bottom: 1.5vh;
+    }
+    .writingsHead h2:after{
+        content: "";
+        position: absolute;
+        bottom: 0; /* Adjust this value to control the distance between the h2 and the line */
+        left: 0;
+        height: 0.2vh;
+        background-color: blue;
+        width: 38%;
+    }
+    .writingsPara{
+        width: 73%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .history{
+        /* height: 150vh; */
+        color:white;
+    }
+    .writingsBar{
+        padding: 5vh 4vw;
+        background-color: black;
+        font-size: 1.8vh;
+    }
+    .writingsHead h2{
+        font-size:5vw;
+        position: relative;
+        padding-bottom: 2vh;
+    }
+    .writingsHead h2:after{
+        content: "";
+        position: absolute;
+        bottom: 0; /* Adjust this value to control the distance between the h2 and the line */
+        left: 0;
+        height: 0.2vh;
+        background-color: blue;
+        width: 36%;
+    }
+
+}
+
+
+
+.writingsPara2Points p{
+    margin-bottom: 1.3vh;
+
+}

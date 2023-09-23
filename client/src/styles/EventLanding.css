@@ -1,0 +1,130 @@
+@media screen and (min-width: 992px) {
+    .eventslanding{
+        height: 89vh;
+        background-color: rgb(255,255,255);
+    }
+    .title{
+        text-align: center;
+        font-size: 2.2vw;
+        position: relative;
+        padding-bottom: 2vh;
+        padding-top: 10vh;
+    }
+    .subTitle{
+        text-align: center;
+        font-size: 1vw;
+        margin-top: 3vh;
+        margin-bottom: 6vh;
+        color: rgba(20,20,20,0.6);
+        font-weight: 600;
+    }
+    .title::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 46.5vw;
+        height: 0.3vh;
+        background-color: blue;
+        width: 6%;
+    }
+    .eventCard{
+        height: 45vh;
+        display: flex;
+        width: 49%;
+        justify-content: space-between;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 1vw;
+    }
+    .eventCard img{
+        height: 100%;
+        width: 50%;
+    }
+    .cardTexts{
+        width: 50%;
+        padding: 3vh 2vw;
+    }
+}
+@media screen and (max-width: 991px) {
+    .eventslanding{
+        height: 135vh;
+        background-color: rgb(255,255,255);
+    }
+    .title{
+        text-align: center;
+        font-size: 8vw;
+        position: relative;
+        padding-bottom: 2vh;
+        padding-top: 10vh;
+    }
+    .subTitle{
+        text-align: center;
+        font-size: 4vw;
+        color: rgba(20,20,20,0.6);
+        font-weight: 600;
+        margin-top: 3vh;
+        margin-bottom: 6vh;
+        
+    }
+    .title::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 37.5vw;
+        height: 0.3vh;
+        background-color: blue;
+        width: 26%;
+    }
+    .eventCard{
+        height: 45vh;
+        display: flex;
+        width: 92%;
+        margin: auto;
+        justify-content: space-between;
+        border: 1px solid rgba(0,0,0,0.1);
+        margin-bottom: 3vh;
+        border-radius: 0.5vw;
+    }
+    .eventCard img{
+        height: 40%;
+        width: 30%;
+    }
+    .cardTexts{
+        width: 70%;
+        padding: 1.5vh 5vw;
+    }
+}
+
+
+.cardTexts h2{
+    font-size: 2.5vh;
+    color: orange;
+    margin-bottom: 2vh;
+}
+.cardTexts p{
+    font-size: 2vh;
+    margin-bottom: 0.8vh;
+}
+@media screen and (min-width: 992px) {
+    .cardTexts Button{
+        font-size: 2vh;
+        background-color: rgb(20,20,20,0.8);
+        color:white;
+        height: 5vh;
+        width: 8vw;
+        font-weight: bold;
+        border-radius: 0.2vw;
+        margin-top: 0.3vw;
+    }
+}
+@media screen and (max-width: 992px) {
+    .cardTexts Button{
+        font-size: 2vh;
+        background-color: rgb(20,20,20,0.8);
+        color:white;
+        height: 5vh;
+        width: 35vw;
+        font-weight: bold;
+        border-radius: 0.5vw;
+        margin-top: 3vw;
+    }
+}
