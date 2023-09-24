@@ -1,7 +1,7 @@
 @media screen and (min-width: 992px) {
     .loginpage{
-        background: url("../../public/slider 2.jpg");
-        /* background-color:white;  */
+        /* background: url("../../public/slider 2.jpg"); */
+        background-color:rgba(0,0,0,0.8); 
         background-repeat: no-repeat;
         background-size: 100vw 100vh;
         overflow:hidden;
@@ -90,8 +90,8 @@
 }
 @media screen and (max-width: 991px) {
     .loginpage{
-        background: url("../../public/slider 2.jpg");
-        /* background-color:#2b2a2b;  */
+        /* background: url("../../public/slider 2.jpg"); */
+        background-color:rgba(0,0,0,0.8); 
         background-repeat: no-repeat;
         background-size: 100vw 100vh;
         overflow:hidden;

@@ -89,12 +89,17 @@
     font-weight: 700;
     transition: linear 0.1s;
 }
+.heromainButtonBar button:nth-child(1) {
+    background-color: white;
+    color: black;
+    border: 0.2vh solid black;
+}
 .heromainButtonBar button:nth-child(1):hover {
     background-color: white;
     color: black;
 }
 .heromainButtonBar Button:nth-child(2){
-    border: 0.2vh solid black;   
+    border: 0.2vh solid white;   
 }
 .heromainButtonBar button:nth-child(2):hover {
     background-color: rgb(20,20,20);

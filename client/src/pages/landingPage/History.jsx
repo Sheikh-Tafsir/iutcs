@@ -13,7 +13,7 @@ const History = () => {
                         <h2 className='mb-4 lg:mb-0'>OUR HISTORY</h2>
                     </div>
                     <div className='writingsPara'>
-                        <p className='mb-7 lg:mb-3 2xl:mb-6'>Scelerisque, felis eget Auctor dictum tempus molestie auctor consectetuer sit nisl, tempor, ultrices velit nascetur ullamcorper torquent adipiscing felis interdum. Vel nibh. Eget maecenas gravida urna nascetur sit. Taciti at suspendisse rutrum.</p>
+                        <p className='mb-7 lg:mb-3 2xl:mb-6'>A platform for young computer engineers to exercise their intellectuality. IUTCS was founded in 2008 through the hands of some enthusiastic computer engineers. Since then, it has grown from a handful of members who also participate with us in activities such as workshops, programming classes, seminars, contests, application development classes etc.</p>
                         <p>Donec quis tortor tempus, lacinia sem nec, accumsan diam. Ut condimentum eget risus at ultrices. Integer molestie augue eros, ac dignissim velit placerat ut. Sed vel leo ac eros tincidunt porttitor. Aliquam erat volutpat.</p>
                     </div>
                 </div>
@@ -23,25 +23,25 @@ const History = () => {
                     </div>
                     <div className='lg:flex writingsPara'>
                         <div className='lg:w-1/3 writingsPara2Points'>
-                            <p>Arts of Global Afriva</p>
-                            <p>American Art</p>
-                            <p>Arts of Canada Arts</p>
-                            <p>Classical Arts</p>
-                            <p>GErman arts</p>
+                            <p>ACM programming class</p>
+                            <p>App Dev class</p>
+                            <p>Research seminar</p>
+                            <p>Web Dev class</p>
+                            <p>Job seminar</p>
                         </div>
                         <div className='lg:w-1/3 writingsPara2Points'>
-                            <p>Arts of Global Afriva</p>
-                            <p>American Art</p>
-                            <p>Arts of Canada Arts</p>
-                            <p>Classical Arts</p>
-                            <p>GErman arts</p>
+                            <p>Administration</p>
+                            <p>Event Management</p>
+                            <p>Operations</p>
+                            <p>Logistics and Design</p>
+                            <p>Sponsorship</p>
                         </div>
                         <div className='lg:w-1/3 writingsPara2Points'>
-                            <p>Arts of Global Afriva</p>
-                            <p>American Art</p>
-                            <p>Arts of Canada Arts</p>
-                            <p>Classical Arts</p>
-                            <p>GErman arts</p>
+                            <p>Programming</p>
+                            <p>Hackathon</p>
+                            <p>IT Olympiad</p>
+                            <p>E sports</p>
+                            <p>Workshop </p>
                         </div>
                     </div>
                 </div>
