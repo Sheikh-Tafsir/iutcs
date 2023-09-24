@@ -102,6 +102,7 @@
         border-radius: 0.5vw;
         overflow: hidden;
         font-size: 2vh;
+        transition: linear 0.1s;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px){
@@ -114,6 +115,7 @@
         font-size: 2vh;
         margin-bottom: 3vh;
         text-align: center;
+        transition: linear 0.1s;
     }
 }
 @media screen and (max-width: 767px) {
@@ -127,7 +129,12 @@
         font-size: 2vh;
         margin-bottom: 3vh;
         text-align: center;
+        transition: linear 0.1s;
     }
+}
+.imageCard:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
 }
 .imageCard img{
     height: 70%;

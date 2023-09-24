@@ -1,71 +1,96 @@
-.userFilterBox{
-    display: flex;
-    justify-content: space-between;
-    width: 33%;
-    margin: auto;
-    margin-top: 7vh;
-}
-.userFilter{
-    width: 10vw;
-    border: 1px solid black;
-    font-weight: 600;
-    padding-left: 1vw;
-}
-.viewUserData{
-    width: 90%;
-    margin: auto;
-    text-align: left;
-    min-height: 69vh;
-    
-}
-table{
-    margin-top: 5vh;
-    width: 100%;
-}
 @media screen and (min-width: 992px) {
-    tr{
+    .userFilterBox{
+        display: flex;
+        justify-content: space-between;
+        width: 33%;
+        margin: auto;
+        margin-top: 7vh;
+    }
+    .userFilter{
+        width: 10vw;
+        border: 1px solid black;
+        font-weight: 600;
+        padding-left: 1vw;
+    }
+}
+@media screen and (max-width: 991px) {
+    .userFilterBox{
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin: auto;
+        margin-top: 7vh;
+    }
+    .userFilter{
+        width: 40%;
+        border: 1px solid black;
+        font-weight: 600;
+        padding-left: 3vw;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .viewUserData{
+        width: 90%;
+        margin: auto;
+        text-align: left;
+        min-height: 45.8vh;
+        margin-bottom: 5vh;
+        
+    }
+    .adminpanelTable{
+        margin-top: 5vh;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .viewUserData{
+        width: 90%;
+        margin: auto;
+        text-align: left;
+        min-height: 83vh;
+        margin-bottom: 5vh;
+        
+    }
+    .adminpanelTable{
+        margin-top: 5vh;
+        width: 100%;
+        transform: rotate(90deg) translate(25vh,35vw)
+    }
+}
+/*@media screen and (min-width: 992px) {
+    .adminpanelTable tr{
         height: 5vh;
-        border:1px solid black;
+        
         display: flex;
         line-height: 4vh;
     }
 }
 @media screen and (max-width: 991px) {
-    tr{
+    .adminpanelTable tr{
         height: 5vh;
         border:1px solid black;
 
     }
-}
+}*/
 .teamName{
-    width: 13%;
     background-color: rgba(255,0,0,0.3);
-    padding-left: 1%;
 }
 .universityName{
-    width: 15%;
-    padding-left: 1%;
 }
 .userName{
-    width: 20%;
     background-color: rgba(255,0,0,0.3);
-    padding-left: 1%;
 }
 .userId{
-    width: 10%;
-    padding-left: 1%;
+
 }
 .userDept{
-    width: 10%;
     background-color: rgba(255,0,0,0.3);
-    padding-left: 1%;
 }
 .userEmail{
-    width: 20%;
-    padding-left: 1%;
+
 }
 .userPhone{
-    width: 12%;
+
     background-color: rgba(255,0,0,0.3);
-    padding-left: 1%;
 }

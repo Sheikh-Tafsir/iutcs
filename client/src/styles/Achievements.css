@@ -1,7 +1,7 @@
 .topBarAchievements{
     height: 50vh;
     width: 100%;
-    background-image: url('/public/slider 3.jpg');
+    background-image: url('/slider 3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -9,7 +9,7 @@
 .topBarAchievements h2{
    font-size: 5vh;
    font-weight: 700;
-   padding-top: 8%;
+   padding-top: 3%;
    text-align: center;
 }
 .topBarAchievements p{

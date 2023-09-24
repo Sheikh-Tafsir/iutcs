@@ -5,7 +5,7 @@ const History = () => {
     <>
         <div className="history">
             <div className='lg:w-1/3'>
-                <img src='https://scontent.fdac5-1.fna.fbcdn.net/v/t39.30808-6/370299391_682867783880359_5440058257807981304_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeGH8i-TNrsj06uOiTMk5FqcesXHS7554jF6xcdLvnniMXppo-hniQ1-QK2zP1hGWwNgQwr9jOdrD2r7sNVtGmca&_nc_ohc=5mbFQgE5ypcAX9CZZ4_&_nc_ht=scontent.fdac5-1.fna&cb_e2o_trans=q&oh=00_AfB0xbVWzVqWp4Eln3VzzoXu29mzVHRs1LNtMJo9YYr17A&oe=650F65EB' alt='' className='h-full'/>
+                <img src='/about.jpg' alt='' className='h-full'/>
             </div>
             <div className='lg:w-2/3 writingsBar'>
                 <div className='lg:h-2/5 mb-10 writings'>

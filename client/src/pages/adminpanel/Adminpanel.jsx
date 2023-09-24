@@ -26,7 +26,7 @@ const Adminpanel = () => {
             </select>
         </div>
         <div className='viewUserData'>
-            <table>
+            <table className='adminpanelTable'>
                 <tr>
                     <th className='teamName'>TEAM</th>
                     <th className='universityName'>UNIVERSITY</th>
