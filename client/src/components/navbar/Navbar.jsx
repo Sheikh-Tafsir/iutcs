@@ -93,7 +93,7 @@ const Navbar = () => {
                   open={isMenuOpen}
                   onClose={handleMenuToggle}
                 >
-                  <div style={{ width: 200 }}>
+                  <div className='mobileNavSideBar'>
                     <MenuItem onClick={handleMenuToggle}>Home</MenuItem>
                     <MenuItem onClick={handleMenuToggle}>Services</MenuItem>
                     <MenuItem onClick={handleMenuToggle}>About</MenuItem>

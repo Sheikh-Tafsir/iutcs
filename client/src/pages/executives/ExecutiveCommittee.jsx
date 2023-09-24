@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react';
-
 import '../../styles/CommitteeIntro.css'
 import '../../styles/effects.css'
 import '../../styles/MediaQuery.css'
@@ -9,11 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export const ExecutiveCommittee = () => {
-    useEffect(() => {
-        AOS.init({
-            once: false, // Set this to true if you want animations to occur only once
-        });
-    }, []);
+    
     return (
         <body>
             <div className='parallax-container'>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import '../../styles/create.css';
 import { IoIosAddCircleOutline } from 'react-icons/io';
+import axios from 'axios';
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
+import Adminnavbar from '../adminpanel/Adminnavbar';
 export const Create = () => {
     const [formData, setFormData] = useState({
         title: '',
@@ -45,6 +47,7 @@ export const Create = () => {
             video: formData.video,
         };
 
+        uploadBlog(newBlogPost);
         // Send the new blog post to your API or data storage
         // For this example, let's assume you have a function to send data
         // to your server or save it in a JSON file
@@ -60,9 +63,23 @@ export const Create = () => {
         });
     };
 
+    const uploadBlog = async (newBlogPost) => {
+      const apipath = `${import.meta.env.VITE_API_URI}/blogs/create`;
+      //const apipath = `http://localhost:3001/project/create`;
+      await axios.post(apipath,
+      {
+        newBlogPost:newBlogPost
+      }
+      ).then((response) =>{
+          console.log(response.data);
+      }).catch(error => {
+        console.log(error);
+      });
+    }
+
     return (
       <>
-      <Navbar/>
+      <Adminnavbar/>
         <section className="newPost">
           <div className="container">
             <form className="form" onSubmit={handleSubmit}>

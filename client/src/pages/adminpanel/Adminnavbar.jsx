@@ -35,7 +35,7 @@ const Adminnavbar = () => {
     };
 
     const logoutFunc = () => {
-        localStorage.setItem("localStorageUsername",null);
+        localStorage.setItem("localStorageUsername",'0');
         window.location.href = "/admin/login";
 
     }
@@ -53,7 +53,7 @@ const Adminnavbar = () => {
                               <Link to='/admin/panel'>userinfo</Link>
                           </Button>
                           <Button color="inherit">
-                              <Link to='/admin/blogwrite'>Blogs</Link>
+                              <Link to='/admin/blogs'>Blogs</Link>
                           </Button>
                           <Button color="inherit">
                             <Link to='/admin/events'>events</Link>

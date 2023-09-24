@@ -47,4 +47,11 @@
     .desktopMenu{
         visibility: hidden;
     }
+    .mobileNavSideBar{
+        width: 50vw;
+        height: 100%;
+        background-color: black;
+        color: white;
+        
+    }
 }

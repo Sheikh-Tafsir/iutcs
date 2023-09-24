@@ -17,7 +17,7 @@ const About = () => {
                     <p>IUTCS provides a platform for students to explore and expand their knowledge.</p>
                 </div>
                 <div className='footerBar'>
-                    <p>Museum History</p>
+                    <p>Our History</p>
                 </div>
             </div>
             <div className='aboutSection'>
