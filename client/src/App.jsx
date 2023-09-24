@@ -16,6 +16,7 @@ import CommitteeIntroPage from './pages/executives/CommitteeIntroPage'
 import { BlogsHome } from "./pages/blogs/Blogs";
 import BlogDetails from "./pages/blogs/blogDetails"
 import { Create } from "./pages/blogs/Create"
+import Home from "./pages/activities/Home";
 
 
 const App = () => {
