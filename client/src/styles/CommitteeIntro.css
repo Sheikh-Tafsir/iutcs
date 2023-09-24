@@ -1,0 +1,146 @@
+/* body {
+    margin: 5%;
+    padding: 0.5vw;
+} */
+#committee-div {
+    /* margin: 2%; */
+    padding: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+
+.committee-images {
+    position: relative;
+    padding: 30px 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 2px solid red; */
+
+}
+
+.image-container {
+
+    width: 20%;
+    height: 20vw;
+    vertical-align: top;
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: auto;
+    margin: 2.3%;
+    order: 3;
+    /* border: 2px solid green;  */
+
+}
+
+
+
+
+.profile-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* position: relative; */
+
+}
+
+
+
+.overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    padding-left: 1vw;
+    width: 100%;
+    height: 26.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.overlay h3,
+.overlay p {
+    color: white;
+    margin: 3px 0;
+    text-align: center;
+    font-size: .9vw;
+}
+
+.overlay h3 {
+    font-size: 1vw;
+}
+.committee-bg{
+    background-image: url('Blue_bgc_2.jpg');
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.committee-h1 {
+    font-size: 3vw;
+    
+    color: #ffffff;
+
+}
+
+#internal-link {
+
+    width: 40%;
+    margin: 1% auto;
+    background-color: #000000;
+    padding: 0;
+    top: 0;
+    position: sticky;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.listwithoutbullet {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+.committee-nav {
+    padding: 0;
+    margin: 0;
+}
+
+#faculty,
+#student {
+    text-align: center;
+    font-size: 2vw;
+}
+
+.goto {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px;
+    color: #ffffff;
+    font-size: 1.2vw;
+}
+
+.separator {
+    width: 1px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+}

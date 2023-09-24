@@ -11,6 +11,7 @@ import IntraCompetition from '../src/components/teamRegistration/intraCompetitio
 import Adminpanel from './pages/adminpanel/Adminpanel';
 import Adminlogin from './pages/adminpanel/Adminlogin';
 import Leaderboard from './pages/leaderboard/Leaderboard';
+import CommitteeIntroPage from './pages/executives/CommitteeIntroPage'
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
           <Route path="/about" element={<About/>} />
           <Route path="/achievements" element={<Achievements/>} />
           <Route path="/blogs" element={<Blogs/>} />
-          <Route path="/executives" element={<Executives/>} />
+          <Route path="/executives" element={<CommitteeIntroPage/>} />
           <Route path="/activities" element={<Activities/>} />
           <Route path="/competitions" element={<Competitions/>} />
           <Route path="/interCompetition/:event_id" element={<InterCompetition/>} />
