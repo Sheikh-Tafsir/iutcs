@@ -1,0 +1,25 @@
+.image-container:hover .profile-img {
+    box-shadow: 5px 5px 10px 5px rgb(36, 35, 35);
+    transform: scale(1.1);
+    transition: .1s ease;
+ }
+
+ .image-container:hover .overlay{
+    transform: scale(1.1);
+    transition: .1s ease;
+    margin-top: 4.5%;
+    background: rgba(0, 0, 0, 0.6);
+ }
+
+
+  /* .parallax-container {
+   background-attachment: fixed; /* Fixed background attachment for the parallax effect */
+  /* background-size: cover; /* Cover the entire container */
+  /* background-repeat: no-repeat; /* Prevent background from repeating */
+/*} */
+
+/* .committee-images {
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.5s ease, transform 0.5s ease;
+}  */

@@ -11,9 +11,12 @@ import IntraCompetition from '../src/components/teamRegistration/intraCompetitio
 import Adminpanel from './pages/adminpanel/Adminpanel';
 import Adminlogin from './pages/adminpanel/Adminlogin';
 import Leaderboard from './pages/leaderboard/Leaderboard';
+import CommitteeIntroPage from './pages/executives/CommitteeIntroPage'
+
 import { BlogsHome } from "./pages/blogs/Blogs";
 import BlogDetails from "./pages/blogs/blogDetails"
 import { Create } from "./pages/blogs/Create"
+
 
 const App = () => {
   return (
@@ -23,7 +26,11 @@ const App = () => {
           <Route path="/" element={<LandigPage/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/achievements" element={<Achievements/>} />
-          <Route path="/executives" element={<Executives/>} />
+
+          <Route path="/blogs" element={<Blogs/>} />
+          <Route path="/executives" element={<CommitteeIntroPage/>} />
+
+
           <Route path="/activities" element={<Activities/>} />
           <Route path="/competitions" element={<Competitions/>} />
           <Route path="/interCompetition/:event_id" element={<InterCompetition/>} />
