@@ -23,7 +23,7 @@ const Achievements = () => {
         <Navbar />
         <div className='topBarAchievements'>
             <h2>Achievements</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quibusdam doloribus hic doloremque facilis debitis porro</p>
+            <p>IUTians remain adamant in achieving great success in their career. </p>
         </div>
         <div className='achievementBox'>
             <h2 className='achievementBoxTitle'>Our Incredible Achievements</h2>
@@ -32,7 +32,7 @@ const Achievements = () => {
                     <div className='galleryBox' key={achievement.id} onClick={()=> focusAchievement(achievement)}>
                         <img src={achievement.imageSrc} alt='achievement.title' />
                         <div className='galleryText'>
-                            <p>{achievement.description}</p>
+                            <p>{achievement.position}</p>
                             <h2>{achievement.title}</h2>
                         </div> 
                     </div> 
@@ -44,8 +44,8 @@ const Achievements = () => {
                     <img src={selectedAchievement.imageSrc} alt={selectedAchievement.title}  className='my-auto'/>
                     <div className='focusGalleryText'>
                         <h2>{selectedAchievement.title}</h2>
-                        <h3>{selectedAchievement.description}</h3>
-                        <p>{selectedAchievement.position}</p>
+                        <h3>{selectedAchievement.position}</h3>
+                        <p>{selectedAchievement.description}</p>
                         
                     </div>
                 </div>

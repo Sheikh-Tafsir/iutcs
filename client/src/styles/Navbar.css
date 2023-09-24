@@ -10,8 +10,8 @@
     .navImageBar img{
         height: 110%;
         width: 50%;
-        margin: auto;
         transform: scaleY(2);
+        margin-left: 3vw;
     }
 }
 @media screen and (max-width: 991px) {
@@ -25,6 +25,7 @@
     height: 100%;
     overflow: hidden;
     
+    
 }
 .navMenuSubBar{
     height: 100%;
@@ -32,6 +33,7 @@
     background-color: white;
     color: white;
     background-color: black;
+    justify-content: center;
 }
 @media screen and (min-width: 992px) {
     .navLeftBarButton{

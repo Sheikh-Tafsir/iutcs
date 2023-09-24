@@ -6,6 +6,20 @@ import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 const Heromain = () => {
     var imgCount = 0;
+    const autoChangeImage = () => {
+        imgCount = (imgCount + 1) % 3; // Cycle through the array of image slides
+        if (imgCount === 0) {
+            imageSlide1();
+        } 
+        else if (imgCount === 1) {
+            imageSlide2();
+        } 
+        else if (imgCount === 2) {
+            imageSlide3();
+        }
+    };
+    const intervalId = setInterval(autoChangeImage, 7000);
+
     const imageSlideRight = () => {
         imgCount=(imgCount+1)%3;
         if (imgCount === 0) {
@@ -62,9 +76,9 @@ const Heromain = () => {
     <div className='heromain'>
         <div className="heromainslider">
             <div className="heromainslides">
-                <img src="/public/slider.png" className="heromainSlideImage"/>
-                <img src="/public/slider 3.jpg" className="heromainSlideImage"/>
-                <img src="/public/slider 4.jpg" className="heromainSlideImage"/>
+                <img src="/slider.png" className="heromainSlideImage"/>
+                <img src="/slider 3.jpg" className="heromainSlideImage"/>
+                <img src="/slider 4.jpg" className="heromainSlideImage"/>
             </div>
         </div>
         <div className='heromainSliderTop'>

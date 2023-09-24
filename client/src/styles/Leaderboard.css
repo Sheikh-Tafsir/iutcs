@@ -1,0 +1,68 @@
+.leaderboardHeadBar{
+    background-image: url('/slider 2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 24vh;
+    width: 100%;
+    display: flex;
+}
+.leaderboardHeadBar h2{
+    font-size: 5vh;
+    color: white;
+    font-weight: 600;
+    margin: auto;
+}
+
+@media screen and (min-width: 992px) {
+    .leaderFilterBox{
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        margin: auto;
+        margin-top: 7vh;
+    }
+
+    .leaderFilter{
+        width: 40%;
+        border: 1px solid black;
+        font-weight: 600;
+        padding-left: 2vw;
+    }
+}
+@media screen and (max-width: 991px) {
+    .leaderFilterBox{
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin: auto;
+        margin-top: 7vh;
+    }
+
+    .leaderFilter{
+        width: 40%;
+        border: 1px solid black;
+        font-weight: 600;
+        padding-left: 3vw;
+    }
+}
+.viewLeaderUserData{
+    width: 100%;
+}
+.leaderboardTable{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+.leaderboardTable tr, td, th{
+    border: 1px solid black;
+    height: 6vh;
+    padding-left: 1vw;
+}
+.leaderboardTable th:nth-child(2n+1){
+    background-color: rgba(255,0,0,0.3);
+}
+.leaderboardTable td:nth-child(2n+1){
+    background-color: rgba(255,0,0,0.3);
+}

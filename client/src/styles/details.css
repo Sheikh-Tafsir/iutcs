@@ -1,0 +1,111 @@
+/* CSS for BlogDetails */
+.blog-details {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    background-color:ghostwhite;
+    
+  }
+  .back-button-container {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Add a background color if needed */
+    padding: 10px 0; /* Add padding to adjust the button's position and size */
+    z-index: 999; /* Set a higher z-index to ensure it's above other content */
+  }
+  
+  .blog_contentss{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+  
+  .blog-details h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .author-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 20px 0;
+    font-family:'Courier New', Courier, monospace;
+   
+  }
+  
+  .author-icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  .author-date .author-icon {
+    margin-right: 10px; /* Adjust the value as needed */
+  }
+  
+  .author-date .date-icon {
+    margin-left: 10px; /* Adjust the value as needed */
+  }
+  .author-date span {
+    margin-right: 10px; /* Adjust the value as needed */
+  }
+  
+  
+  .date-icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .blog-details img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin: 20px 0;
+}
+  
+  .video iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 20px 0;
+  }
+  
+  .blog-details p {
+    text-align: left;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .cover-section {
+    position: relative;
+    
+  }
+  
+  .cover-image img {
+    width: 100%;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid navy;
+  }
+  
+  .cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Place the text on top of the image */
+  }
+  
+  .cover-text h1 {
+    color: #fff; /* Set text color */
+    font-size: 3rem; /* Adjust font size */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  /* Add other styling as needed */
+  

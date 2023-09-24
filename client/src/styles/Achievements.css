@@ -1,7 +1,7 @@
 .topBarAchievements{
     height: 50vh;
     width: 100%;
-    background-image: url('/public/slider 3.jpg');
+    background-image: url('/slider 3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -95,13 +95,13 @@
 .galleryText{
     position: absolute;
     bottom: 9%;
-    left: 8%;
+    left: 5%;
     background-color: white;
-    height: 26%;
-    width: 84%;
+    height: 30%;
+    width: 90%;
     border-radius: 0.4vh;
-    padding-left: 7%;
-    padding-top: 5%;
+    padding-left: 5%;
+    padding-top: 4%;
     transition: 0.3s ease-in-out;
     visibility: hidden;
 }
@@ -111,7 +111,7 @@
 }
 .galleryText h2{
     color: blue;
-    font-size: 3vh;
+    font-size: 2.5vh;
     font-weight: 700;
 }
 .galleryBox:hover .galleryText{

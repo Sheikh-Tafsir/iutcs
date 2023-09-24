@@ -13,8 +13,8 @@ const About = () => {
             <Navbar />
             <div className='topBarAbout'>
                 <div className='textBar'>
-                    <h2>HISTORY</h2>
-                    <p>We Finally Got A Piece Of The Pie. Fleeing From The Cylon Tyranny The Last Battlestar.</p>
+                    <h2>ABOUT US</h2>
+                    <p>IUTCS provides a platform for students to explore and expand their knowledge.</p>
                 </div>
                 <div className='footerBar'>
                     <p>Museum History</p>
@@ -23,8 +23,8 @@ const About = () => {
             <div className='aboutSection'>
                 <div className='my-auto aboutSubSection'>
                     <div className='aboutTextbar'>
-                        <h2>NATIONAL MUSEUM IS A LARGEST RESEARCH AND MUSEUM. MORE THAN 197 COUNTRIES OBJECTS IN HISTORY</h2>
-                        <p>Scelerisque, felis eget Auctor dictum tempus molestie auctor consectetuer sit nisl, tempor, ultrices velit nascetur ullamcorper torquent adipiscing felis interdum. Vel nibh. Eget maecenas gravida urna nascetur sit. Taciti at suspendisse rutrum.</p>
+                        <h2>IUTCS: Igniting Innovation in Computer Science.</h2>
+                        <p>IUTCS, which stands for Islamic University of Technology Computer Science Club, is a vibrant and dynamic student organization dedicated to fostering a passion for computer science and technology among its members. Located at the Islamic University of Technology (IUT), this club serves as a hub for like-minded individuals who share an enthusiasm for all things related to computer science and engineering.</p>
                         <Button>BUY TICKETS </Button>
                     </div>
                     <div className='aboutImageBar'>
@@ -36,7 +36,7 @@ const About = () => {
             <div className='aboutLastSection'>
                 {/* <BiQuoteRight/> */}
                 <BiSolidQuoteRight className='quoteRight'/>
-                <p>The mate was a mighty sailin man the Skipper brave and sure. Five passengers set sail that day for a three hour tour a three hour tour. Well were movin on up to the east side to a deluxe apartment in the sky.</p>
+                <p>IUTCS is more than just a club; it's a community of passionate individuals who are dedicated to advancing their skills, promoting technology education, and making a meaningful contribution to the world of computer science and technology.</p>
             </div>
             <Footer />
         </div>
