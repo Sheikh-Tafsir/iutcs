@@ -1,0 +1,67 @@
+[
+    {
+      "id": 1,
+      "title": "Intro to React",
+      "author":"Nami Swaan",
+      "date": "2023-09-24",
+      "content": "I faced about again, and rushed towards the approaching Martian, rushed right down the gravelly beach and headlong into the water. Others did the same. A boatload of people putting back came leaping out as I rushed past. The stones under my feet were muddy and slippery, and the river was so low that I jnciwedhcnojewsdecnweidocmewsdejkkkkkkkkkkkkkkkkkk ewoidjewocccc ekndweondiiiiiiiiiiiiiiiiiiiiiiiiewdow  ",
+      "image": "https://pbs.twimg.com/profile_images/446356636710363136/OYIaJ1KK_400x400.png",
+      "video": "https://www.youtube.com/embed/aJgAwjP20RY?si=QyQNrdZykXW63WIv"
+    },
+    {
+      "id": 2,
+      "title": "CSS Tips",
+      "author":"Roronoa Zoro",
+      "date": "2023-09-28",
+      "content": "This blog post discusses some CSS tips.",
+      "image": "https://blog.logrocket.com/wp-content/uploads/2023/02/Improving-mobile-design-latest-CSS-viewport-units.png",
+      "video": null
+    },
+    {
+        "id": 3,
+        "title": "CSS Tips1",
+        "author":"Monkey D. Luffy",
+        "date": "2023-09-27",
+        "content": "This blog post discusses some CSS tips.",
+        "image": "https://atme.in/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-15-at-2.01.36-PM.jpeg",
+        "video": null
+    },
+    {
+        "id": 4,
+        "title": "CSS Tips2",
+        "author":"Vinsmoke Sanji",
+        "date": "2023-09-25",
+        "content": "This blog post discusses some CSS tips.",
+        "image": "https://shivalikcollege.edu.in/wp-content/uploads/2022/10/download-27.jpg",
+        "video": null
+    },
+    {
+        "id": 5,
+        "title": "CSS Tips3",
+        "author":"GoDD Usopp",
+        "date": "2023-09-24",
+        "content": "This blog post discusses some CSS tips.",
+        "image": "https://e0.pxfuel.com/wallpapers/794/639/desktop-wallpaper-computer-science-cse.jpg",
+        "video": null
+    },
+    {
+        "id": 6,
+        "title": "CSS Tips4",
+        "author":"Robin",
+        "date": "2023-09-26",
+        "content": "This blog post discusses some CSS tips.",
+        "image": "https://www.theinterrobang.ca/images/interrobang/030819/B8QC6DAZ9PWRK7M2.jpg",
+        "video": null
+    },
+    {
+        "id": 7,
+        "title": "CSS Tips 111",
+        "author":"Franky",
+        "date": "2023-09-22",
+        "content": "This blog post discusses some CSS tips.",
+        "image": null,
+        "video": null
+    }
+
+  ]
+  
