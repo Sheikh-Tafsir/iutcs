@@ -1,0 +1,99 @@
+.newPost {
+    margin: 60px 0;
+}
+
+.newPost .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.newPost .image-container img
+{
+  width: 100%;
+  height: auto;
+}
+.newPost .form {
+    background: black;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Limit the form width to 80% of the container */
+    max-width: 100%; /* Ensure it's not wider than the container */
+    display: flex; /* Display the form as a flex container */
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center align form elements horizontally */
+  }
+
+.newPost .form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.newPost .form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0; 
+    width: 100%; 
+}
+
+.newPost .form .form-group label {
+    display: block;
+    font-weight: 600;
+}
+
+.newPost .form .form-group input[type="text"],
+.newPost .form .form-group input[type="url"],
+.newPost .form .form-group textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    
+}
+.form h2{
+    color: white;
+}
+.newPost .form .form-group textarea {
+    height: 150px;
+}
+.newPost .form input,
+.newPost .form textarea {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+
+.newPost .form .form-group input[type="file"] {
+    display: none;
+}
+
+.newPost .form .form-group .image-preview {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newPost .form .form-group .inputfile label {
+    display: block;
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newPost .form .form-group .inputfile label:hover {
+    background: #0056b3;
+}
+
+.newPost .form .form-group .inputfile input {
+    display: none;
+}
+.newPost label {
+    color: white; /* Replace #333 with the desired text color code */
+}

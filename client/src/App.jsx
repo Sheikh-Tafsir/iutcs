@@ -11,6 +11,9 @@ import IntraCompetition from '../src/components/teamRegistration/intraCompetitio
 import Adminpanel from './pages/adminpanel/Adminpanel';
 import Adminlogin from './pages/adminpanel/Adminlogin';
 import Leaderboard from './pages/leaderboard/Leaderboard';
+import { BlogsHome } from "./pages/blogs/Blogs";
+import BlogDetails from "./pages/blogs/blogDetails"
+import { Create } from "./pages/blogs/Create"
 
 const App = () => {
   return (
@@ -20,7 +23,6 @@ const App = () => {
           <Route path="/" element={<LandigPage/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/achievements" element={<Achievements/>} />
-          <Route path="/blogs" element={<Blogs/>} />
           <Route path="/executives" element={<Executives/>} />
           <Route path="/activities" element={<Activities/>} />
           <Route path="/competitions" element={<Competitions/>} />
@@ -29,6 +31,10 @@ const App = () => {
           <Route path="/admin/panel" element={<Adminpanel/>} />
           <Route path="/admin/login" element={<Adminlogin/>} />
           <Route path="/leaderboard" element={<Leaderboard/>} />
+          <Route path="/blogs/details/:id" element={<BlogDetails/>} />
+          <Route path="/blogs" element={<BlogsHome/>} />
+          
+          <Route path="/createblog" element={<Create/>} />
         </Routes>
       </BrowserRouter>
     </>
