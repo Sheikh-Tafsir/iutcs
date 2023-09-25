@@ -9,7 +9,7 @@ const EventsLanding = () => {
             <h2 className='title'>EVENTS</h2>
             <p className='subTitle'>The movie star the professor and Mary Ann here on Gilligans Isle. Just sit right back and youll hear.</p>
             <div className='lg:flex w-full lg:w-3/4 mx-auto justify-between'>
-                <div className='eventCard'>
+                <div className='eventCard' data-aos="fade-left" data-aos-delay="0">
                     <img src='/event 1.jpg' alt=''/>
                     <div className='cardTexts'>
                         <h2>EXPLORE RESEARCH FOR FUTURE IN USA</h2>
@@ -19,7 +19,7 @@ const EventsLanding = () => {
                         <Button>View Event</Button>
                     </div>
                 </div>
-                <div className='eventCard'>
+                <div className='eventCard' data-aos="fade-left" data-aos-delay="200">
                     <img src='/event 3.jpg' alt=''/>
                     <div className='cardTexts'>
                         <h2>CAREER AT FAANG IUTIAN ROADMAP</h2>

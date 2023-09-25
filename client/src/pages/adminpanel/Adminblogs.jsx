@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import '../../styles/create.css';
+import '../../styles/Adminblogs.css';
 import { IoIosAddCircleOutline } from 'react-icons/io';
 import axios from 'axios';
-import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
-import Adminnavbar from '../adminpanel/Adminnavbar';
-export const Create = () => {
+import Adminnavbar from './Adminnavbar';
+export const Adminblogs = () => {
     const [formData, setFormData] = useState({
         title: '',
         image: '',
@@ -64,7 +63,7 @@ export const Create = () => {
     };
 
     const uploadBlog = async (newBlogPost) => {
-      const apipath = `${import.meta.env.VITE_API_URI}/blogs/create`;
+      const apipath = `${import.meta.env.VITE_BASE_URL}/blogs/create`;
       //const apipath = `http://localhost:3001/project/create`;
       await axios.post(apipath,
       {

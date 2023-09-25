@@ -1,10 +1,10 @@
 import '../../styles/CommitteeIntro.css'
-import '../../styles/effects.css'
-import '../../styles/MediaQuery.css'
+import '../../styles/CommitteeEffects.css'
+import '../../styles/CommitteeMediaQuery.css'
 import { facultyData, studentData } from './ExecutiveCommitteeInfo'
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 export const ExecutiveCommittee = () => {
     

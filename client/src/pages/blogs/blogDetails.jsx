@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import blogs from './blog_components/blogs.json';
-import '../../styles/details.css';
+import '../../styles/Blogdetails.css';
 import { AiOutlineUser, AiOutlineClockCircle } from 'react-icons/ai';
 import { useParams } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
-import Nav from '../../components/navbar/Navbar'
+import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 
 const BlogDetails = () => {
@@ -36,7 +35,7 @@ const BlogDetails = () => {
 
   return (
     <>
-    <Nav />
+    <Navbar />
       <div className="blog-details">
         <h1>{blogPost.title}</h1>
         <div className="author-date">
