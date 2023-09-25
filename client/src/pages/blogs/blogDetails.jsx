@@ -6,34 +6,28 @@ import { AiOutlineUser, AiOutlineClockCircle } from 'react-icons/ai';
 import { useParams } from 'react-router-dom';
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
-import axios from 'axios'
 
 const BlogDetails = () => {
-  // const { id } = useParams();
+  const { id } = useParams();
   const [blogPost, setBlogPost] = useState(null);
-  // console.log("running")
+
   useEffect(() => {
-    // console.log("running")
     const fetchData = async () => {
       try {
-        //const apiPath = 'http://localhost:3001/api/v1/blog/all';
-        const apiPath = `${import.meta.env.VITE_BASE_URL}/api/v1/blog/all`;
+        const post = blogs.find((blog) => blog.id === parseInt(id, 10));
 
-        const response = await axios.get(apiPath);
-
-        // Handle the successful response here
-        console.log(response.data);
-
-        // Assuming the response.data is an array of blogs
-        setBlogPost(response.data);
+        if (post) {
+          setBlogPost(post);
+        } else {
+          console.error('Blog post not found.');
+        }
       } catch (error) {
-        // Handle any errors that occurred during the request
         console.error('Error fetching data:', error);
       }
     };
 
     fetchData();
-  }, []);
+  }, [id]);
 
   if (!blogPost) {
     return <div>Loading...</div>;
