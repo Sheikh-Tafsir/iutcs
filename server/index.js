@@ -47,6 +47,7 @@ app.get('/', (req, res) => {
 });
 
 //app.use("/api/v1", baseRoutes);
+app.use("/blog", require("./routes/blog/blogRoute"));
 
 // Start the server on a specific port (e.g., 3000).
 const PORT = process.env.PORT || 3001;

@@ -14,7 +14,7 @@ export const Card = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        //const apiPath = 'http://localhost:3001/api/v1/blog/all';
+        //const apiPath = 'http://localhost:3001/blog/all';
         const apiPath = `${import.meta.env.VITE_BASE_URL}/blog/all`;
 
         const response = await axios.get(apiPath);
