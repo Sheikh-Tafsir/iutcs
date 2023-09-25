@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
   res.send('Hello, world!');
 });
 
-app.use("/api/v1", baseRoutes);
+//app.use("/api/v1", baseRoutes);
 
 // Start the server on a specific port (e.g., 3000).
 const PORT = process.env.PORT || 3001;
