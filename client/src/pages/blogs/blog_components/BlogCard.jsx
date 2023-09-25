@@ -3,17 +3,41 @@ import '../../../styles/BlogCard.css';
 import { AiOutlineTags, AiOutlineClockCircle, AiOutlineComment, AiOutlineShareAlt, AiOutlineUser } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import blogs from './blogs.json';
+import axios from 'axios'
+
 
 export const Card = () => {
-  const [blogData] = useState(blogs);
+  // const [blogData] = useState(blogs);
   const [postsToShow, setPostsToShow] = useState(6);
   const [sortedPosts, setSortedPosts] = useState([]);
   const navigate = useNavigate();
 
+  const [blogData, setBlogData] = useState(null);
+  // console.log("running")
   useEffect(() => {
-    const sorted = [...blogData].sort((a, b) => new Date(b.date) - new Date(a.date));
-    setSortedPosts(sorted);
-  }, [blogData]);
+    // console.log("running")
+    const fetchData = async () => {
+      try {
+        //const apiPath = 'http://localhost:3001/api/v1/blog/all';
+        const apiPath = `${import.meta.env.VITE_BASE_URL}/api/v1/blog/add`;
+
+        const response = await axios.get(apiPath);
+
+        // Handle the successful response here
+        console.log(response.data);
+
+        // Assuming the response.data is an array of blogs
+        setBlogData(response.data);
+        const sorted = [...response.data].sort((a, b) => new Date(b.date) - new Date(a.date));
+        setSortedPosts(sorted);
+      } catch (error) {
+        // Handle any errors that occurred during the request
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const loadMore = () => {
     const additionalPosts = 6;
@@ -43,7 +67,7 @@ export const Card = () => {
   return (
     <section className="blog">
       <div className="container grid2">
-        {sortedPosts.slice(0, postsToShow).map((item) => (
+        {blogData && blogData.slice(0, postsToShow).map((item) => (
           <div className="box boxItems" key={item.id}>
             <div className="img">
               {item.image && <img src={item.image} alt="" />}

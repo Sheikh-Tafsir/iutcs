@@ -40,10 +40,10 @@ export const Adminblogs = () => {
             id: Math.random(), // You can generate a unique ID using a better method
             title: formData.title,
             author: formData.author,
-            date: currentDate,
+            created_at: currentDate,
             content: formData.content,
-            image: formData.image,
-            video: formData.video,
+            imageLink: formData.image,
+            videoLink: formData.video,
         };
 
         uploadBlog(newBlogPost);
@@ -63,8 +63,9 @@ export const Adminblogs = () => {
     };
 
     const uploadBlog = async (newBlogPost) => {
-      const apipath = `${import.meta.env.VITE_BASE_URL}/blogs/create`;
-      //const apipath = `http://localhost:3001/project/create`;
+      const apipath = `${import.meta.env.VITE_BASE_URL}/api/v1/blog/add`;
+      //console.log(newBlogPost);
+      //const apipath = `http://localhost:3001/api/v1/blog/add`;
       await axios.post(apipath,
       {
         newBlogPost:newBlogPost

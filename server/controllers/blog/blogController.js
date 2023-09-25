@@ -4,7 +4,7 @@ const pool = require("../../db");
 const addBlog = async (req, res) => {
   try {
     const { title, imageLink, videoLink, content, author, created_at } =
-      req.body;
+      req.body.newBlogPost;
     const query = `
       INSERT INTO blogs (title, imageLink, videoLink, content, author, created_at)
       VALUES ($1, $2, $3, $4, $5, $6)
