@@ -1,20 +1,33 @@
 .blog {
-  margin: 50px auto; /* Center the component horizontally and add top margin */
-  max-width: 1200px; /* Set a maximum width for the component */
+  margin: 5vh auto; /* Center the component horizontally and add top margin */
+  max-width: 80vw; /* Set a maximum width for the component */
   padding: 0 20px; /* Add padding to create the gap at right and left */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
   /* Updated .container to display two cards per row */
-  .blog .container.grid2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-    gap: 80px; /* Adjust the gap as needed */
-    align-items: center;
+  @media screen and (min-width: 992px) {
+    .blog .container.grid2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+      gap: 5vw; /* Adjust the gap as needed */
+      align-items: center;
+    } 
+  }
+  @media screen and (max-width: 991px) {
+    .blog .container.grid2 {
+      display: grid;
+      gap: 2vh; /* Adjust the gap as needed */
+      align-items: center;
+    } 
   }
   
   .blog .boxItems {
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: rgb(252,252,252);
+    border-radius: 1vw;
+    padding: 2%;
     transition: 0.5s;
   }
   
@@ -26,8 +39,7 @@
   
   .blog img {
     width: 100%; /* Change the width to 100% to fill the card container */
-    height: 250px;
-    object-fit: cover;
+    height: 35vh;
     border-radius: 10px;
     margin-bottom: 20px;
   }

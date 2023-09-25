@@ -1,36 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
 import  Card  from "./blog_components/BlogCard";
 import "../../styles/Blogdetails.css"; // Create a CSS file for your Home component
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
-import axios from 'axios'
-
 
 export const BlogsHome = () => {
-  const [blogPost, setBlogPost] = useState(null);
-
-  useEffect(() => {
-    // console.log("running")
-    const fetchData = async () => {
-      try {
-        const apiPath = 'http://localhost:3001/api/v1/blog/all';
-
-        const response = await axios.get(apiPath);
-
-        // Handle the successful response here
-        console.log(response.data);
-
-        // Assuming the response.data is an array of blogs
-        setBlogPost(response.data);
-      } catch (error) {
-        // Handle any errors that occurred during the request
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   return (
     <>
       {/* <Navigation Section> */}
