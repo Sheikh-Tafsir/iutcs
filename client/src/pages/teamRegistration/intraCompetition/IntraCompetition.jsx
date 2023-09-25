@@ -1,4 +1,4 @@
-import Navbar from "../../navbar/Navbar";
+import Navbar from "../../../components/navbar/Navbar";
 import "../../../styles/IntraCompetition.css"; // Import your CSS file
 
 function IntraCompetition() {
@@ -12,9 +12,9 @@ function IntraCompetition() {
             src="https://docs.google.com/forms/d/e/1FAIpQLSffnklaqSJqpR3vW16YOjZvHYnvusA_rzPaRpVc-gCj63mF0g/viewform?embedded=true" 
             width="640" 
             height="509" 
-            frameborder="0" 
-            marginheight="0" 
-            marginwidth="0"
+            frameBorder="0" 
+            marginHeight="0" 
+            marginWidth="0"
         >
             Loading…
         </iframe>

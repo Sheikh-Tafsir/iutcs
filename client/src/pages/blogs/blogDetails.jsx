@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import blogs from './blog_components/blogs.json';
 import '../../styles/Blogdetails.css';
 import { AiOutlineUser, AiOutlineClockCircle } from 'react-icons/ai';

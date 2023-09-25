@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../../../styles/InterCompetition.css"; // Import your CSS file
-import Navbar from '../../navbar/Navbar';
+import Navbar from '../../../components/navbar/Navbar';
 
 
 function InterCompetition() {

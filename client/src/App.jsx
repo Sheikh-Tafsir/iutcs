@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import {Routes, Route, BrowserRouter} from "react-router-dom";
 import LandigPage from './pages/landingPage/LandigPage'
 import About from './pages/about/About'
@@ -6,8 +6,8 @@ import Achievements from './pages/achievements/Achievements'
 import { BlogsHome } from './pages/blogs/Blogs';
 import Activities from './pages/activities/Activities';
 import Competitions from './pages/competitions/Competitions';
-import InterCompetition from '../src/components/teamRegistration/interCompetition/InterCompetition';
-import IntraCompetition from '../src/components/teamRegistration/intraCompetition/IntraCompetition';
+import InterCompetition from './pages/teamRegistration/interCompetition/InterCompetition';
+import IntraCompetition from './pages/teamRegistration/intraCompetition/IntraCompetition';
 import Adminpanel from './pages/adminpanel/Adminpanel';
 import Adminlogin from './pages/adminpanel/Adminlogin';
 import { Adminblogs } from './pages/adminpanel/Adminblogs';
