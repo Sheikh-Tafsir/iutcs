@@ -1,13 +1,24 @@
 @media screen and (min-width: 992px) {
+    .location{
+        width: 50%;
+    }
     .mapBar{
-        height: 60vh;
+        height: 55vh;
         background-color: rgb(247,247,247);
         padding-top: 0.5%;
+        
     }
 }
 @media screen and (max-width: 991px) {
+    .location{
+        width: 100%;
+    }
     .mapBar{
         height: 50vh;
+        width: 90%;
+        margin: auto;
+        margin-top:2.5vh;
+        margin-bottom: 2.5vh;
         background-color: rgb(247,247,247);
         padding-top: 0.5%;
     }

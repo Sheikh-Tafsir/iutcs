@@ -103,6 +103,7 @@
         overflow: hidden;
         font-size: 2vh;
         transition: linear 0.1s;
+        
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px){
@@ -133,7 +134,7 @@
     }
 }
 .imageCard:hover{
-    transform: scale(1.05);
+    transform: scale(1.1);
     box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
 }
 .imageCard img{

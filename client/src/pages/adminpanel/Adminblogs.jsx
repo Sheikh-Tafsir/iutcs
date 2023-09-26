@@ -5,6 +5,7 @@ import axios from 'axios';
 import Footer from '../../components/footer/Footer'
 import Adminnavbar from './Adminnavbar';
 export const Adminblogs = () => {
+  const [blogUploadStatus, setBlogUploadStatus] = useState('');
     const [formData, setFormData] = useState({
         title: '',
         image: '',
@@ -63,15 +64,16 @@ export const Adminblogs = () => {
     };
 
     const uploadBlog = async (newBlogPost) => {
-      const apipath = `${import.meta.env.VITE_BASE_URL}/api/v1/blog/add`;
+      //const apipath = `${import.meta.env.VITE_BASE_URL}/blog/add`;
       //console.log(newBlogPost);
-      //const apipath = `http://localhost:3001/api/v1/blog/add`;
+      const apipath = `http://localhost:3001/blog/add`;
       await axios.post(apipath,
       {
         newBlogPost:newBlogPost
       }
       ).then((response) =>{
           console.log(response.data);
+          if(response.data)setBlogUploadStatus('upload successful');
       }).catch(error => {
         console.log(error);
       });
@@ -154,6 +156,7 @@ export const Adminblogs = () => {
                 Create Post
               </button>
             </form>
+            <p className='text-red-600 text-lg'>{blogUploadStatus}</p>
           </div>
         </section>
         <Footer/>

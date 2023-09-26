@@ -17,8 +17,10 @@ const LandigPage = () => {
         <History />
         <Gallery />
         <EventsLanding />
-        <Sponsors />
-        <Locations/>
+        <div className='lg:flex'>
+          <Sponsors />
+          <Locations/>
+        </div>
         <Footer />
     </>
   )

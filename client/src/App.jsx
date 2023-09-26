@@ -39,7 +39,7 @@ const App = () => {
           <Route path="/admin/panel" element={<Adminpanel/>} />
           <Route path="/admin/login" element={<Adminlogin/>} />
           <Route path="/leaderboard" element={<Leaderboard/>} />
-          <Route path="/blogs/details/:id" element={<BlogDetails/>} />
+          <Route path="/blogs/details" element={<BlogDetails/>} />
           <Route path="/blogs" element={<BlogsHome/>} />
           <Route path="/admin/blogs" element={<Adminblogs/>} />
         </Routes>

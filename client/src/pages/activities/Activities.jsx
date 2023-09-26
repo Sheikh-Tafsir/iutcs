@@ -6,17 +6,21 @@ import Work from './Work';
 import Ctf from './Ctf';
 import Webdevx from './Webdevx';
 import Navbar from '../../components/navbar/Navbar'
+import Footer from '../../components/footer/Footer';
 
 function Activities() {
   return (
-    <><Navbar /><div className="activity-home">
-      <Home />
-      <About />
-      <Ctf />
-      <Webdevx />
-      <Work />
-
-    </div></>
+    <>
+      <Navbar />
+      <div className="activity-home">
+        <Home />
+        <About />
+        <Ctf />
+        <Webdevx />
+        <Work />
+      </div>
+      <Footer />
+    </>
   );
 }
 

@@ -4,8 +4,10 @@ import { AiOutlineTags, AiOutlineClockCircle, AiOutlineComment, AiOutlineShareAl
 import { useNavigate } from 'react-router-dom';
 import blogs from './blogs.json';
 import axios from 'axios'
+import Loading from '../../../components/loading/Loading'
 
 export const Card = () => {
+  const [loading, setLoading] = useState(true);
   const [blogData, setBlogData] = useState(null);
   const [postsToShow, setPostsToShow] = useState(6);
   const [sortedPosts, setSortedPosts] = useState([]);
@@ -24,12 +26,14 @@ export const Card = () => {
 
         // Assuming the response.data is an array of blogs
         setBlogData(response.data);
+        setLoading(false);
         
         const sorted = [...response.data].sort((a, b) => new Date(b.date) - new Date(a.date));
         setSortedPosts(sorted);
       } catch (error) {
         // Handle any errors that occurred during the request
         console.error('Error fetching data:', error);
+        setLoading(false);
       }
     };
 
@@ -61,6 +65,12 @@ export const Card = () => {
     textField.remove();
   };
 
+  if (loading) {
+    return(
+      <Loading />
+    );
+  }
+
   return (
     <section className="blog">
       <div className="container grid2">
@@ -74,7 +84,7 @@ export const Card = () => {
               <div className="author">
                 <AiOutlineUser className="auth_icon" />{item.author}
               </div>
-              <button onClick={() => navigate(`/blogs/details/${item.id}`)} className="card_title_link">
+              <button onClick={() => navigate('/blogs/details', { state: { item } })} className="card_title_link">
                 <h3>{item.title}</h3>
               </button>
               <p>{item.content.slice(0, 65)}...</p>

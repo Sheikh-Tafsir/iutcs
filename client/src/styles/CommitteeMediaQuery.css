@@ -1,24 +1,29 @@
 @media screen and (max-width: 1024px){
+    .committee-images{
+
+    }
     .image-container {
-        width: 50%;
-        margin: 1vw auto;
+        width: 48%;
+        margin: 1vh auto;
         height: 75vw;
+        
     }
     .overlay {
-  
-        height: 22%;
+        height: 45%;
         padding: 1%;
         padding-left: 1.5%;
         
-
     } 
-    
-     .overlay h3,
+
     .overlay p {
-        font-size: 2.5vw ;
+        font-size: 3.4vw ;
+        text-align: left;
     }
     .overlay h3 {
-        font-size: 3vw;
+        font-size: 4.2vw;
+        text-align: left;
+        font-weight: 600;
+        
     }
 
     .image-container:hover .profile-img {

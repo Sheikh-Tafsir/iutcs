@@ -5,7 +5,8 @@
     max-width: 800px;
     padding: 0 20px;
     background-color:ghostwhite;
-    
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 1vw;
   }
   .back-button-container {
     text-align: center;
@@ -25,9 +26,10 @@
   .blog-details h1 {
     font-size: 24px;
     text-align: center;
-    margin-top: 20px;
+    padding-top: 3vh;
     font-family: 'Times New Roman', Times, serif;
   }
+
   
   .author-date {
     display: flex;
