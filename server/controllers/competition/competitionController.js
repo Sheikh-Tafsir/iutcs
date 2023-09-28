@@ -2,14 +2,24 @@ const pool = require("../../db"); // Import the pool object from your db.js file
 
 // Add a Competition
 async function addCompetition(req, res) {
-  const { name, description, type, start_date, end_date, no_of_teamMembers } =
-    req.body;
+  const {
+    name,
+    description,
+    start_date,
+    end_date,
+    registration_start_date,
+    registration_end_date,
+    no_of_team_member_min,
+    no_of_team_member_max,
+    fees,
+    event_id
+  } = req.body;
 
   try {
     // Insert a new competition into the database
     const result = await pool.query(
-      "INSERT INTO competition (name, description, type, start_date, end_date, no_of_teamMembers) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-      [name, description, type, start_date, end_date, no_of_teamMembers]
+      "INSERT INTO competitions (name, description, start_date, end_date, registration_start_date, registration_end_date, no_of_team_member_min, no_of_team_member_max, fees, event_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *",
+      [name, description, start_date, end_date, registration_start_date, registration_end_date, no_of_team_member_min, no_of_team_member_max, fees, event_id]
     );
 
     // Send the added competition as the response
@@ -20,20 +30,27 @@ async function addCompetition(req, res) {
   }
 }
 
-// Get All Competitions
-async function getAllCompetitions(req, res) {
+
+// Get Competitions of a Specific Event
+async function getCompetitionsByEvent(req, res) {
+  const { event_id } = req.params;
+
   try {
-    // Query all competitions from the database
-    const result = await pool.query("SELECT * FROM competition");
-    // Send the list of competitions as the response
+    // Query competitions of the specified event from the database
+    const result = await pool.query(
+      "SELECT * FROM competitions WHERE event_id = $1",
+      [event_id]
+    );
+
+    // Send the list of competitions for the specific event as the response
     res.json({ competitions: result.rows });
   } catch (error) {
-    console.error("Error fetching competitions:", error);
-    res.status(500).json({ error: "Error fetching competitions" });
+    console.error("Error fetching competitions for the event:", error);
+    res.status(500).json({ error: "Error fetching competitions for the event" });
   }
 }
 
 module.exports = {
   addCompetition,
-  getAllCompetitions,
+  getCompetitionsByEvent,
 };
