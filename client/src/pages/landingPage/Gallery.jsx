@@ -10,22 +10,22 @@ const Gallery = () => {
                 <div className='imageCard' data-aos="slide-right" data-aos-delay="400">
                     <img src='/gallery 1.jpg' alt='' />
                     <div className='imageCardText'>
-                        <p className='text-orange-400'>Kings CROWN</p>
-                        <p className='text-white'>ORIGIN: DUBAI, UAE</p>
+                        <p className='text-orange-400'>Key Skills for Professional Career</p>
+                        <p className='text-white'>Career Seminar</p>
                     </div>
                 </div>
                 <div className='imageCard' data-aos="slide-right" data-aos-delay="200">
-                    <img src='/gallery 2.jpg' alt='' />
+                    <img src='/gallery 5.jpg' alt='' />
                     <div className='imageCardText'>
-                        <p className='text-orange-400'>MODERN ARTS COLLECTION</p>
-                        <p className='text-white'>ORIGIN: DUBAI, UAE</p>
+                        <p className='text-orange-400'>RIoT Centre Flag Hunt 2022</p>
+                        <p className='text-white'>Cybersecurity tournament</p>
                     </div>
                 </div>
                 <div className='imageCard' data-aos="slide-right" data-aos-delay="0">
-                    <img src='/gallery 3.jpg' alt='' />
+                    <img src='/gallery 6.jpg' alt='' />
                     <div className='imageCardText'>
-                        <p className='text-orange-400'>FRANCE KINGS SWORD</p>
-                        <p className='text-white'>ORIGIN: DUBAI, UAE</p>
+                        <p className='text-orange-400'>Prologue 2023</p>
+                        <p className='text-white'>Freshers Reception</p>
                     </div>
                 </div>
             </div>

@@ -17,6 +17,10 @@ import BlogDetails from "./pages/blogs/blogDetails"
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import AdminEvents from './pages/adminpanel/AdminEvents';
+import AdminCompetitions from './pages/adminpanel/AdminCompetitions';
+import AdminCompetitionsCreate from './pages/adminpanel/AdminCompetitionsCreate';
+import AdminEventsCreate from './pages/adminpanel/AdminEventsCreate';
 
 const App = () => {
   useEffect(() => {
@@ -42,6 +46,10 @@ const App = () => {
           <Route path="/blogs/details" element={<BlogDetails/>} />
           <Route path="/blogs" element={<BlogsHome/>} />
           <Route path="/admin/blogs" element={<Adminblogs/>} />
+          <Route path="/admin/events/view" element={<AdminEvents />} />
+          <Route path="/admin/competitions/view" element={<AdminCompetitions />} />
+          <Route path="/admin/events/create" element={<AdminEventsCreate />} />
+          <Route path="/admin/competitions/create" element={<AdminCompetitionsCreate />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -56,7 +56,7 @@ const Adminnavbar = () => {
                               <Link to='/admin/blogs'>Blogs</Link>
                           </Button>
                           <Button color="inherit">
-                            <Link to='/admin/events'>events</Link>
+                            <Link to='/admin/events/view'>events</Link>
                           </Button>
                           <Button color="inherit">
                             <Link to='/admin/judge'>judge</Link>

@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Work = () => {
   const workInfoData = [
     {
@@ -10,20 +9,20 @@ const Work = () => {
     },
     {
       image: './Assets/coding.png',
-      title: "CIPHER QUEST",
-      text: "Join the cipher quest.Calling the tech enthusiastics and adventure seekers.Get ready to embark on unforgotable journey. ",
+      title: "PROGRAMMING CONTEST",
+      text: "Participate in the programming contest and win amazing prizes",
     },
     {
       image: './Assets/flag.png',
-      title: "PROGRAMMING CONTEST",
-      text: "Participate in the programming contest and win amazing prizes",
+      title: "CIPHER QUEST",
+      text: "Join the cipher quest.Calling the tech enthusiastics and adventure seekers.Get ready to embark on unforgotable journey. ",
     },
   ];
   return (
     <div className="work-section-wrapper">
       <div className="work-section-top">
         <p className="primary-subheading">Events</p>
-        <h1 className="primary-heading">Upcoming Events</h1>
+        <h1 className="primary-heading">Upcoming</h1>
         <p className="primary-text">
           Here is the upcoming exciting events of IUTCS. Register for the competitons and win exciting prizes
         </p>

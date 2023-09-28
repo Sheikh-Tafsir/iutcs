@@ -8,15 +8,17 @@ import EventsLanding from './EventsLanding'
 import Footer from '../../components/footer/Footer'
 import Locations from './Locations'
 import Sponsors from './Sponsors'
+import Work from '../activities/Work'
 
 const LandigPage = () => {
   return (
     <>
         <Navbar/>
         <Heromain/>
+        <Work/>
         <History />
         <Gallery />
-        <EventsLanding />
+        <EventsLanding/>
         <div className='lg:flex'>
           <Sponsors />
           <Locations/>
