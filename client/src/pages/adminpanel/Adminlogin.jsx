@@ -33,7 +33,7 @@ const Adminlogin = () => {
 
         else if (username === usernameFromEnv && password === passwordFromEnv){
             setLoginStatus("logging in");
-            localStorage.setItem("localStorageUsername",username);
+            localStorage.setItem("ocalStorageIutcsAdminUsername",username);
             window.location.href = "/admin/panel";
         }
         else{

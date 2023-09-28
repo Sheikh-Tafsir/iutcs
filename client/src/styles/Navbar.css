@@ -67,16 +67,23 @@ body {
     background-color: black;
     justify-content: center;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
     .navLeftBarButton{
         visibility: hidden;
     }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1023px) {
     .navLeftBarButton{
         transform: translateX(-10vw);
     }
     .desktopMenu{
         visibility: hidden;
+    }
+    .mobileNavSideBar{
+        width: 50vw;
+        height: 100%;
+        background-color: black;
+        color: white;
+        
     }
 }

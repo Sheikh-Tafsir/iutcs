@@ -1,58 +1,47 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import blogs from './blog_components/blogs.json';
-import '../../styles/details.css';
+import '../../styles/Blogdetails.css';
 import { AiOutlineUser, AiOutlineClockCircle } from 'react-icons/ai';
 import { useParams } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
-import Nav from '../../components/navbar/Navbar'
+import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
+import { useLocation } from 'react-router-dom';
 
 const BlogDetails = () => {
-  const { id } = useParams();
-  const [blogPost, setBlogPost] = useState(null);
+  const location = useLocation();
+  const { item } = location.state;
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const post = blogs.find((blog) => blog.id === parseInt(id, 10));
+    console.log(item);
+  }, []);
 
-        if (post) {
-          setBlogPost(post);
-        } else {
-          console.error('Blog post not found.');
-        }
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, [id]);
-
-  if (!blogPost) {
-    return <div>Loading...</div>;
-  }
+  // if (!blogPost) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <>
-    <Nav />
+      <Navbar />
       <div className="blog-details">
-        <h1>{blogPost.title}</h1>
+        <h1>{item.title}</h1>
         <div className="author-date">
           <AiOutlineUser className="author-icon" />
-          <span>{blogPost.author}</span>
+          <span>{item.author}</span>
           <AiOutlineClockCircle className="date-icon" />
-          <span>{blogPost.date}</span>
+          <span>{item.date}</span>
         </div>
-
-        <img src={blogPost.image} alt="" />
-        {blogPost.video && (
+        <div className='lg:flex lg:w-full pb-8'>
+          <div className='lg:w-2/5'>
+            <img src={item.imagelink} alt=""/>
+          </div>
+          
+          <p className="lg:w-3/5 p-4 lg:p-8 blog_contentss">{item.content}</p>
+        </div>
+        {item.videolink && (
           <div className="video">
-            <iframe title="Video" width="560" height="315" src={blogPost.video} allowFullScreen />
+            <iframe title="Video" width="560" height="315" src={item.video} allowFullScreen />
           </div>
         )}
-        <p className="blog_contentss">{blogPost.content}</p>
       </div>
       <Footer/>
     </>

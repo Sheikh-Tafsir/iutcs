@@ -1,0 +1,122 @@
+.admin-competition-topbar{
+    height: 35vh;
+    width: 100%;
+    background-image: url('/public/slider 2.jpg');
+    position: relative;
+}
+.admin-competition-topbar h2{
+    text-align: center;
+    font-size: 5vh;
+    color: white;
+    padding-top: 8vh;
+    font-weight: 600;
+}
+@media screen and (min-width: 992px) {
+    .admin-competition-box{
+        position: absolute;
+        left:20vw;
+        top:20vh;
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: auto;
+        justify-content: space-between;
+        margin-top: 5vh;
+    }
+    .admin-competitions{
+        height: 24vh;
+        width: 31%;
+        background-color:white;
+        border-radius: 1vw;
+        margin-bottom: 4vh;
+        padding-left: 3%;
+        padding-top: 3%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
+        transition: linear 0.1s;
+        cursor:pointer;
+    }
+}
+@media screen and (max-width: 991px) {
+    .admin-competition-box{
+        position: absolute;
+        left:4vw;
+        top:20vh;
+        display: flex;
+        flex-wrap: wrap;
+        width: 92%;
+        margin: auto;
+        justify-content: space-between;
+        margin-top: 5vh;
+    }
+    .admin-competitions{
+        height: 24vh;
+        width: 49%;
+        background-color:white;
+        border-radius: 1vw;
+        margin-bottom: 4vh;
+        padding-left: 2%;
+        padding-top: 6%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
+        transition: linear 0.1s;
+        cursor:pointer;
+    }
+}
+
+.admin-competitions h2{
+    font-size: 3vh;
+    font-weight: 600;
+}
+
+.admin-competitions p{
+    font-size: 2vh;
+}
+
+.admin-competitions:hover{
+    background-color: rgba(240,240,240);
+}
+@media screen and (min-width: 992px) {
+    .admin-competition-add-box{
+        height: 24vh;
+        width: 31%;
+        background-color:white;
+        border-radius: 1vw;
+        margin-bottom: 4vh;
+        padding-top: 3%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
+        transition: linear 0.1s;
+        cursor:pointer;
+    }
+}
+@media screen and (max-width: 991px) {
+    .admin-competition-add-box{
+        height: 24vh;
+        width: 49%;
+        background-color:white;
+        border-radius: 1vw;
+        margin-bottom: 4vh;
+        padding-top: 12%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
+        transition: linear 0.1s;
+        cursor:pointer;
+    }
+}
+.admin-competition-add-box .add-icon{
+    color: rgba(0,0,255,0.6);
+    font-size: 3vh;
+    margin: auto;
+    margin-top: 10%;
+}
+.admin-competition-add-box h2{
+    text-align: center;
+    font-size: 2.2vh;
+    font-weight: 600;
+    color: rgba(0,0,255,0.6);
+    margin-top: 1vh;
+}
+.admin-competition-add-box:hover{
+    background-color: rgba(240,240,240);
+}

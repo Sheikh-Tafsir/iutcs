@@ -64,6 +64,7 @@ nav {
   position: relative;
   display: flex;
   padding-top: 3rem;
+  padding-bottom:3rem ;
 }
 .home-bannerImage-container {
   position: absolute;
@@ -91,8 +92,11 @@ nav {
 }
 .primary-text {
   font-size: 20px;
+  font-size: 1.2vw;
   max-width: 500px;
   color: #1f1e1e;
+  color: rgba(0,0,0,0.7);
+  font-weight: 600;
   margin: 1.5rem 0rem;
 }
 .secondary-button {
@@ -309,7 +313,8 @@ nav {
 }
 
 .work-section-bottom {
-  margin-top: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
