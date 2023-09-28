@@ -4,18 +4,20 @@
     background-image: url('/public/slider 2.jpg');
     position: relative;
 }
-.admin-events-topbar h2{
+.events-headerTitle{
     text-align: center;
     font-size: 5vh;
-    color: white;
+    color: black;
     padding-top: 8vh;
     font-weight: 600;
 }
 @media screen and (min-width: 992px) {
     .admin-events-box{
-        position: absolute;
+        
+        /* position: absolute;
         left:20vw;
-        top:20vh;
+        top:20vh; */
+        min-height: 64vh;
         display: flex;
         flex-wrap: wrap;
         width: 60%;
@@ -48,9 +50,10 @@
 }
 @media screen and (max-width: 991px) {
     .admin-events-box{
-        position: absolute;
+        /* position: absolute;
         left:4vw;
-        top:20vh;
+        top:20vh; */
+        min-height: 44vh;
         display: flex;
         flex-wrap: wrap;
         width: 92%;

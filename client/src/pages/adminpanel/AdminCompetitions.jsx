@@ -6,6 +6,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Loading from '../../components/loading/Loading';
 import Adminnavbar from './Adminnavbar';
+import Footer from '../../components/footer/Footer';
 
 const AdminCompetitions = () => {
     const location = useLocation();
@@ -45,9 +46,6 @@ const AdminCompetitions = () => {
     <>
         <Adminnavbar />
         <div>
-            <div className='admin-competition-topbar'>
-                <h2>All Competitions</h2>
-            </div>
             <div className='admin-competition-box'>
                 <div className='admin-competition-add-box' onClick={() => navigate('/admin/competitions/create', { state: { item } })}>
                     <AiOutlinePlus className='add-icon'/>
@@ -55,16 +53,18 @@ const AdminCompetitions = () => {
                 </div>
 
                 {competitionData.map((competition) => (
-                    <div className='admin-competitions'>
+                    <div className='admin-competitions' onClick={() => navigate('/admin/userinfo/view', { state: { competition } })}>
                         <h2>{competition.name}</h2>
                         <p>start date: {competition.start_date.substring(0, 10)}</p>
                         <p>start date: {competition.end_date.substring(0, 10)}</p>
                         <p>fees: {competition.fees}TK</p>
                         <p>Member Limit: {competition.no_of_team_member_min} - {competition.no_of_team_member_max}</p>
+                        <Button>View Participants </Button>
                     </div>
                 ))}
             </div>
         </div>
+        <Footer/>
     </>
   )
 }

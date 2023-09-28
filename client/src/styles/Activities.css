@@ -268,9 +268,19 @@ nav {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
-.work-section-top p {
-  text-align: center;
-  max-width: 600px !important;
+@media (min-width: 992px) {
+  .work-section-top p {
+    text-align: center;
+    font-size: 2.3vh;
+    max-width: 600px !important;
+  }
+}
+@media (max-width: 991px) {
+  .work-section-top p {
+    text-align: center;
+    font-size: 1.9vh;
+    max-width: 95% !important;
+  }
 }
 .work-section-top h1 {
   max-width: 700px !important;
