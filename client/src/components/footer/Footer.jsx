@@ -2,42 +2,49 @@ import React from 'react';
 import '../../styles/Footer.css'
 import { Link } from 'react-router-dom';
 import {ImLocation} from 'react-icons/im';
-import {AiFillPhone, AiFillMail} from 'react-icons/ai';
+import {AiFillPhone, AiFillMail,AiFillFacebook, AiFillInstagram,AiFillLinkedin} from 'react-icons/ai';
+
 const Footer = () => {
   return (
     <>
         <div className='footerBar'>
+        <div className='footer2'>
+           
+                <div className='my-auto footer2contacts'>
+                <p className='footer-heading'>Contact Us</p>
+                    <div className='flex'><ImLocation className='footerIcons'/><p className='contact-info'>Boardbazar , Gazipur, Bangladesh</p></div>
+                    <div className='flex'><AiFillPhone className='footerIcons'/><p className='contact-info'>(123) 456-7890</p></div>
+                    <div className='flex'><AiFillMail className='footerIcons'/><p className='contact-info'>mail@example.com</p></div>
+                </div>
+                </div>
             <div className='footer1'>
                 <div className='my-auto footer1Menu'>
+                    <p className='footer-heading'>Quick Links</p>
                     <span>
-                        <a href="">Home</a>
+                        <a href="">Home</a><br></br>
                     </span>
                     <span>
-                        <a href="">History</a>
+                        <a href="">Achievements</a><br></br>
                     </span>
                     <span>
-                        <a href="">Events</a>
+                        <a href="">Events</a><br></br>
                     </span>
                     <span>
-                        <a href="">History</a>
+                        <a href="">Blogs</a><br></br>
                     </span>
                     <span>
-                        <a href="">History</a>
+                        <a href="">Our Story</a><br></br>
                     </span>
                 </div>
-                <img src='https://premiumlayers.com/wpthemes/museum/wp-content/themes/museumwp/images/common/logo-footer.png' alt='' />
+                
             </div>
-            <div className='footer2'>
-                <div className='my-auto footer2contacts'>
-                    <div className='flex'><ImLocation className='footerIcons'/><p className='inline-block'>345 National Museum, Melbourne PO 6570</p></div>
-                    <div className='flex'><AiFillPhone className='footerIcons'/><p>(123) 456-7890</p></div>
-                    <div className='flex'><AiFillMail className='footerIcons'/><p>mail@example.com</p></div>
-                </div>
+            <div className='footer3'>
+            <img src='./IUTCSLogo.png' alt='IUTCS Logo' />
                 <div className='my-auto footer2Menu'>
-                    <a href="">FACEBOOK</a>
-                    <a href="">ISNTAGRAM</a>
-                    <a href="">PINTEREST</a>
-                    <a href="">LINKEDIN</a>
+                    <a href="" className='contact-link'><AiFillFacebook className='contact-icon'/></a>
+                    <a href="" className='contact-link'><AiFillInstagram className='contact-icon'/></a>
+                    {/* <a href="">PINTEREST</a> */}
+                    <a href="" className='contact-link'><AiFillLinkedin className='contact-icon'/></a>
                 </div>
             </div>
         </div>   

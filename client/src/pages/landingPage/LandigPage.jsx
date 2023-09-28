@@ -17,8 +17,8 @@ const LandigPage = () => {
         <History />
         <Gallery />
         <EventsLanding />
-        <Sponsors />
-        <Locations/>
+        {/* <Sponsors />
+        <Locations/> */}
         <Footer />
     </>
   )

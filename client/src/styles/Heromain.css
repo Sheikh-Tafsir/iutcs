@@ -95,14 +95,15 @@
     border: 0.2vh solid black;
 }
 .heromainButtonBar button:nth-child(1):hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(156, 18, 18);
+    color: rgb(255, 255, 255);
 }
 .heromainButtonBar Button:nth-child(2){
-    border: 0.2vh solid white;   
+    border: 0.2vh solid white;
+    background-color: rgba(20, 20, 20, 0.39);   
 }
 .heromainButtonBar button:nth-child(2):hover {
-    background-color: rgb(20,20,20);
+    background-color: rgb(0, 0, 0);
 }
 @media screen and (min-width: 992px) {
     .heromainSlideButtonBar{

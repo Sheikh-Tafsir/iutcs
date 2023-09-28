@@ -1,0 +1,14 @@
+/* body{
+    background-color: black;
+} */
+.hudai {
+    width: 900px;
+    height: 900px; /* Set your desired height here */
+    position: relative; /* Add this to allow the child elements to position correctly */
+  }
+
+  #tsparticles{
+    height: 90%;
+    width: 100%;
+    /* position: absolute; */
+  }

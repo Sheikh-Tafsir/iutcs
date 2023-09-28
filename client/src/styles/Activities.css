@@ -118,7 +118,7 @@ nav {
   background-color: #fe0d0d;
 }
 .about-section-container {
-  margin-top: 20rem;
+  margin-top: 10rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -168,7 +168,7 @@ nav {
   margin-right: 1rem;
 }
 .contact-page-wrapper h1 {
-  max-width: 900px !important;
+  max-width: 900px;
 }
 .contact-page-wrapper {
   display: flex;
@@ -261,14 +261,14 @@ nav {
   margin-top: 1.5rem;
 }
 .work-section-wrapper {
-  margin-top: 15rem;
+  margin-top: 8rem;
 }
 .work-section-top p {
   text-align: center;
-  max-width: 600px !important;
+  max-width: 600px;
 }
 .work-section-top h1 {
-  max-width: 700px !important;
+  max-width: 700px;
 }
 .work-section-top {
   display: flex;
@@ -280,23 +280,38 @@ nav {
   width: 290px;
   min-height: 350px;
   background-color: rgb(0, 0, 0);
+  /* background-image: linear-gradient(black, #fe0d0d); */
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  border: #000000 solid .3rem;
   border-radius: 1rem;
   color: #ffffff;
   margin: 1rem 2rem;
 }
+.work-section-info:hover{
+  background-color: #fe0d0d;
+  color: white;
+  transform: scale(1.05);
+  transition: .2s ease;
+  border: #00000000;
+}
+
+.work-section-info:hover h2{
+  color: white;
+}
+
 .work-section-info h2 {
   margin: 1rem 0rem;
 }
+
 .work-section-bottom {
   margin-top: 5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -369,7 +384,7 @@ nav {
     cursor: pointer;
   }
   .about-section-container {
-    margin-top: 5rem !important;
+    margin-top: 5rem ;
   }
   .about-buttons-container {
     justify-content: center;
@@ -379,34 +394,34 @@ nav {
     text-align: center;
   }
   .watch-video-button {
-    margin-left: 0rem !important;
+    margin-left: 0rem ;
     margin-top: 1rem;
-    font-size: 1rem !important;
+    font-size: 1rem;
   }
   .watch-video-button svg {
-    margin-right: 0.5rem !important;
+    margin-right: 0.5rem;
   }
   .about-section-image-container {
-    margin-right: 0rem !important;
+    margin-right: 0rem ;
   }
   .work-section-wrapper {
-    margin-top: 5rem !important;
+    margin-top: 1%;
   }
   .work-section-bottom {
-    margin-top: 1rem !important;
+    margin-top: 1rem ;
   }
   .contact-form-container {
-    padding: 0.5rem !important;
+    padding: 0.5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 1rem !important;
+    border-radius: 1rem ;
   }
   .contact-form-container input {
-    font-size: 1rem !important;
+    font-size: 1rem;
     max-width: 100%;
-    padding: 0.5rem 1rem !important;
-    margin-bottom: 0.8rem !important;
+    padding: 0.5rem 1rem  ;
+    margin-bottom: 0.8rem  ;
     text-align: center;
   }
   .footer-wrapper {
