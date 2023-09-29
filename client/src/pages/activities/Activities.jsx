@@ -10,17 +10,25 @@ import Footer from '../../components/footer/Footer';
 
 function Activities() {
   return (
-    <>
-      <Navbar />
-      <div className="activity-home">
-        <Work />
-        <Home />
-        <About />
-        <Ctf />
-        <Webdevx />
+    <><Navbar /><div className="activity-home">
+      
+      <Home />
+      <div data-aos='fade-up' data-aos-delay='200'>
+      <Work />
       </div>
-      <Footer />
-    </>
+      <div data-aos='fade-up' data-aos-delay='200'>
+      <About />
+      </div>
+      <div data-aos='fade-up' data-aos-delay='200'>
+      <Ctf />
+      </div>
+      <div data-aos='fade-up' data-aos-delay='200'>
+      <Webdevx />
+      </div>
+
+      
+    </div>
+    <Footer /></>
   );
 }
 

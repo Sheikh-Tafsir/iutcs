@@ -8,6 +8,13 @@
 }
 @media screen and (min-width: 992px) {
     .navImageBar img{
+        height: 100%;
+        /* width: 40%; */
+        transform: scaleY(0.9);
+        margin-left: 3%;
+    }
+    .mobileNavSideBar{
+        display: none;
         height: 90%;
         width: 45%;
         margin-left: 3vw;
@@ -17,7 +24,10 @@
 @media screen and (max-width: 991px) {
     .navImageBar img{
         height: 100%;
-        width: 70%;
+        /* width: 70%; */
+    }
+    .primary-text{
+        font-size: 3vw !important;
     }
 }
 .navMenuBar{
@@ -40,7 +50,7 @@
     .desktopMenu Button{
         margin: 0 0.1vw;
         transition: ease-in-out 0.1s;
-        transform: translateX(-4vw);
+        /* transform: translateX(-4vw); */
     }
     .desktopMenu Button:hover{
         background-color: white;
@@ -56,8 +66,12 @@
     }
     .mobileNavSideBar{
         width: 50vw;
+        padding: 10%;
         height: 100%;
         background-color: black;
         color: white;
+    }
+    .mobileNavSideBar li{
+        padding: 5%;
     }
 }

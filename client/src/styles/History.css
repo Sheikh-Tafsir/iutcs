@@ -3,6 +3,7 @@
         height: 75vh;
         display: flex;
         color:white;
+        /* margin: 2% 0; */
     }
     .writingsBar{
         padding: 11vh 5vw;

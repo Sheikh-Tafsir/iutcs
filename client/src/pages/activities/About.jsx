@@ -18,10 +18,10 @@ const About = () => {
         </h1>
         <p className="primary-text">
           Dive into the limitless world of coding and unlock your potential
-          whether youre a novice or an experienced programmer, our platform is designed to help you evaluate your skils and thrive in the 
+          whether youre a novice or an experienced programmer, our platform is designed to help you evaluate your skils and thrive in the
           ever-evolving digital landscape
         </p>
-       
+
         <div className="about-buttons-container">
           <button className="secondary-button">Learn More</button>
           <button className="watch-video-button">
