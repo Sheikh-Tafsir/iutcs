@@ -8,12 +8,12 @@ const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
 var corsOptions = {
-  origin: "https://iutcs.vercel.app",
-  // origin: "*",
+  origin: process.env.CORS_ALLOWED_ORIGINS || "*",
 };
 
-//Middleware
+// Then use corsOptions in your CORS middleware setup
 app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // Swagger documentation options
@@ -57,8 +57,6 @@ app.use("/competition", require("./routes/competition/competitionRoute"));
 app.use("/event", require("./routes/event/eventRoute"));
 app.use("/team", require("./routes/team/teamRoute"));
 app.use("/user", require("./routes/user/userRoute"));
-
-
 
 // Start the server on a specific port (e.g., 3000).
 const PORT = process.env.PORT || 3001;
