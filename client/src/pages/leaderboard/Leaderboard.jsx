@@ -14,7 +14,7 @@ const Leaderboard = () => {
         </div>
         
         <div className='leaderFilterBox'>
-            <select className="leaderFilter h-12 outline-none mr-4" value={festName} onChange={(event) => {setFestName(event.target.value);}}>
+            <select className="leaderFilter h-12 outline-none mr-4 custom-select" value={festName} onChange={(event) => {setFestName(event.target.value);}}>
                 <option value="">Select fest</option>
                 <option value="App">ICT Fest</option>
                 <option value="Soft">Code Rush</option>

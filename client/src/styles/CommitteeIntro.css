@@ -2,6 +2,9 @@
     margin: 5%;
     padding: 0.5vw;
 } */
+.parallax-container{
+    overflow-y: hidden;
+}
 #committee-div {
     /* margin: 2%; */
     padding: 0;

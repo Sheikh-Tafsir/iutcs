@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import Navbar from '../../components/navbar/Navbar'
 import Heromain from './Heromain'
 import History from './History'
@@ -12,7 +12,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const LandigPage = () => {
-
+  // useEffect(() => {
+  //   AOS.init({
+  //     once: false, // Set this to true if you want animations to occur only once
+  //   });
+  // }, []);
 
   return (
     <>
@@ -21,22 +25,22 @@ const LandigPage = () => {
         <div  data-aos="flip-up" data-aos-delay="100">
         <Work/>
         </div>
-        <div data-aos="zoom-in">
-        <History />
+        <div data-aos="zoom-in" data-aos-delay="100">
+          <History />
         </div>
         <div data-aos="fade-up" data-aos-delay="100">
-        <Gallery />
+          <Gallery />
         </div>
         <div data-aos="fade-up" data-aos-delay="100">
-        <EventsLanding/>
+          <EventsLanding/>
         </div>
-        {/* <div className='lg:flex'>
+        <div className='lg:flex' data-aos="zoom-in" data-aos-delay="100">
           <Sponsors />
           <Locations/>
-        </div> */}
+        </div>
         <Footer />
     </>
   )
 }
 
-export default LandigPage;
+export default LandigPage

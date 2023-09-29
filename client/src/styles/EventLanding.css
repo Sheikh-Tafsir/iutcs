@@ -1,6 +1,6 @@
 @media screen and (min-width: 992px) {
     .eventslanding{
-        height: 110vh;
+        height: 89vh;
         background-color: rgb(255,255,255);
 
     }
@@ -9,7 +9,7 @@
         font-size: 2.8vw;
         position: relative;
         padding-bottom: 2vh;
-        padding-top: 10vh;
+        padding-top: 5vh;
     }
     .subTitle{
         text-align: center;
@@ -33,15 +33,15 @@
     .eventCard{
         height: 45vh;
         display: flex;
-        width: 95%;
+        width: 49%;
         justify-content: space-between;
         border: 1px solid rgba(0,0,0,0.2);
         border-radius: 1vw;
-        transition: linear 0.1s;
+        transition: linear 0.15s;
         overflow: hidden;
     }
     .eventCard:hover{
-        transform: scale(1.05);
+        transform: scale(1.02);
         box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
     }
     .eventCard img{

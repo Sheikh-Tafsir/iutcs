@@ -1,15 +1,10 @@
 import { useState } from "react";
 import "../../../styles/InterCompetition.css"; // Import your CSS file
-import { useNavigate, useLocation } from 'react-router-dom';
-import Navbar from '../../../components/navbar/Navbar';
+import Navbar from '../../navbar/Navbar';
 
 
 function InterCompetition() {
-  const location = useLocation();
-  const { competition } = location.state;
-
   const [registrationData, setRegistrationData] = useState({
-    competitionId: competition.id,
     universityName: "",
     teamName: "",
     numberOfParticipants: "",
@@ -91,8 +86,8 @@ function InterCompetition() {
   };
 
   // Define minimum and maximum team members allowed
-  const minTeamMembers = competition.no_of_team_member_min;
-  const maxTeamMembers = competition.no_of_team_member_max;
+  const minTeamMembers = 1;
+  const maxTeamMembers = 5;
   const numOptions = Array.from(
     { length: maxTeamMembers - minTeamMembers + 1 },
     (_, index) => index + minTeamMembers

@@ -6,11 +6,21 @@
     background-repeat: no-repeat;
     color: white;
 }
-.topBarAchievements h2{
-   font-size: 5vh;
-   font-weight: 700;
-   padding-top: 8%;
-   text-align: center;
+@media screen and (min-width: 992px) {
+    .topBarAchievements h2{
+        font-size: 5vh;
+        font-weight: 700;
+        padding-top: 5%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 991px) {
+    .topBarAchievements h2{
+        font-size: 5vh;
+        font-weight: 700;
+        padding-top: 8%;
+        text-align: center;
+    }
 }
 .topBarAchievements p{
     font-size: 2.5vh;

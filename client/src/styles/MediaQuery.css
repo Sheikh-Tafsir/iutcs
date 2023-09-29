@@ -1,29 +1,24 @@
 @media screen and (max-width: 1024px){
-    .committee-images{
-
-    }
     .image-container {
-        width: 48%;
-        margin: 1vh auto;
+        width: 50%;
+        margin: 1vw auto;
         height: 75vw;
-        
     }
     .overlay {
-        height: 45%;
+  
+        height: 22%;
         padding: 1%;
         padding-left: 1.5%;
         
-    } 
 
+    } 
+    
+     .overlay h3,
     .overlay p {
-        font-size: 3.4vw ;
-        text-align: left;
+        font-size: 2.5vw ;
     }
     .overlay h3 {
-        font-size: 4.2vw;
-        text-align: left;
-        font-weight: 600;
-        
+        font-size: 3vw;
     }
 
     .image-container:hover .profile-img {
@@ -41,20 +36,14 @@
         margin-bottom: 4.5%;
 
      }
-    .committee-bg{
-        height: 25vh;
-        margin-bottom: 4vh;
-    }
+    
      .committee-h1{
-        font-size: 3.3vh;
+        font-size: 4.5vw;
     }
     .goto{
         font-size: 2vw;
     }
     #faculty, #student{
         font-size: 3vw;
-    }
-    .committee-nav a{
-        font-size: 1.3vh;
     }
 }

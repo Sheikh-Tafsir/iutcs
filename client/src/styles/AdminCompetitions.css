@@ -4,18 +4,19 @@
     background-image: url('/public/slider 2.jpg');
     position: relative;
 }
-.admin-competition-topbar h2{
+.competitions-headerTitle{
     text-align: center;
     font-size: 5vh;
-    color: white;
+    color: black;
     padding-top: 8vh;
     font-weight: 600;
 }
 @media screen and (min-width: 992px) {
     .admin-competition-box{
-        position: absolute;
+        /* position: absolute;
         left:20vw;
-        top:20vh;
+        top:25vh; */
+        min-height: 64vh;
         display: flex;
         flex-wrap: wrap;
         width: 60%;
@@ -24,7 +25,7 @@
         margin-top: 5vh;
     }
     .admin-competitions{
-        height: 24vh;
+        height: 26vh;
         width: 31%;
         background-color:white;
         border-radius: 1vw;
@@ -39,9 +40,10 @@
 }
 @media screen and (max-width: 991px) {
     .admin-competition-box{
-        position: absolute;
+        /* position: absolute;
         left:4vw;
-        top:20vh;
+        top:20vh; */
+        min-height: 43vh;
         display: flex;
         flex-wrap: wrap;
         width: 92%;
@@ -78,12 +80,12 @@
 }
 @media screen and (min-width: 992px) {
     .admin-competition-add-box{
-        height: 24vh;
+        height: 26vh;
         width: 31%;
         background-color:white;
         border-radius: 1vw;
         margin-bottom: 4vh;
-        padding-top: 3%;
+        padding-top: 4%;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
         transition: linear 0.1s;
@@ -119,4 +121,8 @@
 }
 .admin-competition-add-box:hover{
     background-color: rgba(240,240,240);
+}
+.admin-competitions Button{
+    color: rgba(0,0,255,0.6);
+    margin-top: 0.7vh;
 }

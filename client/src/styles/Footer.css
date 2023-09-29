@@ -49,11 +49,13 @@
 @media screen and (max-width: 991px) {
     .footer1 {
         width: 92%;
-        margin: 2vh auto;
+        margin: auto;
+        margin-bottom: 2vh;
         height: fit-content;
         position: relative;
         display: flex;
         justify-content: center;
+
 
     }
 
@@ -189,8 +191,6 @@
         position: relative;
         display: flex;
         justify-content: space-between;
-
-
     }
 
     .footer2contacts {
@@ -206,13 +206,13 @@
     }
 
     .footer2contacts p {
-        margin-bottom: 2vh;
+        margin-bottom: 0vh;
     }
     .footer2contacts div{
-padding: 2vh;
-margin: auto;
-text-align: center;
-justify-content: center;
+        padding: 1.5vh;
+        margin: auto;
+        text-align: center;
+        justify-content: center;
     }
 
 
