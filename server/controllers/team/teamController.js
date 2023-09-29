@@ -46,12 +46,6 @@ async function addTeam(req, res) {
 
     console.error("Error adding team:", error);
     res.status(500).json({ error: "Error adding team" });
-  } finally {
-    // Release the client from the pool
-    // Make sure to release the client even in case of an error
-    if (client) {
-      client.release();
-    }
   }
 }
 
