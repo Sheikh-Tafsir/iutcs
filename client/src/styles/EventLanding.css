@@ -1,6 +1,6 @@
 @media screen and (min-width: 992px) {
     .eventslanding{
-        height: 110vh;
+        height: 89vh;
         background-color: rgb(255,255,255);
 
     }
@@ -33,7 +33,7 @@
     .eventCard{
         height: 45vh;
         display: flex;
-        width: 95%;
+        width: 49%;
         justify-content: space-between;
         border: 1px solid rgba(0,0,0,0.2);
         border-radius: 1vw;

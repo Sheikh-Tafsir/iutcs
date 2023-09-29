@@ -5,7 +5,6 @@
 .topBarAbout{
     height: 43vh;
     width: 100%;
-    color:white;
     text-align: center;
     background-image: url('/slider 2.jpg');
     background-size: cover;
@@ -15,12 +14,12 @@
 @media screen and (min-width: 992px) {
     .textBar{
         height: 86%;
-        padding-top: 5%;
+        padding-top:6%;
         color:black;
     }
     .textBar h2{
-        margin-bottom: 2%;
-        font-size: 3.7vh;
+        margin-bottom: 1%;
+        font-size: 4.5vh;
     }
     .textBar p{
         font-size: 2.3vh;
@@ -34,8 +33,10 @@
         margin: auto;
     }
     .textBar h2{
+        margin-top: 20%;
         margin-bottom: 4%;
-        font-size: 3.7vh;
+        font-size: 4vh;
+        font-weight: 600;
     }
     .textBar p{
         font-size: 2vh;
@@ -43,22 +44,23 @@
 }
 
 
-
-.footerBar{
+.topBarAboutFooter{
     background-color: black;
     height: 14%;
     display: flex;
 }
-.footerBar p{
+.topBarAboutFooter p{
     margin: auto;
     font-size: 2vh;
     font-weight: 600;
+    color:white;
 }
 
 @media screen and (min-width: 992px) {
     .aboutSection{
         height: 59vh;
         display: flex;
+        background-color: white;
     }
     .aboutSubSection{
         width: 76%;
@@ -79,9 +81,10 @@
 }
 @media screen and (max-width: 991px) {
     .aboutSection{
-        height: 100vh;
+        height: 110vh;
         display: flex;
         flex-wrap: wrap;
+       
     }
     .aboutSubSection{
         width: 90%;

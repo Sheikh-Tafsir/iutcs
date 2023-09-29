@@ -13,7 +13,6 @@ import Adminlogin from './pages/adminpanel/Adminlogin';
 import { Adminblogs } from './pages/adminpanel/Adminblogs';
 import Leaderboard from './pages/leaderboard/Leaderboard';
 import CommitteeIntroPage from './pages/executives/CommitteeIntroPage'
-
 import BlogDetails from "./pages/blogs/blogDetails"
 import AdminEvents from './pages/adminpanel/AdminEvents';
 import AdminCompetitions from './pages/adminpanel/AdminCompetitions';
@@ -22,7 +21,6 @@ import AdminEventsCreate from './pages/adminpanel/AdminEventsCreate';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Events from './pages/competitions/Events';
-
 
 
 const App = () => {

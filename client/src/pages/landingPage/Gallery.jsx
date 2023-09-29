@@ -7,7 +7,7 @@ const Gallery = () => {
             <h2 className='galTitle'>Gallery</h2>
             <p className='galSubTitle'>The Love Boat soon will be making another run. The Love Boat promises something for everyone.</p>
             <div className='flex flex-wrap justify-evenly lg:justify-between w-full lg:w-3/4 mx-auto'>
-                <div className='imageCard' data-aos="slide-up" data-aos-delay="0">
+                <div className='imageCard' data-aos="slide-up" data-aos-delay="400">
                     <img src='/gallery 1.jpg' alt='' />
                     <div className='imageCardText'>
                         <p className='text-orange-400'>Key Skills for Professional Career</p>
@@ -21,7 +21,7 @@ const Gallery = () => {
                         <p className='text-white'>Cybersecurity tournament</p>
                     </div>
                 </div>
-                <div className='imageCard' data-aos="slide-up" data-aos-delay="400">
+                <div className='imageCard' data-aos="slide-up" data-aos-delay="0">
                     <img src='/gallery 6.jpg' alt='' />
                     <div className='imageCardText'>
                         <p className='text-orange-400'>Prologue 2023</p>

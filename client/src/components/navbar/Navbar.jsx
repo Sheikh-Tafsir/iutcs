@@ -12,10 +12,7 @@ import Drawer from '@mui/material/Drawer';
 import '../../styles/Navbar.css';
 import {Link} from 'react-router-dom'
 
-
-
 const Navbar = () => {
-  
     const [anchorEl, setAnchorEl] = useState(null);
     const [submenuAnchorEl, setSubmenuAnchorEl] = useState(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +39,7 @@ const Navbar = () => {
     <>
         <div className=' navbar'>
             <div className="w-2/3 lg:w-1/4 navImageBar">
-               <img src='./IUTCSLogo.png'/>
+                <img src="/public/IUTCSLogo.png" alt='logo' />
             </div>
             <div className="w-1/3 lg:w-3/4">
                 <AppBar position="static" className="navMenuBar" elevation={0}>
@@ -54,17 +51,14 @@ const Navbar = () => {
                           <Button color="inherit">
                             <Link to='/events'>Competitions</Link>
                           </Button>
-                          <Button color="inherit">
+                          {/* <Button color="inherit">
                             <Link to='/leaderboard'>Leaderboard</Link>
-                          </Button>
+                          </Button> */}
                           <Button color="inherit">
                             <Link to='/about'>ABOUT</Link>
                           </Button>
                           <Button color="inherit">
-                            <Link to='/leaderboard'>Leaderboard</Link>
-                          </Button>
-                          <Button color="inherit" onClick={handleSubmenuClick}>
-                              ABOUT
+                              <Link to='/blogs'>Blogs</Link>
                           </Button>
                           <Button color="inherit" onClick={handleSubmenuClick}>
                               Our story
@@ -84,7 +78,7 @@ const Navbar = () => {
                           color="inherit"
                           aria-label="menu"
                           onClick={handleMenuToggle}
-                          edge="start"setSubmenuAnchorEl
+                          edge="start"
                           className='navLeftBarButton'
                         >
                           <MenuIcon />
@@ -92,27 +86,17 @@ const Navbar = () => {
                     </Toolbar>
                     
                 </AppBar>     
-                <Drawer className='drawer'
+                <Drawer
                   anchor="left"
                   open={isMenuOpen}
                   onClose={handleMenuToggle}
                 >
-                  {/* <div className='side-menu' style={{ width: 200 }}>
-                    <MenuItem onClick={handleMenuToggle}>Home</MenuItem>
-                    <MenuItem onClick={handleMenuToggle}>Competitions</MenuItem>
-                    <MenuItem onClick={handleMenuToggle}>LeaderBoard</MenuItem>
-                    <MenuItem onClick={handleMenuToggle}>Achievements</MenuItem>
-                    <MenuItem onClick={handleMenuToggle}>Executives</MenuItem>
-                    <MenuItem onClick={handleMenuToggle}>Activities</MenuItem>
-                    <MenuItem onClick={handleMenuToggle}>Blogs</MenuItem>
-                    <MenuItem onClick={handleMenuToggle}>Our Story</MenuItem> */}
-
                   <div className='mobileNavSideBar'>
                     <MenuItem onClick={handleMenuToggle}><Link to='/'>HOME</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/blogs'>BLOGS</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/about'>ABOUT</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/competitions'>COMPETTITION</Link></MenuItem>
-                    <MenuItem onClick={handleMenuToggle}><Link to='/leaderboard'>LEADERBOARD</Link></MenuItem>
+                    {/* <MenuItem onClick={handleMenuToggle}><Link to='/leaderboard'>LEADERBOARD</Link></MenuItem> */}
                     <MenuItem onClick={handleMenuToggle}><Link to='/activities'>ACTIVITIES</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/achievements'>ACHIEVEMENTS</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/executives'>EXECUTIVES</Link></MenuItem>

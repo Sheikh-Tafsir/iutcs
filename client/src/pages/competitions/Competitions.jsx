@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Button } from 'react-bootstrap'
 import { AiOutlinePlus } from 'react-icons/ai'
-import '../../styles/AdminCompetitions.css';
+import '../../styles/Competitions.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Loading from '../../components/loading/Loading';
@@ -15,8 +15,11 @@ const Competitions = () => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const [competitionData, setCompetitionData] = useState(null);    
+
+    const today = new Date();
     useEffect(() => {
         //console.log(item.id);
+        //alert(today);
         const fetchData = async () => {
             try {
                 //const apiPath = `http://localhost:3001/competition/all/${item.id}`;
@@ -56,16 +59,17 @@ const Competitions = () => {
         <Navbar />
         <div>
             <h2 className='competitions-headerTitle'>All Competitions</h2>
-            <div className='admin-competition-box'>
+            <div className='competition-box'>
                 {competitionData.map((competition) => (
                     // eslint-disable-next-line react/jsx-key
-                    <div className='admin-competitions' onClick={() => handleClickNavigation(competition)}>
+                    <div className='competitions' >
                         <h2>{competition.name}</h2>
-                        <p>start date: {competition.start_date.substring(0, 10)}</p>
-                        <p>start date: {competition.end_date.substring(0, 10)}</p>
+                        <p>Competition date: {competition.start_date.substring(0, 10)} - {competition.end_date.substring(0, 10)}</p>
+                        <p>Registration date: {competition.registration_start_date.substring(0, 10)} - {competition.registration_end_date.substring(0, 10)}</p>
                         <p>fees: {competition.fees}TK</p>
                         <p>Member Limit: {competition.no_of_team_member_min} - {competition.no_of_team_member_max}</p>
-                        <Button>Register now</Button>
+                        <Button onClick={() => handleClickNavigation(competition)}>Register now</Button><br/>
+                        <Button onClick={()=> navigate('/leaderboard')}>Leaderboard</Button>
                     </div>
                 ))}
             </div>
@@ -84,6 +88,7 @@ export default Competitions
 // import { Modal, Button, Card } from 'antd'; // Import Ant Design Modal, Button, and Card
 // import { useNavigate  } from 'react-router-dom'; // Import useHistory from React Router
 // import '../../styles/Competitions.css';
+import Leaderboard from './../leaderboard/Leaderboard';
 
 // const competitionData = [
 //   {
