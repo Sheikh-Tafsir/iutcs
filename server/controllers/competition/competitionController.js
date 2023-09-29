@@ -13,7 +13,7 @@ async function addCompetition(req, res) {
     no_of_team_member_min,
     no_of_team_member_max,
     fees,
-    event_id
+    event_id,
   } = req.body.newCompetition;
 
   try {

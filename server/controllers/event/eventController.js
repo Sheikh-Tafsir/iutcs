@@ -1,6 +1,5 @@
 const pool = require("../../db"); // Import the pool object from your db.js file
 
-
 // Get all events
 async function getAllEvents(req, res) {
   try {
@@ -16,7 +15,8 @@ async function getAllEvents(req, res) {
 
 // Create a new event
 async function createEvent(req, res) {
-  const { name, start_date, end_date, event_details, event_type } = req.body.newEvent;
+  const { name, start_date, end_date, event_details, event_type } =
+    req.body.newEvent;
   try {
     // Insert the new event into the database
     const result = await pool.query(

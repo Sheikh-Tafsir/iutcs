@@ -28,7 +28,7 @@ const About = () => {
                         <Button>KNOW MORE </Button>
                     </div>
                     <div className='aboutImageBar'>
-                        <img src='../../../public/event.jpg' alt='' className='h-full w-full'/>
+                        <img src='/event.jpg' alt='' className='h-full w-full'/>
                     </div>
                 </div>
             </div>

@@ -51,9 +51,9 @@ const Navbar = () => {
                 <Button color="inherit">
                   <Link to='/events'>Competitions</Link>
                 </Button>
-                <Button color="inherit">
-                  <Link to='/leaderboard'>Leaderboard</Link>
-                </Button>
+                {/* <Button color="inherit">
+                            <Link to='/leaderboard'>Leaderboard</Link>
+                          </Button> */}
 
                 <Button color="inherit">
                   <Link to='/blogs'>Blogs</Link>
@@ -70,10 +70,10 @@ const Navbar = () => {
                   <MenuItem onClick={handleSubmenuClose}><Link to='/activities'>Activities</Link></MenuItem>
                   <MenuItem onClick={handleSubmenuClose}><Link to='/achievements'>Achievements</Link></MenuItem>
                   <MenuItem onClick={handleSubmenuClose}><Link to='/executives'>Executives</Link></MenuItem>
-
                 </Menu>
+
                 <Button color="inherit">
-                  <Link to='/about'>Our Story</Link>
+                  <Link to='/about'>ABOUT US</Link>
                 </Button>
               </div>
               <IconButton
@@ -98,7 +98,7 @@ const Navbar = () => {
               <MenuItem onClick={handleMenuToggle}><Link to='/blogs'>BLOGS</Link></MenuItem>
               <MenuItem onClick={handleMenuToggle}><Link to='/about'>ABOUT</Link></MenuItem>
               <MenuItem onClick={handleMenuToggle}><Link to='/competitions'>COMPETTITION</Link></MenuItem>
-              <MenuItem onClick={handleMenuToggle}><Link to='/leaderboard'>LEADERBOARD</Link></MenuItem>
+              {/* <MenuItem onClick={handleMenuToggle}><Link to='/leaderboard'>LEADERBOARD</Link></MenuItem> */}
               <MenuItem onClick={handleMenuToggle}><Link to='/activities'>ACTIVITIES</Link></MenuItem>
               <MenuItem onClick={handleMenuToggle}><Link to='/achievements'>ACHIEVEMENTS</Link></MenuItem>
               <MenuItem onClick={handleMenuToggle}><Link to='/executives'>EXECUTIVES</Link></MenuItem>

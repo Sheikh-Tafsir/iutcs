@@ -62,6 +62,7 @@
     border: 1px solid rgb(81, 78, 78);
     height: 6vh;
     padding-left: 1vw;
+    cursor: pointer;
 }
 /* .leaderboardTable th:nth-child(2n+1){
     /* background-color: rgba(255,0,0,0.3); 
@@ -76,7 +77,8 @@
     border: 1px solid rgb(255, 255, 255);
 }
 /* .leaderboardTable td:nth-child(2n+1){
-    /* background-color: rgba(255,0,0,0.3); 
-    background-color: rgb(121, 119, 119);
-    color: white;
+    background-color: rgba(255,0,0,0.3);
+}
+.leaderboardTable tr:hover{
+    background-color: rgba(0,0,0,0.2);
 } */

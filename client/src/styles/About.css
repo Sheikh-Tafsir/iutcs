@@ -6,8 +6,7 @@
     height: 43vh;
     width: 100%;
     text-align: center;
-    /* background-image: url('/slider 2.jpg'); */
-    background-image: url('/blue.jpg');
+    background-image: url('/topbar3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -16,7 +15,7 @@
     .textBar{
         height: 86%;
         padding-top:6%;
-        color:rgb(255, 255, 255);
+        color:rgb(0, 0, 0);
     }
     .textBar h2{
         margin-bottom: 1%;
@@ -29,7 +28,10 @@
 @media screen and (max-width: 991px) {
     .textBar{
         height: 86%;
-        padding-top: 10%;
+        /* padding-top: 10%; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 85%;
         margin: auto;
     }
@@ -41,6 +43,9 @@
     }
     .textBar p{
         font-size: 2vh;
+    }
+    .aboutSection{
+        height: fit-content;
     }
 }
 

@@ -40,7 +40,7 @@ const Footer = () => {
                 
             </div>
             <div className='footer3'>
-            <img src='./IUTCSLogo.png' alt='IUTCS Logo' />
+            <img src='/IUTCSLogo.png' alt='IUTCS Logo' />
                 <div className='my-auto footer2Menu'>
                     <a href="" className='contact-link'><AiFillFacebook className='contact-icon'/></a>
                     <a href="" className='contact-link'><AiFillInstagram className='contact-icon'/></a>
