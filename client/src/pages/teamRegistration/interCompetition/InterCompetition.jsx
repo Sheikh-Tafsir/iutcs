@@ -55,8 +55,8 @@ function InterCompetition() {
       };
       console.log(teamData)
       // Send a POST request to add the team
-      // const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/team/add`, teamData);
-      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/team/add`, teamData);
+      // const response = await axios.post(`http://localhost:3001/team/add`, teamData);
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/team/add`, {teamData: teamData});
 
 
       // Check the response and handle success or error accordingly

@@ -7,8 +7,13 @@ require("dotenv").config();
 const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
+var corsOptions = {
+  origin: "https://iutcs.vercel.app",
+  // origin: "*",
+};
+
 //Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Swagger documentation options

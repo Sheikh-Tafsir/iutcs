@@ -2,7 +2,8 @@ const pool = require("../../db"); // Import the pool object from your db.js file
 
 // Add a new team
 async function addTeam(req, res) {
-  const { team_name, competition_id, team_point, university_name, users } = req.body;
+  const { team_name, competition_id, team_point, university_name, users } =
+    req.body.teamData;
 
   try {
     // Start a transaction
@@ -29,7 +30,18 @@ async function addTeam(req, res) {
     await pool.query("COMMIT");
 
     // Send the added team as the response
-    res.status(201).json({ team: { id: teamId, team_name, competition_id, team_point, university_name, users } });
+    res
+      .status(201)
+      .json({
+        team: {
+          id: teamId,
+          team_name,
+          competition_id,
+          team_point,
+          university_name,
+          users,
+        },
+      });
   } catch (error) {
     // Rollback the transaction on error
     await pool.query("ROLLBACK");
@@ -44,7 +56,6 @@ async function addTeam(req, res) {
     }
   }
 }
-
 
 // Get teams based on competition_id
 async function getTeamsByCompetition(req, res) {

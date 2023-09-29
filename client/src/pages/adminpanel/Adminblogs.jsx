@@ -64,9 +64,9 @@ export const Adminblogs = () => {
     };
 
     const uploadBlog = async (newBlogPost) => {
-      //const apipath = `${import.meta.env.VITE_BASE_URL}/blog/add`;
+      const apipath = `${import.meta.env.VITE_BASE_URL}/blog/add`;
       //console.log(newBlogPost);
-      const apipath = `http://localhost:3001/blog/add`;
+      // const apipath = `http://localhost:3001/blog/add`;
       await axios.post(apipath,
       {
         newBlogPost:newBlogPost
