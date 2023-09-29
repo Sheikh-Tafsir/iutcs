@@ -33,8 +33,8 @@ const Adminlogin = () => {
 
         else if (username === usernameFromEnv && password === passwordFromEnv){
             setLoginStatus("logging in");
-            localStorage.setItem("localStorageUsername",username);
-            window.location.href = "/admin/panel";
+            localStorage.setItem("localStorageIutcsAdminUsername",username);
+            window.location.href = "/admin/events/view";
         }
         else{
             setLoginStatus("Wrong id or password");

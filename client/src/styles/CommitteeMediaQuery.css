@@ -1,0 +1,60 @@
+@media screen and (max-width: 1024px){
+    .committee-images{
+
+    }
+    .image-container {
+        width: 48%;
+        margin: 1vh auto;
+        height: 75vw;
+        
+    }
+    .overlay {
+        height: 45%;
+        padding: 1%;
+        padding-left: 1.5%;
+        
+    } 
+
+    .overlay p {
+        font-size: 3.4vw ;
+        text-align: left;
+    }
+    .overlay h3 {
+        font-size: 4.2vw;
+        text-align: left;
+        font-weight: 600;
+        
+    }
+
+    .image-container:hover .profile-img {
+
+        z-index: 3;
+        transform: scale(0.93);
+        
+
+     }
+    
+     .image-container:hover .overlay{
+        z-index: 3;
+        transform: scale(0.94);
+        margin:0;
+        margin-bottom: 4.5%;
+
+     }
+    .committee-bg{
+        height: 25vh;
+        margin-bottom: 4vh;
+    }
+     .committee-h1{
+        font-size: 3.3vh;
+    }
+    .goto{
+        font-size: 2vw;
+    }
+    #faculty, #student{
+        font-size: 3vw;
+    }
+    .committee-nav a{
+        font-size: 1.3vh;
+    }
+}

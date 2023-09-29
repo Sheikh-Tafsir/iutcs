@@ -1,19 +1,44 @@
 import React, { useState, useEffect } from 'react';
-import '../../../styles/blog.css';
+import '../../../styles/BlogCard.css';
 import { AiOutlineTags, AiOutlineClockCircle, AiOutlineComment, AiOutlineShareAlt, AiOutlineUser } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import blogs from './blogs.json';
+import axios from 'axios'
+import Loading from '../../../components/loading/Loading'
 
 export const Card = () => {
-  const [blogData] = useState(blogs);
+  const [loading, setLoading] = useState(true);
+  const [blogData, setBlogData] = useState(null);
   const [postsToShow, setPostsToShow] = useState(6);
   const [sortedPosts, setSortedPosts] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const sorted = [...blogData].sort((a, b) => new Date(b.date) - new Date(a.date));
-    setSortedPosts(sorted);
-  }, [blogData]);
+    const fetchData = async () => {
+      try {
+        //const apiPath = 'http://localhost:3001/blog/all';
+        const apiPath = `${import.meta.env.VITE_BASE_URL}/blog/all`;
+
+        const response = await axios.get(apiPath);
+
+        // Handle the successful response here
+        console.log(response.data);
+
+        // Assuming the response.data is an array of blogs
+        setBlogData(response.data);
+        setLoading(false);
+        
+        const sorted = [...response.data].sort((a, b) => new Date(b.date) - new Date(a.date));
+        setSortedPosts(sorted);
+      } catch (error) {
+        // Handle any errors that occurred during the request
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const loadMore = () => {
     const additionalPosts = 6;
@@ -40,19 +65,26 @@ export const Card = () => {
     textField.remove();
   };
 
+  if (loading) {
+    return(
+      <Loading />
+    );
+  }
+
   return (
     <section className="blog">
       <div className="container grid2">
         {sortedPosts.slice(0, postsToShow).map((item) => (
           <div className="box boxItems" key={item.id}>
             <div className="img">
-              {item.image && <img src={item.image} alt="" />}
+              {item.imagelink && <img src={item.imagelink} alt="" />}
+              {/* <img src={item.imagelink} alt="" /> */}
             </div>
             <div className="details">
               <div className="author">
                 <AiOutlineUser className="auth_icon" />{item.author}
               </div>
-              <button onClick={() => navigate(`/blogs/details/${item.id}`)} className="card_title_link">
+              <button onClick={() => navigate('/blogs/details', { state: { item } })} className="card_title_link">
                 <h3>{item.title}</h3>
               </button>
               <p>{item.content.slice(0, 65)}...</p>

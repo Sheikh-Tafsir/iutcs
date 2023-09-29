@@ -1,21 +1,30 @@
 .topBarAchievements{
-    height: 50vh;
+    height: 35vh;
     width: 100%;
-    background-image: url('/slider 3.jpg');
+    background-image: url('/topbar2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
 }
-.topBarAchievements h2{
-   font-size: 5vh;
-   font-weight: 700;
-   padding-top: 8%;
-   text-align: center;
+@media screen and (min-width: 992px) {
+    .topBarAchievements h2{
+        font-size: 6vh;
+        padding-top: 4%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 991px) {
+    .topBarAchievements h2{
+        font-size: 5vh;
+        font-weight: 700;
+        padding-top: 14%;
+        text-align: center;
+    }
 }
 .topBarAchievements p{
     font-size: 2.5vh;
     font-weight: 600;
-    width: 50%;
+    width: 90%;
     text-align: center;
     margin: auto;
     margin-top: 1.5vh;

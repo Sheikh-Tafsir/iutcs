@@ -1,19 +1,13 @@
-import React, { useEffect } from 'react';
-
 import '../../styles/CommitteeIntro.css'
-import '../../styles/effects.css'
-import '../../styles/MediaQuery.css'
+import '../../styles/CommitteeEffects.css'
+import '../../styles/CommitteeMediaQuery.css'
 import { facultyData, studentData } from './ExecutiveCommitteeInfo'
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 export const ExecutiveCommittee = () => {
-    useEffect(() => {
-        AOS.init({
-            once: false, // Set this to true if you want animations to occur only once
-        });
-    }, []);
+    
     return (
         <body>
             <div className='parallax-container'>

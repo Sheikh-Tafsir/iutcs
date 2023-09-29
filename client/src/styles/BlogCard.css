@@ -1,0 +1,122 @@
+.blog {
+  margin: 5vh auto; /* Center the component horizontally and add top margin */
+  max-width: 80vw; /* Set a maximum width for the component */
+  padding: 0 20px; /* Add padding to create the gap at right and left */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  /* Updated .container to display two cards per row */
+  @media screen and (min-width: 992px) {
+    .blog .container.grid2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+      gap: 5vw; /* Adjust the gap as needed */
+      align-items: center;
+    } 
+  }
+  @media screen and (max-width: 991px) {
+    .blog .container.grid2 {
+      display: grid;
+      gap: 2vh; /* Adjust the gap as needed */
+      align-items: center;
+    } 
+  }
+  
+  .blog .boxItems {
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: rgb(250,250,250);
+    border-radius: 1vw;
+    padding: 2%;
+    transition: 0.5s;
+  }
+  
+  .blog .boxItems:hover {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+    cursor: pointer;
+    transform: translateY(-5px);
+  }
+  
+  .blog img {
+    width: 100%; /* Change the width to 100% to fill the card container */
+    height: 35vh;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .blog .icon {
+    margin-right: 10px;
+    font-size: 30px;
+    
+  }
+  .card_title_link
+  {
+    margin-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #0056b3;
+  }
+  .blog .tag a {
+    color: blue;
+    opacity: 0.7;
+  }
+  .author{
+    display: flex;
+    align-items: center;
+    color:black;
+  }
+  .auth_icon{ 
+    margin-right: 10px;
+    font-size: 20px;
+   }
+
+  .blog .tag {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .blog h3 {
+    font-weight: 500;
+  }
+  
+  .blog p {
+    color: #999;
+    font-weight: 400;
+    margin: 20px 0;
+    font-size: 17px;
+    line-height: 25px;
+  }
+  
+  .blog .date {
+    display: flex;
+    align-items: center;
+  }
+  
+  .blog .date label {
+    display: block;
+    margin-right: 20px;
+  }
+ /* CSS for the Load More button */
+ .load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.load-more-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+  
+  .load-more-button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }
+  

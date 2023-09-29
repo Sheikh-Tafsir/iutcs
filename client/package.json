@@ -16,7 +16,7 @@
     "@mui/material": "^5.14.10",
     "antd": "^5.9.2",
     "aos": "^2.3.4",
-    "font-awesome": "^4.7.0",
+    "axios": "^1.5.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",

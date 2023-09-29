@@ -6,9 +6,9 @@ const EventsLanding = () => {
   return (
     <>
         <div className='eventslanding'>
-            <h2 className='title'>EVENTS</h2>
+            <h2 className='title'>SEMINARS</h2>
             <p className='subTitle'>The movie star the professor and Mary Ann here on Gilligans Isle. Just sit right back and youll hear.</p>
-            <div className='lg:flex w-full lg:w-3/4 mx-auto justify-between'>
+            <div className='lg:flex w-full lg:w-5/6 mx-auto justify-between'>
                 <div className='eventCard'>
                     <img src='/event 1.jpg' alt=''/>
                     <div className='cardTexts'>
@@ -16,7 +16,7 @@ const EventsLanding = () => {
                         <p>Melbourne, Australia</p>
                         <p>DEC 10, 2022 - MAR 13, 2023</p>
                         <p className='mt-4'>Embarking on a journey to EXPLORE RESEARCH FOR FUTURE IN USA opens doors to a world of opportunities and innovation. </p>
-                        <Button>View Event</Button>
+                        <Button>Know More</Button>
                     </div>
                 </div>
                 <div className='eventCard'>

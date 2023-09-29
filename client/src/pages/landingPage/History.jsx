@@ -4,10 +4,10 @@ const History = () => {
   return (
     <>
         <div className="history">
-            <div className='lg:w-1/3'>
+            <div className='lg:w-1/3' data-aos="fade-up">
                 <img src='/about.jpg' alt='' className='h-full'/>
             </div>
-            <div className='lg:w-2/3 writingsBar'>
+            <div className='lg:w-2/3 writingsBar' data-aos="fade-up">
                 <div className='lg:h-2/5 mb-10 writings'>
                     <div className='writingsHead'>
                         <h2 className='mb-4 lg:mb-0'>OUR HISTORY</h2>

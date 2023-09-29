@@ -1,0 +1,13 @@
+{
+    "development": {
+      "username": "default",
+      "password": "F6od2DfziWqO",
+      "database": "verceldb",
+      "host": "ep-floral-block-66096016-pooler.ap-southeast-1.postgres.vercel-storage.com",
+      "dialect": "postgres"
+    },
+    "production": {
+      "use_env_variable": "postgres://default:F6od2DfziWqO@ep-floral-block-66096016-pooler.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb",
+      "dialect": "postgres"
+    }
+  }

@@ -1,82 +1,63 @@
-html {
-    margin: 0;
-    padding: 0;
-}
-body {
-    margin: 0;
-    padding: 0;
-}
 .navbar{
     height: 10vh;
-    width: 100%;
     display: flex;
-    justify-content: space-between;
     background-color: black;
 }
 .navImageBar{
-    width: 30vw;
-}
-.menu-items{
-    margin-right: 0;
-    padding-right: 0;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0;
-    width: fit-content;
-}
-.css-4t3x6l-MuiPaper-root-MuiDrawer-paper{
-    background-color: rgba(0, 0, 0, 0.581);
-
-}
-.side-menu{
-    background-color: rgba(0, 0, 0);
-}
-.side-menu li{
-    color: white;
+    /* width: 33vw; */
 }
 @media screen and (min-width: 992px) {
     .navImageBar img{
-        height: 100%;
-        /* width: 40%; */
-        transform: scaleY(0.9);
-        margin-left: 1.5%;
+        height: 90%;
+        width: 45%;
+        margin-left: 3vw;
+        margin-top: 0.2vw;
     }
 }
 @media screen and (max-width: 991px) {
     .navImageBar img{
-        height: 110%;
-        /* width: 70%; */
-        transform: scaleY(0.9);
-    }
-    .menu-items{
-        width: 10%;
+        height: 100%;
+        width: 70%;
     }
 }
 .navMenuBar{
     height: 100%;
-    justify-content: flex-end;
     overflow: hidden;
-    
-    
 }
 .navMenuSubBar{
     height: 100%;
     color:black;
-    background-color: white;
     color: white;
     background-color: black;
-    justify-content: center;
+    justify-content:right;
+    /* background-color: rgba(0,0,255,0.4); */
+    
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
     .navLeftBarButton{
         visibility: hidden;
     }
+    .desktopMenu Button{
+        margin: 0 0.1vw;
+        transition: ease-in-out 0.1s;
+        transform: translateX(-4vw);
+    }
+    .desktopMenu Button:hover{
+        background-color: white;
+        color:black;
+    }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1023px) {
     .navLeftBarButton{
-        transform: translateX(-10vw);
+        transform: translateX(-3vw);
     }
     .desktopMenu{
         visibility: hidden;
+    }
+    .mobileNavSideBar{
+        width: 50vw;
+        height: 100%;
+        background-color: black;
+        color: white;
     }
 }

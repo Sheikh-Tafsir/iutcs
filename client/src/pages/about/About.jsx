@@ -16,8 +16,8 @@ const About = () => {
                     <h2>ABOUT US</h2>
                     <p>IUTCS provides a platform for students to explore and expand their knowledge.</p>
                 </div>
-                <div className='footerBar'>
-                    <p>Museum History</p>
+                <div className='topBarAboutFooter'>
+                    <p>Our History</p>
                 </div>
             </div>
             <div className='aboutSection'>
@@ -25,10 +25,10 @@ const About = () => {
                     <div className='aboutTextbar'>
                         <h2>IUTCS: Igniting Innovation in Computer Science.</h2>
                         <p>IUTCS, which stands for Islamic University of Technology Computer Science Club, is a vibrant and dynamic student organization dedicated to fostering a passion for computer science and technology among its members. Located at the Islamic University of Technology (IUT), this club serves as a hub for like-minded individuals who share an enthusiasm for all things related to computer science and engineering.</p>
-                        <Button>BUY TICKETS </Button>
+                        <Button>KNOW MORE </Button>
                     </div>
                     <div className='aboutImageBar'>
-                        <img src='../../../public/event.jpg' alt='' className='h-full w-full'/>
+                        <img src='/event.jpg' alt='' className='h-full w-full'/>
                     </div>
                 </div>
             </div>
