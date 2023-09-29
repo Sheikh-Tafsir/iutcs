@@ -39,7 +39,10 @@ body {
         height: 100%;
         /* width: 40%; */
         transform: scaleY(0.9);
-        margin-left: 1.5%;
+        margin-left: 3%;
+    }
+    .mobileNavSideBar{
+        display: none;
     }
 }
 @media screen and (max-width: 991px) {
@@ -81,9 +84,13 @@ body {
     }
     .mobileNavSideBar{
         width: 50vw;
+        padding: 10%;
         height: 100%;
         background-color: black;
         color: white;
         
+    }
+    .mobileNavSideBar li{
+        padding: 5%;
     }
 }

@@ -12,9 +12,11 @@ const Footer = () => {
            
                 <div className='my-auto footer2contacts'>
                 <p className='footer-heading'>Contact Us</p>
+               
                     <div className='flex'><ImLocation className='footerIcons'/><p className='contact-info'>Boardbazar , Gazipur, Bangladesh</p></div>
                     <div className='flex'><AiFillPhone className='footerIcons'/><p className='contact-info'>(123) 456-7890</p></div>
                     <div className='flex'><AiFillMail className='footerIcons'/><p className='contact-info'>mail@example.com</p></div>
+           
                 </div>
                 </div>
             <div className='footer1'>

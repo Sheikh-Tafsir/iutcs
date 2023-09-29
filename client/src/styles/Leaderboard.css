@@ -56,13 +56,24 @@
     margin-bottom: 10vh;
 }
 .leaderboardTable tr, td, th{
-    border: 1px solid black;
+    border: 1px solid rgb(81, 78, 78);
     height: 6vh;
     padding-left: 1vw;
 }
-.leaderboardTable th:nth-child(2n+1){
-    background-color: rgba(255,0,0,0.3);
+/* .leaderboardTable th:nth-child(2n+1){
+    /* background-color: rgba(255,0,0,0.3); 
+    background-color: rgb(144, 141, 141);
+    color: white;
+} */
+
+.leaderboardTable th{
+    /* background-color: rgba(255,0,0,0.3); */
+    background-color: rgb(23, 8, 75);
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
 }
-.leaderboardTable td:nth-child(2n+1){
-    background-color: rgba(255,0,0,0.3);
-}
+/* .leaderboardTable td:nth-child(2n+1){
+    /* background-color: rgba(255,0,0,0.3); 
+    background-color: rgb(121, 119, 119);
+    color: white;
+} */

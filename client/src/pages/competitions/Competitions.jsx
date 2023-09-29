@@ -3,6 +3,8 @@ import Navbar from '../../components/navbar/Navbar';
 import { Modal, Button, Card } from 'antd'; // Import Ant Design Modal, Button, and Card
 import { useNavigate  } from 'react-router-dom'; // Import useHistory from React Router
 import '../../styles/Competitions.css';
+import Footer from '../../components/footer/Footer';
+
 
 const competitionData = [
   {
@@ -59,6 +61,7 @@ const Competitions = () => {
   };
 
   return (
+    <>
     <div>
       <Navbar />
       <div className="competition-list">
@@ -94,7 +97,10 @@ const Competitions = () => {
           </Card>
         ))}
       </Modal>
+   
     </div>
+    <Footer/>
+    </>
   );
 };
 
