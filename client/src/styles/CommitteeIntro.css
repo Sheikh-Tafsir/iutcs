@@ -146,3 +146,30 @@ div {
     background-color: rgb(255, 255, 255);
     border: none;
 }
+
+
+.image-container {
+    width: 20%;
+    height: 20vw;
+    vertical-align: top;
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: auto;
+    margin: 2.3%;
+    order: 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
