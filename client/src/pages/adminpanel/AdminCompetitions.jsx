@@ -53,13 +53,13 @@ const AdminCompetitions = () => {
                 </div>
 
                 {competitionData.map((competition) => (
-                    <div className='admin-competitions' onClick={() => navigate('/admin/userinfo/view', { state: { competition } })}>
+                    <div className='admin-competitions' onClick={() => navigate('/admin/team/view', { state: { competition } })}>
                         <h2>{competition.name}</h2>
                         <p>start date: {competition.start_date.substring(0, 10)}</p>
                         <p>start date: {competition.end_date.substring(0, 10)}</p>
                         <p>fees: {competition.fees}TK</p>
                         <p>Member Limit: {competition.no_of_team_member_min} - {competition.no_of_team_member_max}</p>
-                        <Button>View Participants </Button>
+                        <Button onClick={() => navigate('/admin/team/view', { state: { competition } })}>View Participants </Button>
                     </div>
                 ))}
             </div>

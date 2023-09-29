@@ -42,16 +42,16 @@ const Adminnavbar = () => {
   return (
     <>
         <div className=' navbar'>
-            <div className="w-2/3 lg:w-1/3 navImageBar">
-                <img src="https://scontent.fdac134-1.fna.fbcdn.net/v/t1.15752-9/379633144_326787363197731_6137547151598542345_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFL3gjt45ElZNfJxb1WR4_T2O7z2e4X843Y7vPZ7hfzjTjAyvXDV_EV2pqEzkhWtQZTrftOwFsWcc_0Ksc7x6qn&_nc_ohc=NyCvWVKTwUUAX85FWEr&_nc_ht=scontent.fdac134-1.fna&cb_e2o_trans=q&oh=03_AdQ5sHFkTja1YwI1MfAxM16_zkqtUzap9QMfV_67Q6ivTg&oe=6536322B" alt='logo' />
+            <div className="w-2/3 lg:w-1/4 navImageBar">
+                <img src="/IUTCSLogo.png" alt='logo' />
             </div>
-            <div className="w-1/3 lg:w-2/3">
+            <div className="w-1/3 lg:w-3/4">
                 <AppBar position="static" className="navMenuBar" elevation={0}>
                     <Toolbar className='navMenuSubBar' >
                         <div className='desktopMenu'>
-                          <Button color="inherit">
+                          {/* <Button color="inherit">
                               <Link to='/admin/panel'>userinfo</Link>
-                          </Button>
+                          </Button> */}
                           <Button color="inherit">
                               <Link to='/admin/blogs'>Blogs</Link>
                           </Button>
@@ -82,11 +82,10 @@ const Adminnavbar = () => {
                   open={isMenuOpen}
                   onClose={handleMenuToggle}
                 >
-                  <div style={{ width: 200 }}>
-                    <MenuItem onClick={handleMenuToggle}>Home</MenuItem>
-                    <MenuItem onClick={handleMenuToggle}>Services</MenuItem>
-                    <MenuItem onClick={handleMenuToggle}>About</MenuItem>
-                    <MenuItem onClick={handleMenuToggle}>Contact</MenuItem>
+                  <div className='mobileNavSideBar'>
+                    <MenuItem onClick={handleMenuToggle}><Link to='/admin/blogs'>BLOGS</Link></MenuItem>
+                    <MenuItem onClick={handleMenuToggle}><Link to='/admin/events/view'>EVENTS</Link></MenuItem>
+                    <MenuItem onClick={handleMenuToggle}><Link to='/admin/judge'>JUDGE</Link></MenuItem>
                   </div>
                 </Drawer>
             </div>

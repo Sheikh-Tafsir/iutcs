@@ -109,7 +109,7 @@ const AdminEventsCreate = () => {
                 />
               </div>
               
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label>Event type (intra or inter)</label>
                 <input
                   type="text"
@@ -117,6 +117,12 @@ const AdminEventsCreate = () => {
                   value={formData.event_type}
                   onChange={handleInputChange}
                 />
+              </div> */}
+              <div className="form-group">
+                <select className="h-12 outline-none" name="event_type" value={formData.event_type} onChange={handleInputChange}>
+                  <option value="Intra">Intra</option>
+                  <option value="Inter">Inter</option>
+                </select>
               </div>
               <div className="form-group">
                 <label>Event details</label>

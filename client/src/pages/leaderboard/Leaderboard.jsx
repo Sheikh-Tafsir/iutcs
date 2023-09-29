@@ -1,34 +1,58 @@
-import React, {useState} from 'react'
+/* eslint-disable react/jsx-key */
+import React, {useState, useEffect} from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import axios from 'axios';
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 import '../../styles/Leaderboard.css'
+import Loading from '../../components/loading/Loading';
 
 const Leaderboard = () => {
-  const [festName, setFestName] = useState("");
-  const [eventName, setEventName] = useState("");
+  const location = useLocation();
+  const { competition } = location.state;
+
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
+
+  const [teamData, setTeamData] = useState('');
+
+  useEffect(() => {
+
+    const fetchData = async () => {
+        try {
+            //const apiPath = `http://localhost:3001/team/all/${competition.id}`;
+            const apiPath = `${import.meta.env.VITE_BASE_URL}/team/all/${competition.id}`;
+
+            const response = await axios.get(apiPath);
+            const sortedTeams = [...response.data.teams].sort((a, b) => b.team_point - a.team_point);
+            // Set sorted teamData to state
+            setTeamData(sortedTeams);
+            setLoading(false);
+        } 
+        catch (error) {
+            console.error('Error fetching data:', error);
+            setLoading(false);
+        }
+    };
+
+    fetchData();
+}, []);
+
+if (loading) {
+    return(
+      <Loading/>
+    );
+  }
+
+
   return (
     <div>
         <Navbar />
         <div className='leaderboardHeadBar'>
           <h2>Leaderboard</h2>
         </div>
-        
-        <div className='leaderFilterBox'>
-            <select className="leaderFilter h-12 outline-none mr-4" value={festName} onChange={(event) => {setFestName(event.target.value);}}>
-                <option value="">Select fest</option>
-                <option value="App">ICT Fest</option>
-                <option value="Soft">Code Rush</option>
-                <option value="ml">Web Off</option>
-            </select>
-            <select className="leaderFilter h-12 outline-none " value={eventName} onChange={(event) => {setEventName(event.target.value);}}>
-                <option value="">Select event</option>
-                <option value="App">Hackathon</option>
-                <option value="Soft">CTF</option>
-                <option value="ml">PC</option>
-                <option value="ml">Datathon</option>
-            </select>
-        </div>
         <div className='viewLeaderUserData'>
+            {/* <h2>{competition.name}</h2> */}
             <table className='leaderboardTable'>
                 <tr>
                     <th className='leaderteamRank'>Rank</th>
@@ -36,30 +60,15 @@ const Leaderboard = () => {
                     <th className='leaderuniversityName'>UNIVERSITY</th>
                     <th className='leaderteamPoints'>POINTS</th>
                 </tr>
+            {teamData.map((team, index) => ( 
                 <tr>
-                    <td className='leaderteamName'>1</td>
-                    <td className='leaderuniversityName'>Phoneix5</td>
-                    <td className='leaderuserName'>IUT</td>
-                    <td className='leaderteamPoints'>1130</td>
+                    <td className='leaderteamRank'>{index+1}</td>
+                    <td className='leaderteamName'>{team.team_name}</td>
+                    <td className='leaderuniversityName'>{team.university_name}</td>
+                    <td className='leaderteamPoints'>{team.team_point}</td>
                 </tr>
-                <tr>
-                    <td className='leaderteamName'>2</td>
-                    <td className='leaderuniversityName'>DU</td>
-                    <td className='leaderuserName'>John Doe</td>
-                    <td className='leaderteamPoints'>1090</td>
-                </tr>
-                <tr>
-                    <td className='leaderteamName'>1</td>
-                    <td className='leaderuniversityName'>IUT</td>
-                    <td className='leaderuserName'>Tafsir Rahman</td>
-                    <td className='leaderteamPoints'>1130</td>
-                </tr>
-                <tr>
-                    <td className='leaderteamName'>1</td>
-                    <td className='leaderuniversityName'>IUT</td>
-                    <td className='leaderuserName'>Tafsir Rahman</td>
-                    <td className='leaderteamPoints'>1130</td>
-                </tr>
+             ))}
+                
             </table>
         </div>
         <Footer/>

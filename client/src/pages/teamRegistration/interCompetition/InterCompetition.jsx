@@ -22,10 +22,9 @@ function InterCompetition() {
   }, [competition]);
 
   const [registrationData, setRegistrationData] = useState({
-    competitionId: competition.id,
-    universityName: "",
-    teamName: "",
-    numberOfParticipants: "",
+    competition_id: competition.id,
+    university_name: "",
+    team_name: "",
     teamMembers: [],
   });
 

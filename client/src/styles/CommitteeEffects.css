@@ -1,5 +1,5 @@
 .image-container:hover .profile-img {
-    box-shadow: 5px 5px 10px 5px rgb(36, 35, 35);
+    box-shadow: 5px 5px 10px 5px rgba(36, 35, 35,0.3);
     transform: scale(1.1);
     transition: .1s ease;
  }

@@ -44,6 +44,9 @@
 
 .newPost .form .form-group input[type="text"],
 .newPost .form .form-group input[type="url"],
+.newPost .form .form-group input[type="date"],
+.newPost .form .form-group input[type="datetime-local"],
+.newPost .form .form-group select,
 .newPost .form .form-group textarea {
     width: 95%;
     padding: 10px;
