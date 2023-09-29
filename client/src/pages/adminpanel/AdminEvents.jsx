@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { AiOutlinePlus } from 'react-icons/ai'
 import axios from 'axios'
 import Loading from '../../components/loading/Loading'
+import Footer from '../../components/footer/Footer';
+import Adminnavbar from './Adminnavbar';
 
 const AdminEvents = () => {
     const navigate = useNavigate();
@@ -44,26 +46,33 @@ const AdminEvents = () => {
       }
 
   return (
-    <div>
-        <div className='admin-events-topbar'>
-            <h2>All Events</h2>
-        </div>
-        <div className='admin-events-box' >
-            <div className='admin-events-add-box' onClick={() => navigate('/admin/events/create')}>
-                <AiOutlinePlus className='add-icon'/>
-                <h2>Add Event</h2>
-            </div>
-            {eventData.map((item) => (
-                <div className='admin-events'>
-                    <h2>{item.name}</h2>
-                    <h3>{item.event_type}</h3>
-                    <p>Start Date: {item.start_date.substring(0, 10)}</p>
-                    <p>End Date: {item.end_date.substring(0, 10)}</p>
-                    <Button onClick={() => navigate('/admin/competitions/view', { state: { item } } )}>View</Button>
+    <>
+        <Adminnavbar/>
+        <div>
+            {/* <div className='admin-events-topbar'>
+                <h2>All Events</h2>
+            </div> */}
+            <div className='admin-events-box' >
+                <div className='admin-events-add-box' onClick={() => navigate('/admin/events/create')}>
+                    <AiOutlinePlus className='add-icon'/>
+                    <h2>Add Event</h2>
                 </div>
-            ))}
+                {eventData.map((item) => (
+                    <div className='admin-events'>
+                        <h2>{item.name}</h2>
+                        <h3>{item.event_type}</h3>
+                        <p>Start Date: {item.start_date.substring(0, 10)}</p>
+                        <p>End Date: {item.end_date.substring(0, 10)}</p>
+                        <Button onClick={() => navigate('/admin/competitions/view', { state: { item } } )}>View</Button>
+                    </div>
+                ))}
+            </div>
+            <div className='admin-events-midbar'>
+                
+            </div>
         </div>
-    </div>
+        <Footer />
+    </>
   )
 }
 

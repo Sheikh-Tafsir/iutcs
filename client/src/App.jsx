@@ -15,13 +15,14 @@ import Leaderboard from './pages/leaderboard/Leaderboard';
 import CommitteeIntroPage from './pages/executives/CommitteeIntroPage'
 
 import BlogDetails from "./pages/blogs/blogDetails"
-
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import AdminEvents from './pages/adminpanel/AdminEvents';
 import AdminCompetitions from './pages/adminpanel/AdminCompetitions';
 import AdminCompetitionsCreate from './pages/adminpanel/AdminCompetitionsCreate';
 import AdminEventsCreate from './pages/adminpanel/AdminEventsCreate';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Events from './pages/competitions/Events';
+
 
 
 const App = () => {
@@ -39,15 +40,13 @@ const App = () => {
           <Route path="/achievements" element={<Achievements/>} />
           <Route path="/executives" element={<CommitteeIntroPage/>} />
           <Route path="/activities" element={<Activities/>} />
-
-    
-          <Route path="/competitions" element={<Competitions/>} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/competitions/view" element={<Competitions/>} />
           <Route path="/interCompetition/:event_id" element={<InterCompetition/>} />
           <Route path="/intraCompetition/:event_id" element={<IntraCompetition/>} />
           <Route path="/admin/panel" element={<Adminpanel/>} />
           <Route path="/admin/login" element={<Adminlogin/>} />
           <Route path="/leaderboard" element={<Leaderboard/>} />
-      
           <Route path="/blogs/details" element={<BlogDetails/>} />
           <Route path="/blogs" element={<BlogsHome/>} />
           <Route path="/admin/blogs" element={<Adminblogs/>} />
@@ -55,6 +54,7 @@ const App = () => {
           <Route path="/admin/competitions/view" element={<AdminCompetitions />} />
           <Route path="/admin/events/create" element={<AdminEventsCreate />} />
           <Route path="/admin/competitions/create" element={<AdminCompetitionsCreate />} />
+          
         </Routes>
       </BrowserRouter>
     </>

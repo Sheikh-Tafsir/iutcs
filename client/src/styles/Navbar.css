@@ -14,32 +14,14 @@ body {
     background-color: black;
 }
 .navImageBar{
-    width: 30vw;
-}
-.menu-items{
-    margin-right: 0;
-    padding-right: 0;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0;
-    width: fit-content;
-}
-.css-4t3x6l-MuiPaper-root-MuiDrawer-paper{
-    background-color: rgba(0, 0, 0, 0.581);
-
-}
-.side-menu{
-    background-color: rgba(0, 0, 0);
-}
-.side-menu li{
-    color: white;
+    /* width: 33vw; */
 }
 @media screen and (min-width: 992px) {
     .navImageBar img{
-        height: 100%;
-        /* width: 40%; */
-        transform: scaleY(0.9);
-        margin-left: 1.5%;
+        height: 110%;
+        width: 60%;
+        transform: scaleY(2);
+        margin-left: 3vw;
     }
 }
 @media screen and (max-width: 991px) {
@@ -56,20 +38,30 @@ body {
     height: 100%;
     justify-content: flex-end;
     overflow: hidden;
-    
-    
 }
 .navMenuSubBar{
     height: 100%;
     color:black;
-    background-color: white;
     color: white;
     background-color: black;
-    justify-content: center;
+    justify-content:right;
+    /* background-color: rgba(0,0,255,0.4); */
+    
 }
 @media screen and (min-width: 1024px) {
     .navLeftBarButton{
         visibility: hidden;
+    }
+    .desktopMenu Button{
+        margin: 0 0.1vw;
+        transition: ease-in-out 0.1s;
+        transform: translateX(-5vw);
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+    .desktopMenu Button:hover{
+        background-color: white;
+        color:black;
     }
 }
 @media screen and (max-width: 1023px) {
@@ -84,6 +76,5 @@ body {
         height: 100%;
         background-color: black;
         color: white;
-        
     }
 }

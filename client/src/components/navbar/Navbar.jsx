@@ -41,23 +41,24 @@ const Navbar = () => {
   return (
     <>
         <div className=' navbar'>
-            <div className="w-1/3 lg:w-1/3 navImageBar" style={{ left: 0 }}>
-                {/* <img src="https://scontent.fdac134-1.fna.fbcdn.net/v/t1.15752-9/379633144_326787363197731_6137547151598542345_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFL3gjt45ElZNfJxb1WR4_T2O7z2e4X843Y7vPZ7hfzjTjAyvXDV_EV2pqEzkhWtQZTrftOwFsWcc_0Ksc7x6qn&_nc_ohc=NyCvWVKTwUUAX85FWEr&_nc_ht=scontent.fdac134-1.fna&cb_e2o_trans=q&oh=03_AdQ5sHFkTja1YwI1MfAxM16_zkqtUzap9QMfV_67Q6ivTg&oe=6536322B" alt='logo' /> */}
-            
-            <img src='./IUTCSLogo.png'></img>
+            <div className="w-2/3 lg:w-1/4 navImageBar">
+               <img src='./IUTCSLogo.png'/>
             </div>
-            {/* <div className="w-1/3 lg:w-2/3 menu-items"> */}
-            <div className="menu-items">
+            <div className="w-1/3 lg:w-3/4">
                 <AppBar position="static" className="navMenuBar" elevation={0}>
                     <Toolbar className='navMenuSubBar' >
                         <div className='desktopMenu'>
                           <Button color="inherit">
                               <Link to='/'>HOME</Link>
                           </Button>
-                         
-                        
                           <Button color="inherit">
-                            <Link to='/competitions'>Competitions</Link>
+                            <Link to='/events'>Competitions</Link>
+                          </Button>
+                          <Button color="inherit">
+                            <Link to='/leaderboard'>Leaderboard</Link>
+                          </Button>
+                          <Button color="inherit">
+                            <Link to='/about'>ABOUT</Link>
                           </Button>
                           <Button color="inherit">
                             <Link to='/leaderboard'>Leaderboard</Link>
@@ -65,6 +66,10 @@ const Navbar = () => {
                           <Button color="inherit" onClick={handleSubmenuClick}>
                               ABOUT
                           </Button>
+                          <Button color="inherit" onClick={handleSubmenuClick}>
+                              Our story
+                          </Button>
+                         
                           <Menu
                               anchorEl={submenuAnchorEl}
                               open={Boolean(submenuAnchorEl)}
@@ -74,19 +79,6 @@ const Navbar = () => {
                               <MenuItem onClick={handleSubmenuClose}><Link to='/executives'>Executives</Link></MenuItem>
                               <MenuItem onClick={handleSubmenuClose}><Link to='/activities'>Activities</Link></MenuItem>
                           </Menu>
-                         
-                         
-                          {/* <Button color="inherit">
-                            <Link to='/admin/login'>Admin</Link>
-                          </Button> */}
-                          <Button color="inherit">
-                              <Link to='/blogs'>Blogs</Link>
-                          </Button>
-
-                          <Button color="inherit">
-                            <Link to='/about'>Our Story</Link>
-                          </Button>
-                         
                         </div>
                         <IconButton
                           color="inherit"
