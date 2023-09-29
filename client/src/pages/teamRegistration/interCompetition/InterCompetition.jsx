@@ -5,7 +5,7 @@ import Navbar from '../../../components/navbar/Navbar';
 import Footer from '../../../components/footer/Footer'
 import axios from 'axios';
 
-function InterCompetition() {
+const InterCompetition = () => {
   const location = useLocation();
   const { competition } = location.state;
   // console.log(competition)
@@ -39,39 +39,57 @@ function InterCompetition() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      // Prepare the data to send in the request
-      const teamData = {
-        team_name: registrationData.teamName,
-        competition_id: registrationData.competitionId,
-        team_point: 0, // You can set the initial team points here
-        university_name: registrationData.universityName,
-        users: registrationData.teamMembers.map((member) => ({
-          name: member.name,
-          email: member.email,
-          contactInfo: member.contactInfo,
-          studentId: member.studentId
-        })),
-      };
-      console.log(teamData)
-      // Send a POST request to add the team
-      // const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/team/add`, teamData);
-      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/team/add`, teamData);
+    const teamData = {
+      team_name: registrationData.teamName,
+      competition_id: registrationData.competitionId,
+      team_point: 0, // You can set the initial team points here
+      university_name: registrationData.universityName,
+      users: registrationData.teamMembers.map((member) => ({
+        name: member.name,
+        email: member.email,
+        contactInfo: member.contactInfo,
+        studentId: member.studentId
+      })),
+    };
+    uploadTeam(teamData)
+
+    // try {
+    //   // Prepare the data to send in the request
+
+    //   // Send a POST request to add the team
+    //   // const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/team/add`, teamData);
+    //   const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/team/add`, teamData);
 
 
-      // Check the response and handle success or error accordingly
-      if (response.status === 201) {
-        console.log('Team added successfully:', response.data);
-        alert('Registration Successful!');
-      } else {
-        console.error('Error adding team:', response.data);
-        alert('Error adding team. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error adding team:', error);
-      alert('Error adding team. Please try again.');
-    }
+    //   // Check the response and handle success or error accordingly
+    //   if (response.status === 201) {
+    //     console.log('Team added successfully:', response.data);
+    //     alert('Registration Successful!');
+    //   } else {
+    //     console.error('Error adding team:', response.data);
+    //     alert('Error adding team. Please try again.');
+    //   }
+    // } catch (error) {
+    //   console.error('Error adding team:', error);
+    //   alert('Error adding team. Please try again.');
+    // }
   };
+
+  const uploadTeam = async (teamData) => {
+    console.log(teamData);
+        const apipath = `${import.meta.env.VITE_BASE_URL}/team/add`;
+        //const apipath = `http://localhost:3001/team/add`;
+        await axios.post(apipath,
+        {
+          teamData: teamData
+        }
+        ).then((response) =>{
+            console.log(response.data);
+            if(response.data)setBlogUploadStatus('upload successful');
+        }).catch(error => {
+          console.log(error);
+        });
+  }
 
   const handleTeamMemberChange = (e, index) => {
     const { name, value } = e.target;
@@ -235,7 +253,7 @@ function InterCompetition() {
       <Footer/>
     </div>
     
-  );
-}
+    );      
+  };
 
 export default InterCompetition;

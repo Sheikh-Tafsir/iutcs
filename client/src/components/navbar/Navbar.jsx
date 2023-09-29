@@ -55,13 +55,13 @@ const Navbar = () => {
                             <Link to='/leaderboard'>Leaderboard</Link>
                           </Button> */}
                           <Button color="inherit">
-                            <Link to='/about'>ABOUT</Link>
-                          </Button>
-                          <Button color="inherit">
                               <Link to='/blogs'>Blogs</Link>
                           </Button>
                           <Button color="inherit" onClick={handleSubmenuClick}>
-                              Our story
+                              Programs
+                          </Button>
+                          <Button color="inherit">
+                            <Link to='/about'>our story</Link>
                           </Button>
                          
                           <Menu
