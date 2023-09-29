@@ -95,8 +95,8 @@
     border: 0.2vh solid black;
 }
 .heromainButtonBar button:nth-child(1):hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(156, 18, 18);
+    color: rgb(255, 255, 255);
 }
 .heromainButtonBar Button:nth-child(2){
     border: 0.2vh solid white;   

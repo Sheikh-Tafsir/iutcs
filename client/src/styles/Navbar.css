@@ -4,45 +4,52 @@
     background-color: black;
 }
 .navImageBar{
-    width: 33vw;
+    /* width: 33vw; */
 }
 @media screen and (min-width: 992px) {
     .navImageBar img{
-        height: 110%;
-        width: 50%;
-        transform: scaleY(2);
+        height: 90%;
+        width: 45%;
         margin-left: 3vw;
+        margin-top: 0.2vw;
     }
 }
 @media screen and (max-width: 991px) {
     .navImageBar img{
-        height: 110%;
+        height: 100%;
         width: 70%;
-        transform: scaleY(2);
     }
 }
 .navMenuBar{
     height: 100%;
     overflow: hidden;
-    
-    
 }
 .navMenuSubBar{
     height: 100%;
     color:black;
-    background-color: white;
     color: white;
     background-color: black;
-    justify-content: center;
+    justify-content:right;
+    /* background-color: rgba(0,0,255,0.4); */
+    
 }
 @media screen and (min-width: 1024px) {
     .navLeftBarButton{
         visibility: hidden;
     }
+    .desktopMenu Button{
+        margin: 0 0.1vw;
+        transition: ease-in-out 0.1s;
+        transform: translateX(-4vw);
+    }
+    .desktopMenu Button:hover{
+        background-color: white;
+        color:black;
+    }
 }
 @media screen and (max-width: 1023px) {
     .navLeftBarButton{
-        transform: translateX(-10vw);
+        transform: translateX(-3vw);
     }
     .desktopMenu{
         visibility: hidden;
@@ -52,6 +59,5 @@
         height: 100%;
         background-color: black;
         color: white;
-        
     }
 }

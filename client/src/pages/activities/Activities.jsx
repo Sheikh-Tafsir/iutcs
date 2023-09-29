@@ -13,11 +13,11 @@ function Activities() {
     <>
       <Navbar />
       <div className="activity-home">
+        <Work />
         <Home />
         <About />
         <Ctf />
         <Webdevx />
-        <Work />
       </div>
       <Footer />
     </>

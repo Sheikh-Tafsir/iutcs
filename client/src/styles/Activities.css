@@ -64,6 +64,7 @@ nav {
   position: relative;
   display: flex;
   padding-top: 3rem;
+  padding-bottom:3rem ;
 }
 .home-bannerImage-container {
   position: absolute;
@@ -91,8 +92,11 @@ nav {
 }
 .primary-text {
   font-size: 20px;
+  font-size: 1.2vw;
   max-width: 500px;
   color: #1f1e1e;
+  color: rgba(0,0,0,0.7);
+  font-weight: 600;
   margin: 1.5rem 0rem;
 }
 .secondary-button {
@@ -261,14 +265,36 @@ nav {
   margin-top: 1.5rem;
 }
 .work-section-wrapper {
-  margin-top: 15rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
-.work-section-top p {
-  text-align: center;
-  max-width: 600px !important;
+@media (min-width: 992px) {
+  .work-section-top p {
+    text-align: center;
+    font-size: 2.3vh;
+    max-width: 600px !important;
+  }
+}
+@media (max-width: 991px) {
+  .work-section-top p {
+    text-align: center;
+    font-size: 1.9vh;
+    max-width: 95% !important;
+  }
 }
 .work-section-top h1 {
   max-width: 700px !important;
+  position: relative;
+  padding-bottom: 2vh;
+}
+.work-section-top h1::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 7.5%;
+  height: 0.3vh;
+  background-color: blue;
+  width: 85%;
 }
 .work-section-top {
   display: flex;
@@ -289,12 +315,18 @@ nav {
   border-radius: 1rem;
   color: #ffffff;
   margin: 1rem 2rem;
+  transition: ease-in-out 0.2s;
+}
+.work-section-info:hover {
+  background-color: rgba(,255,0,0,0.8);
+  transform: scale(1.05);
+  
 }
 .work-section-info h2 {
   margin: 1rem 0rem;
 }
 .work-section-bottom {
-  margin-top: 5rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -307,7 +339,10 @@ nav {
   font-weight: 600;
 }
 .activity-home{
-  padding: 5%;
+  padding-top: 2%;;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 @media (max-width: 1000px) {

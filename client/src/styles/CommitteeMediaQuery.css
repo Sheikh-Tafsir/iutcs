@@ -41,14 +41,20 @@
         margin-bottom: 4.5%;
 
      }
-    
+    .committee-bg{
+        height: 25vh;
+        margin-bottom: 4vh;
+    }
      .committee-h1{
-        font-size: 4.5vw;
+        font-size: 3.3vh;
     }
     .goto{
         font-size: 2vw;
     }
     #faculty, #student{
         font-size: 3vw;
+    }
+    .committee-nav a{
+        font-size: 1.3vh;
     }
 }

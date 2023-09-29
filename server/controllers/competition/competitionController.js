@@ -2,6 +2,7 @@ const pool = require("../../db"); // Import the pool object from your db.js file
 
 // Add a Competition
 async function addCompetition(req, res) {
+  console.log(req.body);
   const {
     name,
     description,
@@ -13,7 +14,7 @@ async function addCompetition(req, res) {
     no_of_team_member_max,
     fees,
     event_id
-  } = req.body;
+  } = req.body.newCompetition;
 
   try {
     // Insert a new competition into the database

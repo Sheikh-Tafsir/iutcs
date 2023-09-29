@@ -8,7 +8,7 @@ export const Adminblogs = () => {
   const [blogUploadStatus, setBlogUploadStatus] = useState('');
     const [formData, setFormData] = useState({
         title: '',
-        image: '',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_fbveBmBPqAkVOIjPxtxPb7B1nzxgN1eH_e5vAXg&s',
         video: '',
         content: '',
         author: 'Admin', // Set the default author as 'Admin'
