@@ -1,6 +1,5 @@
 const pool = require("../../db"); // Import the pool object from your db.js file
 
-
 // Get all events
 async function getAllEvents(req, res) {
   try {
