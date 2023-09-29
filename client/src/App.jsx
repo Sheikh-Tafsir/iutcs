@@ -13,8 +13,6 @@ import Adminlogin from './pages/adminpanel/Adminlogin';
 import Leaderboard from './pages/leaderboard/Leaderboard';
 import CommitteeIntroPage from './pages/executives/CommitteeIntroPage'
 
-import Emni from "./components/footer/Emni";
-
 import { BlogsHome } from "./pages/blogs/Blogs";
 import BlogDetails from "./pages/blogs/blogDetails"
 import { Create } from "./pages/blogs/Create"

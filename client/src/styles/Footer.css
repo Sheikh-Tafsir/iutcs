@@ -5,8 +5,36 @@
     width: 100%;
     display: flex;
     padding: 3% 5%;
-
+       
 }
+   .footer{
+    position: relative;
+   }
+/* Footer.css */
+ 
+  .design-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Places the Design component behind the content */
+    /* Add any other styling you want for the particles */
+  }
+  .design-background {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Places the Design component behind the content */
+    /* Add any other styling you want for the particles */
+}
+
+  
+  /* Rest of your CSS for the Footer component */
+  
 
 .contact-info {
     margin-left: 1% !important;
@@ -111,6 +139,9 @@
         width: 12vw;
         margin: auto;
         margin-bottom: 10%;
+        position: relative;
+        z-index: 2;
+        
     }
 }
 
@@ -125,6 +156,8 @@
         height: 50%;
         width: 20%;
         margin: auto;
+        z-index: 2;
+        position: relative;
     }
 }
 
@@ -158,6 +191,8 @@
     .contact-link {
         padding: 0;
         margin: 0;
+        position: relative;
+        z-index: 2;
     }
 
     .contact-icon {
