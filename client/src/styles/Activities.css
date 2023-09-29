@@ -334,7 +334,7 @@ body{
   margin-top: 2rem;
   margin-bottom: 6rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }

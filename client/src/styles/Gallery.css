@@ -38,10 +38,12 @@
     .csGallery{
         /* background-color: rgb(248,248,248); */
         background-color: rgb(0, 0, 0);
+        background-color: rgb(76 71 71);
         height: 160vh;
         width: 100%;
     }
     .galTitle{
+        color: white;
         text-align: center;
         font-size: 8vw;
         position: relative;
@@ -49,9 +51,11 @@
         padding-top: 10vh;
     }
     .galSubTitle{
+        
         text-align: center;
         font-size: 4vw;
         color: rgba(20,20,20,0.6);
+        color: rgb(255, 255, 255,0.8);
         font-weight: 600;
         margin-top: 3vh;
         margin-bottom: 6vh;
@@ -72,10 +76,12 @@
     .csGallery{
         /* background-color: rgb(248,248,248); */
         background-color: rgb(0, 0, 0);
+        background-color: rgb(76 71 71);
         height: 200vh;
         width: 100%;
     }
     .galTitle{
+        color: rgb(255, 255, 255,1);
         text-align: center;
         font-size: 8vw;
         position: relative;
@@ -86,6 +92,7 @@
         text-align: center;
         font-size: 4vw;
         color: rgba(20,20,20,0.6);
+        color: rgb(255, 255, 255,0.8);
         font-weight: 600;
         margin-top: 3vh;
         margin-bottom: 6vh;
@@ -142,7 +149,7 @@
 }
 .imageCard:hover{
     transform: scale(1.1);
-    box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid white;
 }
 .imageCard img{
     height: 70%;

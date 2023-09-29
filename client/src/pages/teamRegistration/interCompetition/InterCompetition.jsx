@@ -38,26 +38,7 @@ const InterCompetition = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // try {
-    //   // Prepare the data to send in the request
 
-    //   // Send a POST request to add the team
-    //   // const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/team/add`, teamData);
-    //   const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/team/add`, teamData);
-
-
-    //   // Check the response and handle success or error accordingly
-    //   if (response.status === 201) {
-    //     console.log('Team added successfully:', response.data);
-    //     alert('Registration Successful!');
-    //   } else {
-    //     console.error('Error adding team:', response.data);
-    //     alert('Error adding team. Please try again.');
-    //   }
-    // } catch (error) {
-    //   console.error('Error adding team:', error);
-    //   alert('Error adding team. Please try again.');
-    // }
     try {
       // Prepare the data to send in the request
       const teamData = {
@@ -93,9 +74,9 @@ const InterCompetition = () => {
   };
 
   const uploadTeam = async (teamData) => {
-    console.log(teamData);
-        const apipath = `${import.meta.env.VITE_BASE_URL}/team/add`;
-        //const apipath = `http://localhost:3001/team/add`;
+    //console.log(teamData);
+        //const apipath = `${import.meta.env.VITE_BASE_URL}/team/add`;
+        const apipath = `http://localhost:3001/team/add`;
         await axios.post(apipath,
         {
           teamData: teamData
