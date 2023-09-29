@@ -149,7 +149,6 @@
 }
 .imageCard:hover{
     transform: scale(1.1);
-    border: 2px solid white;
 }
 .imageCard img{
     height: 70%;

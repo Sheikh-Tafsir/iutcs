@@ -65,7 +65,7 @@
     cursor: pointer;
 }
 /* .leaderboardTable th:nth-child(2n+1){
-    /* background-color: rgba(255,0,0,0.3); 
+    /background-color: rgba(255,0,0,0.3); 
     background-color: rgb(144, 141, 141);
     color: white;
 } */
@@ -76,9 +76,9 @@
     color: white;
     border: 1px solid rgb(255, 255, 255);
 }
-/* .leaderboardTable td:nth-child(2n+1){
+.leaderboardTable td:nth-child(2n+1){
     background-color: rgba(255,0,0,0.3);
 }
 .leaderboardTable tr:hover{
     background-color: rgba(0,0,0,0.2);
-} */
+}
