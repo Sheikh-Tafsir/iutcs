@@ -9,6 +9,8 @@ const swaggerUi = require("swagger-ui-express");
 
 var corsOptions = {
   origin: process.env.CORS_ALLOWED_ORIGINS || "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Add the HTTP methods you need
+  allowedHeaders: ["Content-Type", "Authorization"], // Add the headers you want to allow
 };
 
 // Then use corsOptions in your CORS middleware setup
