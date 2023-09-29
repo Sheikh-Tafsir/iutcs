@@ -1,14 +1,57 @@
 const pool = require("../../db"); // Import the pool object from your db.js file
 
 // Add a new team
+// async function addTeam(req, res) {
+//   console.log(req.body.teamData);
+//   const { team_name, competition_id, team_point, university_name, users } = req.body;
+
+//   try {
+//     // Start a transaction
+//     await pool.query("BEGIN");
+
+//     // Insert a new team into the database
+//     const teamResult = await pool.query(
+//       "INSERT INTO teams (team_name, competition_id, team_point, university_name) VALUES ($1, $2, $3, $4) RETURNING id",
+//       [team_name, competition_id, team_point, university_name]
+//     );
+
+//     const teamId = teamResult.rows[0].id;
+
+//     // Insert team members into the database
+//     for (const user of users) {
+//       const { name, email, studentId, contactInfo } = user;
+//       await pool.query(
+//         "INSERT INTO users (team_id, name, email, student_id, contact_info) VALUES ($1, $2, $3, $4, $5)",
+//         [teamId, name, email, studentId, contactInfo]
+//       );
+//     }
+
+//     // Commit the transaction
+//     await pool.query("COMMIT");
+
+//     // Send the added team as the response
+//     res.status(201).json({ team: { id: teamId, team_name, competition_id, team_point, university_name, users } });
+//   } catch (error) {
+//     // Rollback the transaction on error
+//     await pool.query("ROLLBACK");
+
+//     console.error("Error adding team:", error);
+//     res.status(500).json({ error: "Error adding team" });
+//   } finally {
+//     // Release the client from the pool
+//     // Make sure to release the client even in case of an error
+//     if (client) {
+//       client.release();
+//     }
+//   }
+// }
+
 async function addTeam(req, res) {
+  console.log(req.body.teamData);
   const { team_name, competition_id, team_point, university_name, users } =
     req.body.teamData;
 
   try {
-    // Start a transaction
-    await pool.query("BEGIN");
-
     // Insert a new team into the database
     const teamResult = await pool.query(
       "INSERT INTO teams (team_name, competition_id, team_point, university_name) VALUES ($1, $2, $3, $4) RETURNING id",
@@ -26,9 +69,6 @@ async function addTeam(req, res) {
       );
     }
 
-    // Commit the transaction
-    await pool.query("COMMIT");
-
     // Send the added team as the response
     res.status(201).json({
       team: {
@@ -41,9 +81,6 @@ async function addTeam(req, res) {
       },
     });
   } catch (error) {
-    // Rollback the transaction on error
-    await pool.query("ROLLBACK");
-
     console.error("Error adding team:", error);
     res.status(500).json({ error: "Error adding team" });
   }
