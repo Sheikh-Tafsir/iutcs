@@ -55,6 +55,7 @@ const Navbar = () => {
                             <Link to='/leaderboard'>Leaderboard</Link>
                           </Button> */}
 
+
                 <Button color="inherit">
                   <Link to='/blogs'>Blogs</Link>
                 </Button>
@@ -66,6 +67,7 @@ const Navbar = () => {
                   anchorEl={submenuAnchorEl}
                   open={Boolean(submenuAnchorEl)}
                   onClose={handleSubmenuClose}
+
                 >
                   <MenuItem onClick={handleSubmenuClose}><Link to='/activities'>Activities</Link></MenuItem>
                   <MenuItem onClick={handleSubmenuClose}><Link to='/achievements'>Achievements</Link></MenuItem>

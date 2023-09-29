@@ -35,7 +35,7 @@ const Adminnavbar = () => {
     };
 
     const logoutFunc = () => {
-        localStorage.setItem("localStorageIutcsAdminUsername",'0');
+        localStorage.setItem("localStorageIutcsAdminUsername","0");
         window.location.href = "/admin/login";
 
     }
