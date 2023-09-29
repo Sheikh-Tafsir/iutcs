@@ -10,17 +10,16 @@ import Footer from '../../components/footer/Footer';
 
 function Activities() {
   return (
-    <>
-      <Navbar />
-      <div className="activity-home">
-        <Home />
-        <About />
-        <Ctf />
-        <Webdevx />
-        <Work />
-      </div>
+    <><Navbar /><div className="activity-home">
+      <Home />
+      <Work />
+      <About />
+
+      <Ctf />
+      <Webdevx />
+
       <Footer />
-    </>
+    </div></>
   );
 }
 

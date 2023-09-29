@@ -1,5 +1,5 @@
 import React from "react";
-import  Card  from "./blog_components/BlogCard";
+import Card from "./blog_components/BlogCard";
 import "../../styles/Blogdetails.css"; // Create a CSS file for your Home component
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'

@@ -2,42 +2,49 @@ import React from 'react';
 import '../../styles/Footer.css'
 import { Link } from 'react-router-dom';
 import {ImLocation} from 'react-icons/im';
-import {AiFillPhone, AiFillMail} from 'react-icons/ai';
+import {AiFillPhone, AiFillMail,AiFillFacebook, AiFillInstagram,AiFillLinkedin} from 'react-icons/ai';
+
 const Footer = () => {
   return (
     <>
         <div className='footerBar'>
+        <div className='footer2'>
+           
+                <div className='my-auto footer2contacts'>
+                <p className='footer-heading'>Contact Us</p>
+                    <div className='flex'><ImLocation className='footerIcons'/><p className='contact-info'>Boardbazar , Gazipur, Bangladesh</p></div>
+                    <div className='flex'><AiFillPhone className='footerIcons'/><p className='contact-info'>(123) 456-7890</p></div>
+                    <div className='flex'><AiFillMail className='footerIcons'/><p className='contact-info'>mail@example.com</p></div>
+                </div>
+                </div>
             <div className='footer1'>
                 <div className='my-auto footer1Menu'>
+                    <p className='footer-heading'>Quick Links</p>
                     <span>
-                        <a href="">Home</a>
+                        <a href="">Home</a><br></br>
                     </span>
                     <span>
-                        <a href="">History</a>
+                        <a href="">Achievements</a><br></br>
                     </span>
                     <span>
-                        <a href="">Events</a>
+                        <a href="">Events</a><br></br>
                     </span>
                     <span>
-                        <a href="">History</a>
+                        <a href="">Blogs</a><br></br>
                     </span>
                     <span>
-                        <a href="">History</a>
+                        <a href="">Our Story</a><br></br>
                     </span>
                 </div>
-                <img src='https://scontent.fdac134-1.fna.fbcdn.net/v/t1.15752-9/379633144_326787363197731_6137547151598542345_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFL3gjt45ElZNfJxb1WR4_T2O7z2e4X843Y7vPZ7hfzjTjAyvXDV_EV2pqEzkhWtQZTrftOwFsWcc_0Ksc7x6qn&_nc_ohc=NyCvWVKTwUUAX85FWEr&_nc_ht=scontent.fdac134-1.fna&cb_e2o_trans=q&oh=03_AdQ5sHFkTja1YwI1MfAxM16_zkqtUzap9QMfV_67Q6ivTg&oe=6536322B' alt='' />
+                
             </div>
-            <div className='footer2'>
-                <div className='my-auto footer2contacts'>
-                    <div className='flex'><ImLocation className='footerIcons'/><p className='inline-block'>345 National Museum, Melbourne PO 6570</p></div>
-                    <div className='flex'><AiFillPhone className='footerIcons'/><p>(123) 456-7890</p></div>
-                    <div className='flex'><AiFillMail className='footerIcons'/><p>mail@example.com</p></div>
-                </div>
+            <div className='footer3'>
+            <img src='./IUTCSLogo.png' alt='IUTCS Logo' />
                 <div className='my-auto footer2Menu'>
-                    <a href="">FACEBOOK</a>
-                    <a href="">ISNTAGRAM</a>
-                    <a href="">PINTEREST</a>
-                    <a href="">LINKEDIN</a>
+                    <a href="" className='contact-link'><AiFillFacebook className='contact-icon'/></a>
+                    <a href="" className='contact-link'><AiFillInstagram className='contact-icon'/></a>
+                    {/* <a href="">PINTEREST</a> */}
+                    <a href="" className='contact-link'><AiFillLinkedin className='contact-icon'/></a>
                 </div>
             </div>
         </div>   

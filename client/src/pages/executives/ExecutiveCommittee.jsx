@@ -47,7 +47,7 @@ export const ExecutiveCommittee = () => {
                         {studentData.map((student, index) => (
                             <div className='image-container'
                                 data-aos="fade-up"
-                                data-aos-delay="150" // Adjust the delay value to control the animation timing
+                                data-aos-delay="100" // Adjust the delay value to control the animation timing
                                 key={index}
                             >
                                 <img className="profile-img" src={student.image} alt={`Student ${index + 1}`} />

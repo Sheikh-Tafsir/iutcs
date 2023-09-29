@@ -12,7 +12,10 @@ import Drawer from '@mui/material/Drawer';
 import '../../styles/Navbar.css';
 import {Link} from 'react-router-dom'
 
+
+
 const Navbar = () => {
+  
     const [anchorEl, setAnchorEl] = useState(null);
     const [submenuAnchorEl, setSubmenuAnchorEl] = useState(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +42,7 @@ const Navbar = () => {
     <>
         <div className=' navbar'>
             <div className="w-2/3 lg:w-1/4 navImageBar">
-                <img src="https://scontent.fdac134-1.fna.fbcdn.net/v/t1.15752-9/379633144_326787363197731_6137547151598542345_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFL3gjt45ElZNfJxb1WR4_T2O7z2e4X843Y7vPZ7hfzjTjAyvXDV_EV2pqEzkhWtQZTrftOwFsWcc_0Ksc7x6qn&_nc_ohc=NyCvWVKTwUUAX85FWEr&_nc_ht=scontent.fdac134-1.fna&cb_e2o_trans=q&oh=03_AdQ5sHFkTja1YwI1MfAxM16_zkqtUzap9QMfV_67Q6ivTg&oe=6536322B" alt='logo' />
+               <img src='./IUTCSLogo.png'/>
             </div>
             <div className="w-1/3 lg:w-3/4">
                 <AppBar position="static" className="navMenuBar" elevation={0}>
@@ -58,7 +61,10 @@ const Navbar = () => {
                             <Link to='/about'>ABOUT</Link>
                           </Button>
                           <Button color="inherit">
-                              <Link to='/blogs'>Blogs</Link>
+                            <Link to='/leaderboard'>Leaderboard</Link>
+                          </Button>
+                          <Button color="inherit" onClick={handleSubmenuClick}>
+                              ABOUT
                           </Button>
                           <Button color="inherit" onClick={handleSubmenuClick}>
                               Our story
@@ -78,7 +84,7 @@ const Navbar = () => {
                           color="inherit"
                           aria-label="menu"
                           onClick={handleMenuToggle}
-                          edge="start"
+                          edge="start"setSubmenuAnchorEl
                           className='navLeftBarButton'
                         >
                           <MenuIcon />
@@ -86,11 +92,21 @@ const Navbar = () => {
                     </Toolbar>
                     
                 </AppBar>     
-                <Drawer
+                <Drawer className='drawer'
                   anchor="left"
                   open={isMenuOpen}
                   onClose={handleMenuToggle}
                 >
+                  {/* <div className='side-menu' style={{ width: 200 }}>
+                    <MenuItem onClick={handleMenuToggle}>Home</MenuItem>
+                    <MenuItem onClick={handleMenuToggle}>Competitions</MenuItem>
+                    <MenuItem onClick={handleMenuToggle}>LeaderBoard</MenuItem>
+                    <MenuItem onClick={handleMenuToggle}>Achievements</MenuItem>
+                    <MenuItem onClick={handleMenuToggle}>Executives</MenuItem>
+                    <MenuItem onClick={handleMenuToggle}>Activities</MenuItem>
+                    <MenuItem onClick={handleMenuToggle}>Blogs</MenuItem>
+                    <MenuItem onClick={handleMenuToggle}>Our Story</MenuItem> */}
+
                   <div className='mobileNavSideBar'>
                     <MenuItem onClick={handleMenuToggle}><Link to='/'>HOME</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/blogs'>BLOGS</Link></MenuItem>
