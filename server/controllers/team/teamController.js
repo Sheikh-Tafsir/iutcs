@@ -30,18 +30,16 @@ async function addTeam(req, res) {
     await pool.query("COMMIT");
 
     // Send the added team as the response
-    res
-      .status(201)
-      .json({
-        team: {
-          id: teamId,
-          team_name,
-          competition_id,
-          team_point,
-          university_name,
-          users,
-        },
-      });
+    res.status(201).json({
+      team: {
+        id: teamId,
+        team_name,
+        competition_id,
+        team_point,
+        university_name,
+        users,
+      },
+    });
   } catch (error) {
     // Rollback the transaction on error
     await pool.query("ROLLBACK");
