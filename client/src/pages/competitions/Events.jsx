@@ -22,7 +22,7 @@ const Events = () => {
                 const response = await axios.get(apiPath);
 
                 // Handle the successful response here
-                console.log(response.data.events);
+                // console.log(response.data.events);
                 setEventData(response.data.events)
                 setLoading(false);
 

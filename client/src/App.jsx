@@ -8,7 +8,6 @@ import Activities from './pages/activities/Activities';
 import Competitions from './pages/competitions/Competitions';
 import InterCompetition from './pages/teamRegistration/interCompetition/InterCompetition';
 import IntraCompetition from './pages/teamRegistration/intraCompetition/IntraCompetition';
-import Adminpanel from './pages/adminpanel/Adminpanel';
 import Adminlogin from './pages/adminpanel/Adminlogin';
 import { Adminblogs } from './pages/adminpanel/Adminblogs';
 import Leaderboard from './pages/leaderboard/Leaderboard';
@@ -21,6 +20,8 @@ import AdminEventsCreate from './pages/adminpanel/AdminEventsCreate';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Events from './pages/competitions/Events';
+import AdminTeamView from './pages/adminpanel/AdminTeamView';
+import AdminUserView from './pages/adminpanel/AdminUserView';
 
 
 const App = () => {
@@ -42,7 +43,6 @@ const App = () => {
           <Route path="/competitions/view" element={<Competitions/>} />
           <Route path="/interCompetition/:event_id" element={<InterCompetition/>} />
           <Route path="/intraCompetition/:event_id" element={<IntraCompetition/>} />
-          <Route path="/admin/panel" element={<Adminpanel/>} />
           <Route path="/admin/login" element={<Adminlogin/>} />
           <Route path="/leaderboard" element={<Leaderboard/>} />
           <Route path="/blogs/details" element={<BlogDetails/>} />
@@ -52,7 +52,8 @@ const App = () => {
           <Route path="/admin/competitions/view" element={<AdminCompetitions />} />
           <Route path="/admin/events/create" element={<AdminEventsCreate />} />
           <Route path="/admin/competitions/create" element={<AdminCompetitionsCreate />} />
-          
+          <Route path="/admin/team/view" element={<AdminTeamView />} />
+          <Route path="/admin/user/view" element={<AdminUserView />} />
         </Routes>
       </BrowserRouter>
     </>

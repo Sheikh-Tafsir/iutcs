@@ -2,34 +2,33 @@
 import React, {useState, useEffect} from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
 import '../../styles/Leaderboard.css'
 import Loading from '../../components/loading/Loading';
+import Adminnavbar from './Adminnavbar';
 
-const Leaderboard = () => {
+const AdminUserView = () => {
   const location = useLocation();
-  const { competition } = location.state;
+  const { team } = location.state;
 
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
-
-  const [teamData, setTeamData] = useState('');
+  const [userData, setUserData] = useState('');
 
   useEffect(() => {
-    //console.log(item.id);
+    //console.log(team.id);
     //alert(today);
     const fetchData = async () => {
         try {
-            const apiPath = `http://localhost:3001/team/all/${competition.id}`;
+            const apiPath = `http://localhost:3001/user/all/${team.id}`;
             //const apiPath = `${import.meta.env.VITE_BASE_URL}/team/all/${competition.id}`;
 
             const response = await axios.get(apiPath);
-            //console.log(response.data.teams);
+            console.log(response.data.users);
             //setTeamData(response.data.teams)
-            const sortedTeams = [...response.data.teams].sort((a, b) => b.team_point - a.team_point);
+
             // Set sorted teamData to state
-            setTeamData(sortedTeams);
+            setUserData(response.data.users);
             setLoading(false);
         } 
         catch (error) {
@@ -50,7 +49,7 @@ if (loading) {
 
   return (
     <div>
-        <Navbar />
+        <Adminnavbar/>
         <div className='leaderboardHeadBar'>
           <h2>Leaderboard</h2>
         </div>
@@ -58,17 +57,17 @@ if (loading) {
             {/* <h2>{competition.name}</h2> */}
             <table className='leaderboardTable'>
                 <tr>
-                    <th className='leaderteamRank'>Rank</th>
-                    <th className='leaderteamName'>TEAM</th>
-                    <th className='leaderuniversityName'>UNIVERSITY</th>
-                    <th className='leaderteamPoints'>POINTS</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact Info</th>
+                    <th>Student Id</th>
                 </tr>
-            {teamData.map((team, index) => ( 
+            {userData.map((user) => ( 
                 <tr>
-                    <td className='leaderteamRank'>{index+1}</td>
-                    <td className='leaderteamName'>{team.team_name}</td>
-                    <td className='leaderuniversityName'>{team.university_name}</td>
-                    <td className='leaderteamPoints'>{team.team_point}</td>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>{user.contact_info}</td>
+                    <td>{user.student_id}</td>
                 </tr>
              ))}
                 
@@ -79,4 +78,4 @@ if (loading) {
   )
 }
 
-export default Leaderboard
+export default AdminUserView

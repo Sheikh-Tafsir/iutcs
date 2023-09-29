@@ -95,7 +95,7 @@ const Navbar = () => {
                     <MenuItem onClick={handleMenuToggle}><Link to='/'>HOME</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/blogs'>BLOGS</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/about'>ABOUT</Link></MenuItem>
-                    <MenuItem onClick={handleMenuToggle}><Link to='/competitions'>COMPETTITION</Link></MenuItem>
+                    <MenuItem onClick={handleMenuToggle}><Link to='/events'>COMPETTITION</Link></MenuItem>
                     {/* <MenuItem onClick={handleMenuToggle}><Link to='/leaderboard'>LEADERBOARD</Link></MenuItem> */}
                     <MenuItem onClick={handleMenuToggle}><Link to='/activities'>ACTIVITIES</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/achievements'>ACHIEVEMENTS</Link></MenuItem>

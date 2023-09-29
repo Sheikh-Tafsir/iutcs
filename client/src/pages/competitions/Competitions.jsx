@@ -16,7 +16,11 @@ const Competitions = () => {
     const [loading, setLoading] = useState(true);
     const [competitionData, setCompetitionData] = useState(null);    
 
-    const today = new Date();
+    const originalDate = new Date();
+    const year = originalDate.getFullYear();
+    const month = String(originalDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+    const day = String(originalDate.getDate()).padStart(2, '0');
+    const formattedDate = `${year}-${month}-${day}`;
     useEffect(() => {
         //console.log(item.id);
         //alert(today);
@@ -26,7 +30,7 @@ const Competitions = () => {
                 const apiPath = `${import.meta.env.VITE_BASE_URL}/competition/all/${item.id}`;
 
                 const response = await axios.get(apiPath);
-                console.log(response.data.competitions);
+                // console.log(response.data.competitions);
                 setCompetitionData(response.data.competitions)
                 setLoading(false);
             } catch (error) {
@@ -38,13 +42,15 @@ const Competitions = () => {
 
         fetchData();
     }, []);
+
     const handleClickNavigation = (competition) => {
-      if(item.event_type === "inter"){
-        navigate(`/interCompetition/${competition.id}`, { state: { competition } })
-      }
-      else{
-        navigate(`/intraCompetition/${competition.id}`, { state: { competition } })
-      }
+      navigate(`/interCompetition/${competition.id}`, { state: { competition } })
+      // if(item.event_type === "inter"){
+      //   navigate(`/interCompetition/${competition.id}`, { state: { competition } })
+      // }
+      // else{
+      //   navigate(`/intraCompetition/${competition.id}`, { state: { competition } })
+      // }
     
     }
 
@@ -68,8 +74,14 @@ const Competitions = () => {
                         <p>Registration date: {competition.registration_start_date.substring(0, 10)} - {competition.registration_end_date.substring(0, 10)}</p>
                         <p>fees: {competition.fees}TK</p>
                         <p>Member Limit: {competition.no_of_team_member_min} - {competition.no_of_team_member_max}</p>
-                        <Button onClick={() => handleClickNavigation(competition)}>Register now</Button><br/>
-                        <Button onClick={()=> navigate('/leaderboard')}>Leaderboard</Button>
+                        <p>{formattedDate}</p>
+                        {/* {formattedDate < competition.start_date.substring(0, 10) ? (
+                          <Button onClick={() => handleClickNavigation(competition)}>Register now</Button>
+                        ) : (
+                          <Button onClick={() => navigate('/leaderboard')}>Leaderboard</Button>
+                        )} */}
+                        <Button onClick={() => handleClickNavigation(competition)}>Register now</Button>
+                        <Button onClick={() => navigate('/leaderboard', { state: { competition } })}>Leaderboard</Button>
                     </div>
                 ))}
             </div>
