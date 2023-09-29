@@ -38,21 +38,6 @@ const InterCompetition = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const teamData = {
-      team_name: registrationData.teamName,
-      competition_id: registrationData.competitionId,
-      team_point: 0, // You can set the initial team points here
-      university_name: registrationData.universityName,
-      users: registrationData.teamMembers.map((member) => ({
-        name: member.name,
-        email: member.email,
-        contactInfo: member.contactInfo,
-        studentId: member.studentId
-      })),
-    };
-    uploadTeam(teamData)
-
     // try {
     //   // Prepare the data to send in the request
 
@@ -73,6 +58,38 @@ const InterCompetition = () => {
     //   console.error('Error adding team:', error);
     //   alert('Error adding team. Please try again.');
     // }
+    try {
+      // Prepare the data to send in the request
+      const teamData = {
+        team_name: registrationData.teamName,
+        competition_id: registrationData.competitionId,
+        team_point: 0, // You can set the initial team points here
+        university_name: registrationData.universityName,
+        users: registrationData.teamMembers.map((member) => ({
+          name: member.name,
+          email: member.email,
+          contactInfo: member.contactInfo,
+          studentId: member.studentId
+        })),
+      };
+      uploadTeam(teamData);
+      // Send a POST request to add the team
+      // const response = await axios.post(`http://localhost:3001/team/add`, teamData);
+      // const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/team/add`, {teamData: teamData});
+
+
+      // // Check the response and handle success or error accordingly
+      // if (response.status === 201) {
+      //   console.log('Team added successfully:', response.data);
+      //   alert('Registration Successful!');
+      // } else {
+      //   console.error('Error adding team:', response.data);
+      //   alert('Error adding team. Please try again.');
+      // }
+    } catch (error) {
+      console.error('Error adding team:', error);
+      alert('Error adding team. Please try again.');
+    }
   };
 
   const uploadTeam = async (teamData) => {
@@ -85,7 +102,7 @@ const InterCompetition = () => {
         }
         ).then((response) =>{
             console.log(response.data);
-            if(response.data)setBlogUploadStatus('upload successful');
+            // if(response.data)setBlogUploadStatus('upload successful');
         }).catch(error => {
           console.log(error);
         });

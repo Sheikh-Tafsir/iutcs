@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../../styles/Adminblogs.css';
-import { IoIosAddCircleOutline } from 'react-icons/io';
 import axios from 'axios';
 import Footer from '../../components/footer/Footer'
 import Adminnavbar from './Adminnavbar';
@@ -65,8 +64,7 @@ export const Adminblogs = () => {
 
     const uploadBlog = async (newBlogPost) => {
       const apipath = `${import.meta.env.VITE_BASE_URL}/blog/add`;
-      //console.log(newBlogPost);
-      //const apipath = `http://localhost:3001/blog/add`;
+
       await axios.post(apipath,
       {
         newBlogPost:newBlogPost
