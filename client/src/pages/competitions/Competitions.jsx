@@ -11,7 +11,7 @@ import Footer from '../../components/footer/Footer';
 const Competitions = () => {
     const location = useLocation();
     const { item } = location.state;
-
+    // console.log(item)
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const [competitionData, setCompetitionData] = useState(null);    
@@ -38,6 +38,7 @@ const Competitions = () => {
 
         fetchData();
     }, []);
+
     const handleClickNavigation = (competition) => {
       if(item.event_type === "inter"){
         navigate(`/interCompetition/${competition.id}`, { state: { competition } })
