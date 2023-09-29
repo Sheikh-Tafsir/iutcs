@@ -51,12 +51,23 @@
 .viewLeaderUserData{
     width: 100%;
 }
-.leaderboardTable{
-    width: 80%;
-    margin: auto;
-    text-align: left;
-    margin-top: 5vh;
-    margin-bottom: 10vh;
+@media screen and (min-width: 992px) {
+    .leaderboardTable{
+        width: 80%;
+        margin: auto;
+        text-align: left;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+    }
+}
+@media screen and (max-width: 991px) {
+    .leaderboardTable{
+        width: 92%;
+        margin: auto;
+        text-align: left;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+    }
 }
 .leaderboardTable tr, td, th{
     border: 1px solid rgb(81, 78, 78);

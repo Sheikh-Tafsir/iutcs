@@ -12,18 +12,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const LandigPage = () => {
-  // useEffect(() => {
-  //   AOS.init({
-  //     once: false, // Set this to true if you want animations to occur only once
-  //   });
-  // }, []);
 
   return (
     <>
         <Navbar/>
         <Heromain/>
-        <div  data-aos="flip-up" data-aos-delay="100">
-        <Work/>
+        <div  data-aos="fade-up" data-aos-delay="100">
+          <Work/>
         </div>
         <div data-aos="zoom-in" data-aos-delay="100">
           <History />
