@@ -23,8 +23,8 @@ const AdminTeamView = () => {
     //alert(today);
     const fetchData = async () => {
         try {
-            const apiPath = `http://localhost:3001/team/all/${competition.id}`;
-            //const apiPath = `${import.meta.env.VITE_BASE_URL}/team/all/${competition.id}`;
+            //const apiPath = `http://localhost:3001/team/all/${competition.id}`;
+            const apiPath = `${import.meta.env.VITE_BASE_URL}/team/all/${competition.id}`;
 
             const response = await axios.get(apiPath);
             //console.log(response.data.teams);

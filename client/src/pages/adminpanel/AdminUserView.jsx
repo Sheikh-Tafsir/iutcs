@@ -20,8 +20,8 @@ const AdminUserView = () => {
     //alert(today);
     const fetchData = async () => {
         try {
-            const apiPath = `http://localhost:3001/user/all/${team.id}`;
-            //const apiPath = `${import.meta.env.VITE_BASE_URL}/team/all/${competition.id}`;
+            //const apiPath = `http://localhost:3001/user/all/${team.id}`;
+            const apiPath = `${import.meta.env.VITE_BASE_URL}/user/all/${team.id}`;
 
             const response = await axios.get(apiPath);
             console.log(response.data.users);

@@ -17,16 +17,13 @@ const Leaderboard = () => {
   const [teamData, setTeamData] = useState('');
 
   useEffect(() => {
-    //console.log(item.id);
-    //alert(today);
+
     const fetchData = async () => {
         try {
-            const apiPath = `http://localhost:3001/team/all/${competition.id}`;
-            //const apiPath = `${import.meta.env.VITE_BASE_URL}/team/all/${competition.id}`;
+            //const apiPath = `http://localhost:3001/team/all/${competition.id}`;
+            const apiPath = `${import.meta.env.VITE_BASE_URL}/team/all/${competition.id}`;
 
             const response = await axios.get(apiPath);
-            //console.log(response.data.teams);
-            //setTeamData(response.data.teams)
             const sortedTeams = [...response.data.teams].sort((a, b) => b.team_point - a.team_point);
             // Set sorted teamData to state
             setTeamData(sortedTeams);

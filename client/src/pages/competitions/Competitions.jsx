@@ -80,7 +80,7 @@ const Competitions = () => {
                         ) : (
                           <Button onClick={() => navigate('/leaderboard')}>Leaderboard</Button>
                         )} */}
-                        <Button onClick={() => handleClickNavigation(competition)}>Register now</Button>
+                        <Button onClick={() => handleClickNavigation(competition)} className='pr-12'>Register now</Button>
                         <Button onClick={() => navigate('/leaderboard', { state: { competition } })}>Leaderboard</Button>
                     </div>
                 ))}

@@ -26,7 +26,7 @@ const Achievements = () => {
             <p>IUTians remain adamant in achieving great success in their career. </p>
         </div>
         <div className='achievementBox'>
-            <h2 className='achievementBoxTitle'>Our Incredible Achievements</h2>
+            {/* <h2 className='achievementBoxTitle'>Our Incredible Achievements</h2> */}
             <div className='gallery'>
                 {AchievementsJson.map((achievement) => (
                     <div className='galleryBox' key={achievement.id} onClick={()=> focusAchievement(achievement)}>

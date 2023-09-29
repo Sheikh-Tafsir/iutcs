@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import {Routes, Route, BrowserRouter} from "react-router-dom";
+import {Routes, Route, BrowserRouter, Navigate} from "react-router-dom";
 import LandigPage from './pages/landingPage/LandigPage'
 import About from './pages/about/About'
 import Achievements from './pages/achievements/Achievements'
@@ -22,9 +22,14 @@ import 'aos/dist/aos.css';
 import Events from './pages/competitions/Events';
 import AdminTeamView from './pages/adminpanel/AdminTeamView';
 import AdminUserView from './pages/adminpanel/AdminUserView';
+import NotFound from './pages/notfound/NotFound';
 
 
 const App = () => {
+  let token = localStorage.getItem('localStorageIutcsAdminUsername');
+
+  const checkToken = () => (token == null || token == "null" || token == "undefined" || token == "" || token == "0");
+
   useEffect(() => {
     AOS.init({
         once: true, // Set this to true if you want animations to occur only once
@@ -43,17 +48,18 @@ const App = () => {
           <Route path="/competitions/view" element={<Competitions/>} />
           <Route path="/interCompetition/:event_id" element={<InterCompetition/>} />
           <Route path="/intraCompetition/:event_id" element={<IntraCompetition/>} />
-          <Route path="/admin/login" element={<Adminlogin/>} />
           <Route path="/leaderboard" element={<Leaderboard/>} />
           <Route path="/blogs/details" element={<BlogDetails/>} />
           <Route path="/blogs" element={<BlogsHome/>} />
-          <Route path="/admin/blogs" element={<Adminblogs/>} />
-          <Route path="/admin/events/view" element={<AdminEvents />} />
-          <Route path="/admin/competitions/view" element={<AdminCompetitions />} />
-          <Route path="/admin/events/create" element={<AdminEventsCreate />} />
-          <Route path="/admin/competitions/create" element={<AdminCompetitionsCreate />} />
-          <Route path="/admin/team/view" element={<AdminTeamView />} />
-          <Route path="/admin/user/view" element={<AdminUserView />} />
+          <Route path="/admin/login" element={checkToken() ? <Adminlogin/>: <Navigate to="/admin/events/view" />} />
+          <Route path="/admin/blogs" element={checkToken() ? <Navigate to="/admin/login" /> : <Adminblogs/>} />
+          <Route path="/admin/events/view" element={checkToken() ? <Navigate to="/admin/login" /> : <AdminEvents />} />
+          <Route path="/admin/competitions/view" element={checkToken() ? <Navigate to="/admin/login" /> : <AdminCompetitions />} />
+          <Route path="/admin/events/create" element={checkToken() ? <Navigate to="/admin/login" /> : <AdminEventsCreate />} />
+          <Route path="/admin/competitions/create" element={checkToken() ? <Navigate to="/admin/login" /> : <AdminCompetitionsCreate />} />
+          <Route path="/admin/team/view" element={checkToken() ? <Navigate to="/admin/login" /> : <AdminTeamView />} />
+          <Route path="/admin/user/view" element={checkToken() ? <Navigate to="/admin/login" /> : <AdminUserView />} />
+          <Route path='*' element={<NotFound/>} />
         </Routes>
       </BrowserRouter>
     </>
