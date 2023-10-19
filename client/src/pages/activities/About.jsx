@@ -4,7 +4,7 @@ import { BsFillPlayCircleFill } from "react-icons/bs";
 
 const About = () => {
   return (
-    <div className="about-section-container" data-aos="zoom-in" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
+    <div className="about-section-container" data-aos="zoom-in" data-aos-delay="100" data-aos-anchor-placement="center-center">
       <div className="about-background-image-container">
         <img src='./Assets/designbanner.png' alt="" loading="lazy"/>
       </div>

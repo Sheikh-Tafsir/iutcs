@@ -32,7 +32,7 @@ const Work = () => {
       </div>
       <div className="work-section-bottom">
         {workInfoData.map((data) => (
-          <div className="work-section-info" key={data.title} data-aos="slide-right" data-aos-delay={data.id * 200} data-aos-duration="200" opacity="50" data-aos-anchor-placement="center-bottom">
+          <div className="work-section-info" key={data.title} data-aos="fade-down" data-aos-delay={data.id * 200} data-aos-duration="200" data-aos-anchor-placement="top-center">
             <div className="info-boxes-img-container">
               <img src={data.image} alt="" />
             </div>

@@ -29,7 +29,7 @@ const LandigPage = () => {
         <div>
           <EventsLanding/>
         </div>
-        <div className='lg:flex' data-aos="zoom-in" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
+        <div className='lg:flex' data-aos="zoom-in" data-aos-delay="200" data-aos-anchor-placement="center-bottom">
           <Sponsors />
           <Locations/>
         </div>
