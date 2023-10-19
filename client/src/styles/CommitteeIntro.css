@@ -78,7 +78,7 @@ div {
     font-size: 1vw;
 }
 .committee-bg{
-    background-image: url('/public/topbar1.jpg');
+    background-image: url('/public/blue-tech-bg.jpg');
     height: 40vh;
     background-size: cover;
     background-position: center;
@@ -132,7 +132,12 @@ div {
 }
 #student-body{
     margin-top: 15vh;
-    
+}
+.student-section{
+    margin-top: 10vh;
+}
+.student-section-title{
+    text-align: center;
 }
 .goto {
     text-decoration: none;

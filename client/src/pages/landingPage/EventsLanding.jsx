@@ -8,7 +8,7 @@ const EventsLanding = () => {
         <div className='eventslanding'>
             <h2 className='title'>SEMINARS</h2>
             <p className='subTitle'>The movie star the professor and Mary Ann here on Gilligans Isle. Just sit right back and youll hear.</p>
-            <div className='lg:flex w-full lg:w-5/6 mx-auto justify-between'>
+            <div className='lg:flex w-full lg:w-5/6 mx-auto justify-between events-section'>
                 <div className='eventCard' data-aos="fade-down" data-aos-delay="100" data-aos-anchor-placement="center-center">
                     <img src='/event 1.jpg' alt=''/>
                     <div className='cardTexts'>

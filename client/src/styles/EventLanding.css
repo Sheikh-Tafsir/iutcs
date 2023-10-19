@@ -1,27 +1,30 @@
 @media screen and (min-width: 992px) {
-    .eventslanding{
-        height: 89vh;
-        background-color: rgb(255,255,255);
+    .eventslanding {
+        height: fit-content;
+        background-color: rgb(255, 255, 255);
 
     }
-    .title{
+
+    .title {
         text-align: center;
         font-size: 2.8vw;
         position: relative;
         padding-bottom: 2vh;
         padding-top: 5vh;
     }
-    .subTitle{
+
+    .subTitle {
         text-align: center;
         font-size: 1.2vw;
-        color: rgba(0,0,0,0.7);
+        color: rgba(0, 0, 0, 0.7);
         font-weight: 600;
         width: 50%;
         margin: auto;
         margin-top: 3vh;
         margin-bottom: 6vh;
     }
-    .title::after{
+
+    .title::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -30,52 +33,68 @@
         background-color: blue;
         width: 6%;
     }
-    .eventCard{
-        height: 45vh;
+
+    .events-section {
+        height: fit-content;
+    }
+
+    .eventCard {
+        height: fit-content;
         display: flex;
-        width: 49%;
-        justify-content: space-between;
-        border: 1px solid rgba(0,0,0,0.2);
+        flex-flow: column;
+        object-fit: contain;
+        width: 35%;
+        justify-content: space-around;
+        border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 1vw;
         transition: linear 0.15s;
         overflow: hidden;
+        margin: auto 5vw;
+        margin-bottom: 4vh;
+
     }
-    .eventCard:hover{
+
+    .eventCard:hover {
         transform: scale(1.02);
         box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
     }
-    .eventCard img{
+
+    .eventCard img {
         height: 100%;
-        width: 55%;
 
     }
-    .cardTexts{
-        width: 45%;
+
+    .cardTexts {
+
         padding: 3vh 2vw;
     }
 }
+
 @media screen and (max-width: 991px) {
-    .eventslanding{
-        height: 135vh;
-        background-color: rgb(255,255,255);
+    .eventslanding {
+        height: fit-content;
+        background-color: rgb(255, 255, 255);
     }
-    .title{
+
+    .title {
         text-align: center;
         font-size: 8vw;
         position: relative;
         padding-bottom: 2vh;
         padding-top: 10vh;
     }
-    .subTitle{
+
+    .subTitle {
         text-align: center;
         font-size: 4vw;
-        color: rgba(20,20,20,0.6);
+        color: rgba(20, 20, 20, 0.6);
         font-weight: 600;
         margin-top: 3vh;
         margin-bottom: 6vh;
-        
+
     }
-    .title::after{
+
+    .title::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -84,41 +103,77 @@
         background-color: blue;
         width: 26%;
     }
-    .eventCard{
+
+    /* .eventCard {
         height: 45vh;
         display: flex;
         width: 92%;
         margin: auto;
         justify-content: space-between;
-        border: 1px solid rgba(0,0,0,0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
         margin-bottom: 3vh;
         border-radius: 0.5vw;
     }
-    .eventCard img{
+
+    .eventCard img {
         height: 40%;
         width: 30%;
     }
-    .cardTexts{
+
+    .cardTexts {
         width: 70%;
         padding: 1.5vh 5vw;
+    } */
+
+    .events-section {
+        height: fit-content;
     }
+
+    .eventCard {
+        height: fit-content;
+        display: flex;
+        flex-flow: column;
+        object-fit: contain;
+        width: 92%;
+        justify-content: space-around;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 1vw;
+        transition: linear 0.15s;
+        overflow: hidden;
+        margin: auto 5vw;
+        margin-bottom: 4vh;
+
+    }
+
+    .eventCard img {
+        height: 100%;
+
+    }
+
+    .cardTexts {
+
+        padding: 3vh 2vw;
+    }
+
 }
 
 
-.cardTexts h2{
+.cardTexts h2 {
     font-size: 2.5vh;
     color: blue;
     margin-bottom: 2vh;
 }
-.cardTexts p{
+
+.cardTexts p {
     font-size: 2vh;
     margin-bottom: 0.8vh;
 }
+
 @media screen and (min-width: 992px) {
-    .cardTexts Button{
+    .cardTexts Button {
         font-size: 2vh;
-        background-color: rgb(20,20,20,0.8);
-        color:white;
+        background-color: rgb(20, 20, 20, 0.8);
+        color: white;
         height: 5vh;
         width: 8vw;
         font-weight: bold;
@@ -127,11 +182,12 @@
         transition: linear 0.2s;
     }
 }
+
 @media screen and (max-width: 992px) {
-    .cardTexts Button{
+    .cardTexts Button {
         font-size: 2vh;
-        background-color: rgb(20,20,20,0.8);
-        color:white;
+        background-color: rgb(20, 20, 20, 0.8);
+        color: white;
         height: 5vh;
         width: 35vw;
         font-weight: bold;
@@ -139,6 +195,7 @@
         margin-top: 3vw;
     }
 }
-.cardTexts Button:hover{
-    background-color: rgba(0,0,255,0.6);
+
+.cardTexts Button:hover {
+    background-color: rgba(0, 0, 255, 0.6);
 }
