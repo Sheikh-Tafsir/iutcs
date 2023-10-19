@@ -6,7 +6,7 @@ const Webdevx = () => {
   return (
     <div className="home-container">
      
-      <div className="home-banner-container">
+      <div className="home-banner-container" data-aos="zoom-out" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
         <div className="home-bannerImage-container">
          
         </div>

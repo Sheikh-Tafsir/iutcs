@@ -44,13 +44,13 @@ const Competitions = () => {
     }, []);
 
     const handleClickNavigation = (competition) => {
-      navigate(`/interCompetition/${competition.id}`, { state: { competition } })
-      // if(item.event_type === "inter"){
-      //   navigate(`/interCompetition/${competition.id}`, { state: { competition } })
-      // }
-      // else{
-      //   navigate(`/intraCompetition/${competition.id}`, { state: { competition } })
-      // }
+      //navigate(`/interCompetition/${competition.id}`, { state: { competition } })
+      if(item.event_type === "Inter University"){
+        navigate(`/interCompetition/${competition.id}`, { state: { competition } })
+      }
+      else if(item.event_type === "Intra University"){
+        navigate(`/intraCompetition/${competition.id}`, { state: { competition } })
+      }
     
     }
 
@@ -64,11 +64,11 @@ const Competitions = () => {
     <>
         <Navbar />
         <div>
-            <h2 className='competitions-headerTitle'>All Competitions</h2>
+            <h2 className='competitions-headerTitle' data-aos="fade-down" data-aos-delay="100" data-aos-anchor-placement="center-bottom">All Competitions</h2>
             <div className='competition-box'>
                 {competitionData.map((competition) => (
                     // eslint-disable-next-line react/jsx-key
-                    <div className='competitions' >
+                    <div className='competitions' data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
                         <h2>{competition.name}</h2>
                         <p>Competition date: {competition.start_date.substring(0, 10)} - {competition.end_date.substring(0, 10)}</p>
                         <p>Registration date: {competition.registration_start_date.substring(0, 10)} - {competition.registration_end_date.substring(0, 10)}</p>

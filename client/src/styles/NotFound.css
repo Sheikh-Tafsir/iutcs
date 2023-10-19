@@ -1,0 +1,19 @@
+.notFound{
+    background-color: rgb(54,54,118);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+.notFoundCover img{
+    height: 70vh;
+    width: 60vw;
+    margin: auto;
+    padding-top: 10vh;
+}
+.notFound Button{
+    height: 5vh;
+    width: 12vw;
+    background-color: white;
+    color:black;
+    border-radius: 0.3vw;
+}

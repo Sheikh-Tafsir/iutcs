@@ -17,10 +17,10 @@ export const BlogsHome = () => {
           />
         </div>
         <div className="cover-text">
-          <h1>BLOGS</h1>
+          <h1 data-aos="fade-down" data-aos-delay="100" data-aos-anchor-placement="center-bottom">BLOGS</h1>
         </div>
       </section>
-      <section className="blog-section">
+      <section className="blog-section" >
         <Card />
       </section>
       <Footer/>

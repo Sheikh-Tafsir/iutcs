@@ -3,12 +3,12 @@ import { BsFillPlayCircleFill } from "react-icons/bs";
 
 const Ctf = () => {
   return (
-    <div className="about-section-container">
+    <div className="about-section-container" data-aos="fade-down" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
       <div className="about-background-image-container">
         
       </div>
       <div className="about-section-image-container">
-        <img src='/Assets/cipher.png' alt="" />
+        <img src='/Assets/cipher.png' alt="" loading="lazy"/>
       </div>
       <div className="about-section-text-container">
         <p className="primary-subheading">CTF</p>

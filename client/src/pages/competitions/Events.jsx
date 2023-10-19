@@ -49,10 +49,11 @@ const Events = () => {
     <>
         <Navbar/>
         <div>
-            <h2 className='events-headerTitle'>All Events</h2>
+            <h2 className='events-headerTitle' data-aos="fade-down" data-aos-delay="100" data-aos-anchor-placement="center-bottom">All Events</h2>
             <div className='admin-events-box' >
                 {eventData.map((item) => (
-                    <div className='admin-events'>
+                    <div className='admin-events' data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
+                        <img src={item.image_link}/>
                         <h2>{item.name}</h2>
                         <h3>{item.event_type}</h3>
                         <p>Start Date: {item.start_date.substring(0, 10)}</p>

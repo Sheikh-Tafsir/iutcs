@@ -75,7 +75,10 @@ export const Card = () => {
     <section className="blog">
       <div className="container grid2">
         {sortedPosts.slice(0, postsToShow).map((item) => (
-          <div className="box boxItems" key={item.id}>
+          <div className="box boxItems" 
+          key={item.id} data-aos="fade-up" 
+          data-aos-delay="100" data-aos-anchor-placement="center-bottom" 
+          onClick={() => navigate('/blogs/details', { state: { item } })}>
             <div className="img">
               {item.imagelink && <img src={item.imagelink} alt="" />}
               {/* <img src={item.imagelink} alt="" /> */}
@@ -84,7 +87,7 @@ export const Card = () => {
               <div className="author">
                 <AiOutlineUser className="auth_icon" />{item.author}
               </div>
-              <button onClick={() => navigate('/blogs/details', { state: { item } })} className="card_title_link">
+              <button className="card_title_link">
                 <h3>{item.title}</h3>
               </button>
               <p>{item.content.slice(0, 65)}...</p>

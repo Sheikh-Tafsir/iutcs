@@ -21,16 +21,18 @@ const Achievements = () => {
   return (
     <>
         <Navbar />
-        <div className='topBarAchievements'>
-            <h2>Achievements</h2>
-            <p>IUTians remain adamant in achieving great success in their career. </p>
+        <div className='topBarAchievements' >
+            <h2 data-aos="fade-down" data-aos-delay="100" data-aos-anchor-placement="center-bottom">Achievements</h2>
+            <p data-aos="fade-down" data-aos-delay="200" data-aos-anchor-placement="center-bottom">IUTians remain adamant in achieving great success in their career. </p>
         </div>
         <div className='achievementBox'>
             {/* <h2 className='achievementBoxTitle'>Our Incredible Achievements</h2> */}
             <div className='gallery'>
                 {AchievementsJson.map((achievement) => (
-                    <div className='galleryBox' key={achievement.id} onClick={()=> focusAchievement(achievement)}>
-                        <img src={achievement.imageSrc} alt='achievement.title' />
+                    <div className='galleryBox' key={achievement.id} 
+                    onClick={()=> focusAchievement(achievement)} 
+                    data-aos="fade-up" data-aos-delay={(achievement.id - 1)*200} >
+                        <img src={achievement.imageSrc} alt='achievement.title' loading="lazy" />
                         <div className='galleryText'>
                             <p>{achievement.position}</p>
                             <h2>{achievement.title}</h2>

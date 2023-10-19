@@ -1,113 +1,50 @@
 import '../../styles/CommitteeIntro.css'
 import '../../styles/CommitteeEffects.css'
 import '../../styles/CommitteeMediaQuery.css'
-import { facultyData, studentData } from './ExecutiveCommitteeInfo'
-
+import { facultyData} from './json/ExecutiveCommitteeTeachersInfo'
+import { studentData} from './json/ExecutiveCommitteeStudentsInfo'
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
 
 export const ExecutiveCommittee = () => {
     
     return (
-        // <body>
-        //     <div className='parallax-container'>
-
-        //         <div id="faculty-body">
-        //             <div data-aos="fade-up">
-        //                 <h3 id="faculty">FacultyBody</h3>
-        //             </div>
-        //             <div className="committee-images">
-        //                 {facultyData.map((faculty, index) => (
-        //                     <div className='image-container'
-        //                         data-aos="fade-up"
-        //                         data-aos-delay="150" // Adjust the delay value to control the animation timing
-        //                         key={index}
-        //                     >
-        //                         <img className="profile-img" src={faculty.image} alt={`Faculty ${index + 1}`} />
-        //                         <div className="overlay">
-        //                             <h3>{faculty.name}</h3>
-        //                             <p>{faculty.division}</p>
-        //                             <p>{faculty.title}</p>
-        //                         </div>
-
-        //                     </div>
-
-        //                 ))}
-        //             </div>
-        //         </div>
-
-        //         <div id="student-body">
-        //             <div data-aos="fade-up">
-        //                 <h3 id="student">StudentBody</h3>
-        //             </div>
-
-
-        //             <div className="committee-images">
-
-        //                 {studentData.map((student, index) => (
-        //                     <div className='image-container'
-        //                         data-aos="fade-up"
-        //                         data-aos-delay="150" // Adjust the delay value to control the animation timing
-        //                         key={index}
-        //                     >
-        //                         <img className="profile-img" src={student.image} alt={`Student ${index + 1}`} />
-        //                         <div className="overlay">
-        //                             <h3>{student.name}</h3>
-        //                             <p>{student.title}</p>
-        //                             <p>{student.division}</p>
-        //                         </div>
-        //                     </div>
-        //                 ))}
-
-        //             </div>
-        //         </div>
-        //     </div>
-        // </body>
-
-
-
-        <body>
-            <div className='parallax-container'>
-             <div data-aos="fade-up">
-        <div id="faculty-body">
-
-            <h3 id="faculty">FacultyBody</h3>
-            <div className="committee-images">
-                {facultyData.map((faculty, index) => (
-                    <figure className="image-container" key={index}>
-                        <img className="profile-img" src={faculty.image} alt={`Faculty ${index + 1}`} />
-                        <div className="overlay">
-                            <h3>{faculty.name}</h3>
-                            <p>{faculty.division}</p>
-                            <p>{faculty.title}</p>
+        <>
+            <div className='parallax-containe'>
+                    <div id="faculty-body" data-aos="fade-up">
+                        <h3 id="faculty" className='font-semibold'>FacultyBody</h3>
+                        <div className="committee-images">
+                            {facultyData.map((faculty, index) => (
+                                <div className="image-container" key={index}>
+                                    <img className="profile-img" src={faculty.image} alt={`Faculty ${index + 1}`} loading="lazy" />
+                                    <div className="overlay">
+                                        <h3>{faculty.name}</h3>
+                                        <p>{faculty.division}</p>
+                                        <p>{faculty.title}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    </figure>
-                ))}
-            </div>
-        </div>
-        </div>
+                    </div>
 
-
-        <div data-aos="fade-up">
-        <div id="student-body">
-            <h3 id="student">StudentBody</h3>
-            <div className="committee-images">
-                {studentData.map((student, index) => (
-                    <figure className="image-container" key={index}>
-                        <img className="profile-img" src={student.image} alt={`Student ${index + 1}`} />
-                        <div className="overlay">
-                            <h3>{student.name}</h3>
-                            <p>{student.title}</p>
-                            <p>{student.division}</p>
-                           
+                    <div id="student-body" data-aos="fade-up">
+                        <h3 id="student" className='font-semibold'>StudentBody</h3>
+                        <div className="committee-images">
+                            {studentData.map((student, index) => (
+                                <div className="image-container" key={index}>
+                                    <img className="profile-img" src={student.image} alt={`Student ${index + 1}`} loading="lazy" />
+                                    <div className="overlay">
+                                        <h3>{student.name}</h3>
+                                        <p>{student.title}</p>
+                                        <p>{student.division}</p>
+                                    
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    </figure>
-                ))}
+                    </div>
             </div>
-        </div>
-        </div>
-        </div>
-    </body>
+        </>
 
     )
 }

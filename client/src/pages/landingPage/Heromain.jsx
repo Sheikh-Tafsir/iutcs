@@ -48,7 +48,7 @@ const Heromain = () => {
     const imageSlide1 = () => {
         imgCount = 0;
         document.querySelector(".heromainslides").style.marginLeft = "0%";
-        document.querySelector(".heromainslides").style.transition = "all 1.5s";
+        document.querySelector(".heromainslides").style.transition = "all 1s";
         
         document.querySelectorAll(".heromainSlideButton")[0].style.backgroundColor = 'white';
         document.querySelectorAll(".heromainSlideButton")[1].style.backgroundColor = 'transparent';
@@ -57,7 +57,7 @@ const Heromain = () => {
     const imageSlide2 = () => {
         imgCount = 1;
         document.querySelector(".heromainslides").style.marginLeft = "-100%";
-        document.querySelector(".heromainslides").style.transition = "all 1.5s";
+        document.querySelector(".heromainslides").style.transition = "all 1s";
         
         document.querySelectorAll(".heromainSlideButton")[0].style.backgroundColor = 'transparent';
         document.querySelectorAll(".heromainSlideButton")[1].style.backgroundColor = 'white';
@@ -66,7 +66,7 @@ const Heromain = () => {
     const imageSlide3 = () => {
         imgCount = 2;
         document.querySelector(".heromainslides").style.marginLeft = "-200%";
-        document.querySelector(".heromainslides").style.transition = "all 1.5s";
+        document.querySelector(".heromainslides").style.transition = "all 1s";
 
         document.querySelectorAll(".heromainSlideButton")[0].style.backgroundColor = 'transparent';
         document.querySelectorAll(".heromainSlideButton")[1].style.backgroundColor ='transparent';
@@ -87,11 +87,11 @@ const Heromain = () => {
                 <span className='arrowIcons' onClick={imageSlideRight}><BsChevronRight className='my-auto mx-auto text-4xl lg:text-2xl 2xl:text-3xl' /></span>
                 
             </div>
-            <div className="mx-auto flex justify-between items-center heromainButtonBar">
+            <div className="mx-auto flex justify-between items-center heromainButtonBar" data-aos="fade-down" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
                 <Button>Continue</Button>
                 <Button>Explore</Button>
             </div>
-            <div className="heromainSlideButtonBar">
+            <div className="heromainSlideButtonBar" data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
                 <span className="heromainSlideButton" onClick={imageSlide1}></span>
                 <span className="heromainSlideButton" onClick={imageSlide2}></span>
                 <span className="heromainSlideButton" onClick={imageSlide3}></span>

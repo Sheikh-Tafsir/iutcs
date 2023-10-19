@@ -6,6 +6,7 @@ import Footer from '../../components/footer/Footer'
 import '../../styles/Leaderboard.css'
 import Loading from '../../components/loading/Loading';
 import Adminnavbar from './Adminnavbar';
+import { Button } from 'react-bootstrap';
 
 const AdminUserView = () => {
   const location = useLocation();
@@ -14,6 +15,23 @@ const AdminUserView = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [userData, setUserData] = useState('');
+  const [updatePoints, setUpdatePoints] = useState('');
+  const [updatePointsStatus, setUpdatePointsStatus] = useState('');
+
+  const UpdatePoints = async () => {
+    const apipath = `${import.meta.env.VITE_BASE_URL}/blog/add`;
+
+    await axios.post(apipath,
+    {
+      updatePoints:updatePoints
+    }
+    ).then((response) =>{
+        console.log(response.data);
+        if(response.data)setUpdatePointsStatus('update successful');
+    }).catch(error => {
+      console.log(error);
+    });
+  }
 
   useEffect(() => {
     //console.log(team.id);
@@ -39,6 +57,7 @@ const AdminUserView = () => {
 
     fetchData();
 }, []);
+
 
 if (loading) {
     return(
@@ -72,7 +91,19 @@ if (loading) {
              ))}
                 
             </table>
+            <div className='updatePointBox'>
+              <h2>Update Points</h2>
+              <h3>Previous Total Points: {team.team_point}</h3>
+              <p>Add points</p>
+              <input type="number" placeholder='example: 30'
+                value={updatePoints}
+                onChange={(event) => {setUpdatePoints(event.target.value);} }
+              />
+              <p>{updatePointsStatus}</p>
+              <Button>Update</Button>
+            </div>
         </div>
+        
         <Footer/>
     </div>
   )

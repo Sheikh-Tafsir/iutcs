@@ -59,6 +59,7 @@ const AdminEvents = () => {
                 </div>
                 {eventData.map((item) => (
                     <div className='admin-events'>
+                        <img src={item.image_link}/>
                         <h2>{item.name}</h2>
                         <h3>{item.event_type}</h3>
                         <p>Start Date: {item.start_date.substring(0, 10)}</p>

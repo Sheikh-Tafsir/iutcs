@@ -3,7 +3,7 @@
     background-image: url('/blue.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 43vh;
+    height: 23vh;
     width: 100%;
     display: flex;
 }
@@ -50,6 +50,7 @@
 }
 .viewLeaderUserData{
     width: 100%;
+    overflow: hidden;
 }
 @media screen and (min-width: 992px) {
     .leaderboardTable{
@@ -59,8 +60,15 @@
         margin-top: 5vh;
         margin-bottom: 10vh;
     }
+    .leaderboardTable tr, td, th{
+        /* border: 1px solid rgb(81, 78, 78); */
+        border-bottom: 1px solid rgba(0, 0, 0,0.2);
+        height: 9vh;
+        padding-left: 1vw;
+        cursor: pointer;
+    }
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1023px){
     .leaderboardTable{
         width: 92%;
         margin: auto;
@@ -68,13 +76,33 @@
         margin-top: 5vh;
         margin-bottom: 10vh;
     }
+    .leaderboardTable tr, td, th{
+        /* border: 1px solid rgb(81, 78, 78); */
+        border-bottom: 1px solid rgba(0, 0, 0,0.2);
+        height: 9vh;
+        padding-left: 1vw;
+        cursor: pointer;
+        text-wrap: wrap;
+    }
 }
-.leaderboardTable tr, td, th{
-    border: 1px solid rgb(81, 78, 78);
-    height: 6vh;
-    padding-left: 1vw;
-    cursor: pointer;
+@media screen and (max-width: 767px){
+    .leaderboardTable{
+        width: 92%;
+        margin: auto;
+        text-align: left;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+    }
+    .leaderboardTable tr, td, th{
+        /* border: 1px solid rgb(81, 78, 78); */
+        border-bottom: 1px solid rgba(0, 0, 0,0.2);
+        height: 9vh;
+        padding-left: 1vw;
+        cursor: pointer;
+        text-wrap: wrap;
+    }
 }
+
 /* .leaderboardTable th:nth-child(2n+1){
     /background-color: rgba(255,0,0,0.3); 
     background-color: rgb(144, 141, 141);
@@ -82,14 +110,140 @@
 } */
 
 .leaderboardTable th{
-    /* background-color: rgba(255,0,0,0.3); */
-    background-color: rgb(4, 4, 18);
-    color: white;
-    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(191,194,196,0.3);
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0,0.1);
 }
-.leaderboardTable td:nth-child(2n+1){
+@media screen and (min-width: 768px) {
+    .leaderboardTable td:nth-child(1){
+        font-weight: 700;
+        font-size: 3vh;
+        color: rgba(0,0,0,0.3);
+    }
+    .leaderboardTable td:nth-child(2){
+        font-size: 2.2vh;
+        font-weight: 700;
+    }
+}
+/* @media screen and (min-width: 768px) and (max-width: 1023px){
+    leaderboardTable td:nth-child(2){
+        font-size: 2.2vh;
+        font-weight: 700;
+    }
+} */
+
+/* .leaderboardTable td:nth-child(2n+1){
     background-color: rgba(255,0,0,0.3);
-}
+}*/
 .leaderboardTable tr:hover{
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.1);
+}
+
+.leaderBoardAddPoints p{
+    background-color: rgba(128, 128, 128);
+    width: 50%;
+    height: 60%;
+    text-align: center;
+    padding-top: 1vh;
+    color: white;
+    border-radius: 0.3vw; 
+}
+.leaderBoardAddPoints p:hover{
+    background-color: rgba(128, 128, 128,0.7);
+}
+
+@media screen and (min-width: 992px) {
+    .updatePointBox{
+        width: 40%;
+        height: 45vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        /* background-color: red; */
+        margin: auto;
+        margin-bottom: 10vh;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: 0.5vw;
+    }
+    .updatePointBox h2{
+        text-align: center;
+        font-size: 4vh;
+        font-weight: 600;
+        padding-top: 5vh;
+        padding-bottom: 1vh;
+    }
+    .updatePointBox h3{
+        text-align: center;
+        font-size: 2.5vh;
+        font-weight: 600;
+        padding-bottom: 5vh;
+    }
+    .updatePointBox p{
+        font-size: 2.5vh;
+        margin-bottom: 1vh;
+    }
+    .updatePointBox input{
+        height: 6vh;
+        width: 100%;
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: 0.3vw;
+        padding-left: 1.5vw;
+    }
+    .updatePointBox Button{
+        height: 5vh;
+        width: 10vw;
+        border-radius: 0.3vw;
+        background-color: red;
+        color: white;
+        margin-top: 2vh;
+    }
+}
+@media screen and (max-width: 991px) {
+    .updatePointBox{
+        width: 80%;
+        height: 42vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        /* background-color: red; */
+        margin: auto;
+        margin-bottom: 10vh;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: 0.5vw;
+    }
+    .updatePointBox h2{
+        text-align: center;
+        font-size: 4vh;
+        font-weight: 600;
+        padding-top: 5vh;
+        padding-bottom: 1vh;
+    }
+    .updatePointBox h3{
+        text-align: center;
+        font-size: 2.5vh;
+        font-weight: 600;
+        padding-bottom: 5vh;
+    }
+    .updatePointBox p{
+        font-size: 2.5vh;
+        margin-bottom: 1vh;
+    }
+    .updatePointBox input{
+        height: 5vh;
+        width: 100%;
+        border: 1px solid rgba(0,0,0,0.1);
+        padding-left: 1vw;
+        padding-right:1vw;
+    }
+    .updatePointBox Button{
+        height: 5vh;
+        width: 100%;
+        border-radius: 0.5vw;
+        background-color: red;
+        color: white;
+        margin: auto;
+        margin-top: 2vh;
+    }
+}
+
+.updatePointBox Button:hover{
+    background-color: rgba(255,50,0);
 }

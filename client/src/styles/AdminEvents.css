@@ -11,36 +11,41 @@
     padding-top: 8vh;
     font-weight: 600;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
     .admin-events-box{
-        
-        /* position: absolute;
-        left:20vw;
-        top:20vh; */
         min-height: 64vh;
         display: flex;
         flex-wrap: wrap;
-        width: 60%;
+        width: 64%;
         margin: auto;
         justify-content: space-between;
         margin-top: 5vh;
     }
     .admin-events{
-        height: 27vh;
+        height: 55vh;
         width: 31%;
         background-color:white;
         border-radius: 1vw;
+        margin: auto;
+        text-align: center;
         margin-bottom: 4vh;
-        padding-left: 2.8%;
         padding-top: 3%;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
+        
         transition: linear 0.1s;
+    }
+    .admin-events img{
+        width: 90%;
+        height: 27vh;
+        border-radius: 1vw;
+        margin: auto;
+        margin-bottom: 1vh;
     }
     .admin-events Button{
         height: 4vh;
-        width: 5vw;
-        border-radius: 0.3vw;
+        width: 80%;
+        border-radius: 0.4vw;
         color:white;
         margin-top: 2.5vh;
         font-size: 2vh;
@@ -48,7 +53,7 @@
         transition: linear 0.1s;
     } 
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .admin-events-box{
         /* position: absolute;
         left:4vw;
@@ -62,21 +67,68 @@
         margin-top: 5vh;
     }
     .admin-events{
-        height: 27vh;
+        height: 50vh;
         width: 49%;
         background-color:white;
         border-radius: 1vw;
         margin-bottom: 4vh;
-        padding-left: 2.8%;
-        padding-top: 5%;
+        padding-top: 4%;
+        text-align: center;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
         transition: linear 0.1s;
     }
+    .admin-events img{
+        width: 84%;
+        height: 22vh;
+        border-radius: 1vw;
+        margin: auto;
+        margin-bottom: 1vh;
+    }
     .admin-events Button{
         height: 4vh;
-        width: 16vw;
-        border-radius: 0.3vw;
+        width: 80%;
+        border-radius: 0.4vw;
+        color:white;
+        margin-top: 2.5vh;
+        font-size: 2vh;
+        background-color: rgba(0,0,255,0.6);
+        transition: linear 0.1s;
+    } 
+}
+@media screen and (max-width: 767px) {
+    .admin-events-box{
+        min-height: 44vh;
+        flex-wrap: wrap;
+        width: 92%;
+        margin: auto;
+        justify-content: space-between;
+        margin-top: 5vh;
+    }
+    .admin-events{
+        height: 50vh;
+        width: 84%;
+        background-color:white;
+        border-radius: 1vw;
+        margin: auto;
+        margin-bottom: 4vh;
+        padding-top: 6%;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
+        transition: linear 0.1s;
+    }
+    .admin-events img{
+        width: 84%;
+        height: 22vh;
+        border-radius: 1vw;
+        margin: auto;
+        margin-bottom: 1vh;
+    }
+    .admin-events Button{
+        height: 4vh;
+        width: 80%;
+        border-radius: 0.4vw;
         color:white;
         margin-top: 2.5vh;
         font-size: 2vh;
@@ -104,14 +156,14 @@
 .admin-events Button:hover{
     background-color: rgba(0,0,0,0.6);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
     .admin-events-add-box{
-        height: 27vh;
+        height: 55vh;
         width: 31%;
         background-color:white;
         border-radius: 1vw;
         margin-bottom: 4vh;
-        padding-top: 3%;
+        padding-top: 13%;
         border: 1px solid rgba(0, 0, 0, 0.2);
         box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
         transition: linear 0.1s;
@@ -123,9 +175,10 @@
         margin-top: 13%;
     }
 }
-@media screen and (max-width: 991px) {
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .admin-events-add-box{
-        height: 27vh;
+        height: 50vh;
         width: 49%;
         background-color:white;
         border-radius: 1vw;
@@ -139,10 +192,30 @@
         color: rgba(0,0,255,0.6);
         font-size: 4vh;
         margin: auto;
-        margin-top: 32%;
+        margin-top: 50%;
     }
 }
 
+@media screen and (max-width: 767px){
+    .admin-events-add-box{
+        height: 44vh;
+        width: 84%;
+        background-color:white;
+        border-radius: 1vw;
+        margin: auto;
+        margin-bottom: 4vh;
+        padding-top: 9%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 10px 0px 20px 5px rgba(0, 0, 0, 0.1);
+        transition: linear 0.1s;
+    }
+    .admin-events-add-box .add-icon{
+        color: rgba(0,0,255,0.6);
+        font-size: 4vh;
+        margin: auto;
+        margin-top: 32%;
+    }
+}
 .admin-events-add-box h2{
     text-align: center;
     font-size: 2.5vh;

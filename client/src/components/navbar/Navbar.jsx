@@ -35,32 +35,33 @@ const Navbar = () => {
     const handleMenuToggle = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    // window.addEventListener("scroll",function(){
+    //   document.querySelector(".navbar").classList.toggle("navbarSticky",window.scrollY > 80);
+    // });
   return (
     <>
         <div className=' navbar'>
             <div className="w-2/3 lg:w-1/4 navImageBar">
-                <img src="/IUTCSLogo.png" alt='logo' />
+                <img src="/IUTCSLogo.png" alt='logo' data-aos="fade-left" data-aos-delay="0" data-aos-anchor-placement="center-bottom"/>
             </div>
             <div className="w-1/3 lg:w-3/4">
                 <AppBar position="static" className="navMenuBar" elevation={0}>
                     <Toolbar className='navMenuSubBar' >
                         <div className='desktopMenu'>
-                          <Button color="inherit">
+                          <Button color="inherit" data-aos="fade-right" data-aos-delay="0" data-aos-anchor-placement="center-bottom">
                               <Link to='/'>HOME</Link>
                           </Button>
-                          <Button color="inherit">
+                          <Button color="inherit" data-aos="fade-right" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
                             <Link to='/events'>Competitions</Link>
                           </Button>
-                          {/* <Button color="inherit">
-                            <Link to='/leaderboard'>Leaderboard</Link>
-                          </Button> */}
-                          <Button color="inherit">
+                          <Button color="inherit" data-aos="fade-right" data-aos-delay="200" data-aos-anchor-placement="center-bottom">
                               <Link to='/blogs'>Blogs</Link>
                           </Button>
-                          <Button color="inherit" onClick={handleSubmenuClick}>
+                          <Button color="inherit" onClick={handleSubmenuClick}  data-aos="fade-right" data-aos-delay="300" data-aos-anchor-placement="center-bottom">
                               Programs
                           </Button>
-                          <Button color="inherit">
+                          <Button color="inherit"  data-aos="fade-right" data-aos-delay="400" data-aos-anchor-placement="center-bottom">
                             <Link to='/about'>about us</Link>
                           </Button>
                          

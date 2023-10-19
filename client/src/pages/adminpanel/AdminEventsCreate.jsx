@@ -10,6 +10,7 @@ const AdminEventsCreate = () => {
     const [blogUploadStatus, setBlogUploadStatus] = useState('');
     const [formData, setFormData] = useState({
         name: '',
+        image_link: '',
         start_date: '',
         end_date: '',
         event_details: '',
@@ -31,6 +32,7 @@ const AdminEventsCreate = () => {
         // Create the new blog post object
         const newEvent = {
             name: formData.name,
+            image_link: formData.image_link,
             start_date: formData.start_date,
             end_date: formData.end_date,
             event_details: formData.event_details,
@@ -42,6 +44,7 @@ const AdminEventsCreate = () => {
         // Clear the form after submission
         setFormData({
             name: '',
+            image_link: '',
             start_date: '',
             end_date: '',
             event_details: '',
@@ -91,6 +94,16 @@ const AdminEventsCreate = () => {
               </div>
 
               <div className="form-group">
+                <label>Image Link</label>
+                <input
+                  type="text"
+                  name="image_link"
+                  value={formData.image_link}
+                  onChange={handleInputChange}
+                />
+              </div>
+
+              <div className="form-group">
                 <label>Competition Start Date</label>
                 <input
                   type="date"
@@ -120,8 +133,8 @@ const AdminEventsCreate = () => {
               </div> */}
               <div className="form-group">
                 <select className="h-12 outline-none" name="event_type" value={formData.event_type} onChange={handleInputChange}>
-                  <option value="Intra">Intra</option>
-                  <option value="Inter">Inter</option>
+                  <option value="Intra University">Intra University</option>
+                  <option value="Inter University">Inter University</option>
                 </select>
               </div>
               <div className="form-group">

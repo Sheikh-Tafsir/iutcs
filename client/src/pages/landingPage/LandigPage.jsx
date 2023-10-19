@@ -17,19 +17,19 @@ const LandigPage = () => {
     <>
         <Navbar/>
         <Heromain/>
-        <div  data-aos="fade-up" data-aos-delay="100">
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
           <Work/>
         </div>
-        <div data-aos="zoom-in" data-aos-delay="100">
+        <div data-aos="zoom-in" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
           <History />
         </div>
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div>
           <Gallery />
         </div>
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div>
           <EventsLanding/>
         </div>
-        <div className='lg:flex' data-aos="zoom-in" data-aos-delay="100">
+        <div className='lg:flex' data-aos="zoom-in" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
           <Sponsors />
           <Locations/>
         </div>

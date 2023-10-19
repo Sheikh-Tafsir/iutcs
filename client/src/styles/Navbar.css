@@ -1,23 +1,43 @@
 .navbar{
     height: 10vh;
+    width: 100vw;
     display: flex;
     background-color: black;
+    position: relative;
+    z-index: 100;
+    transition: 0.1s;
+}
+.navbarSticky{
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.5);
+    transition: 0.1s;
 }
 .navImageBar{
     /* width: 33vw; */
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
     .navImageBar img{
-        height: 90%;
-        width: 45%;
-        margin-left: 3vw;
-        margin-top: 0.2vw;
+        height: 80%;
+        width: 35%;
+        margin-left: 5vw;
+        margin-top: 0.4vw;
     }
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .navImageBar img{
-        height: 100%;
-        width: 70%;
+        height: 80%;
+        width: 40%;
+        margin-top: 1vw;
+        margin-left:5vw;
+    }
+}
+@media screen and (max-width: 767px) {
+    .navImageBar img{
+        height: 80%;
+        width: 50%;
+        margin-top: 1vw;
+        margin-left:5vw;
     }
 }
 .navMenuBar{
@@ -36,6 +56,9 @@
 @media screen and (min-width: 1024px) {
     .navLeftBarButton{
         visibility: hidden;
+    }
+    .desktopMenu{
+        margin-right: 6vw;
     }
     .desktopMenu Button{
         margin: 0 0.1vw;
