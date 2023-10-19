@@ -64,6 +64,9 @@ const Navbar = () => {
                           <Button color="inherit"  data-aos="fade-right" data-aos-delay="400" data-aos-anchor-placement="center-bottom">
                             <Link to='/about'>about us</Link>
                           </Button>
+                          <Button color="inherit"  data-aos="fade-right" data-aos-delay="500" data-aos-anchor-placement="center-bottom">
+                            <Link to='/contacts'>contacts</Link>
+                          </Button>
                          
                           <Menu
                               anchorEl={submenuAnchorEl}
@@ -100,6 +103,7 @@ const Navbar = () => {
                     <MenuItem onClick={handleMenuToggle}><Link to='/activities'>ACTIVITIES</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/achievements'>ACHIEVEMENTS</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/executives'>EXECUTIVES</Link></MenuItem>
+                    <MenuItem onClick={handleMenuToggle}><Link to='/contacts'>CONTACTS</Link></MenuItem>
                   </div>
                 </Drawer>
             </div>

@@ -23,6 +23,7 @@ import Events from './pages/competitions/Events';
 import AdminTeamView from './pages/adminpanel/AdminTeamView';
 import AdminUserView from './pages/adminpanel/AdminUserView';
 import NotFound from './pages/notfound/NotFound';
+import Contacts from './components/contacts/Contacts';
 
 
 const App = () => {
@@ -51,6 +52,7 @@ const App = () => {
           <Route path="/leaderboard" element={<Leaderboard/>} />
           <Route path="/blogs/details" element={<BlogDetails/>} />
           <Route path="/blogs" element={<BlogsHome/>} />
+          <Route path='contacts' element={<Contacts/>} />
           <Route path="/admin/login" element={checkToken() ? <Adminlogin/>: <Navigate to="/admin/events/view" />} />
           <Route path="/admin/blogs" element={checkToken() ? <Navigate to="/admin/login" /> : <Adminblogs/>} />
           <Route path="/admin/events/view" element={checkToken() ? <Navigate to="/admin/login" /> : <AdminEvents />} />

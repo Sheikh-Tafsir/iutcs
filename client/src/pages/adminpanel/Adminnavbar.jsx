@@ -58,9 +58,9 @@ const Adminnavbar = () => {
                           <Button color="inherit">
                             <Link to='/admin/events/view'>events</Link>
                           </Button>
-                          <Button color="inherit">
+                          {/* <Button color="inherit">
                             <Link to='/admin/judge'>judge</Link>
-                          </Button>
+                          </Button> */}
                           <Button color="inherit" onClick={()=>logoutFunc()} >
                             <p className='bg-red-600 p-2 rounded-lg'>Logout</p>
                           </Button>
@@ -85,7 +85,10 @@ const Adminnavbar = () => {
                   <div className='mobileNavSideBar'>
                     <MenuItem onClick={handleMenuToggle}><Link to='/admin/blogs'>BLOGS</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/admin/events/view'>EVENTS</Link></MenuItem>
-                    <MenuItem onClick={handleMenuToggle}><Link to='/admin/judge'>JUDGE</Link></MenuItem>
+                    {/* <MenuItem onClick={handleMenuToggle}><Link to='/admin/judge'>JUDGE</Link></MenuItem> */}
+                    <Button color="inherit" onClick={()=>logoutFunc()} >
+                        <p className='bg-red-600 p-2 rounded-lg'>Logout</p>
+                    </Button>
                   </div>
                 </Drawer>
             </div>
