@@ -16,7 +16,37 @@
 .navImageBar{
     /* width: 33vw; */
 }
-@media screen and (min-width: 1024px) {
+
+@media screen and (min-width: 992px) {
+    .navImageBar img{
+        height: 100%;
+        /* width: 40%; */
+        transform: scaleY(0.9);
+        /* margin-left: 3%; */
+        margin-left: 5vw;
+    }
+    .mobileNavSideBar{
+        display: none;
+        height: 90%;
+        width: 45%;
+        margin-left: 3vw;
+        margin-top: 0.2vw;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navImageBar img{
+        height: 100%;
+        margin-left: 5vw;
+    }
+    /* .primary-text{
+        font-size: 3vw !important;
+    } */
+}
+
+
+
+/* @media screen and (min-width: 1024px) {
     .navImageBar img{
         height: 80%;
         width: 30%;
@@ -39,7 +69,7 @@
         margin-top: 1vw;
         margin-left:5vw;
     }
-}
+} */
 .navMenuBar{
     height: 100%;
     overflow: hidden;
