@@ -8,18 +8,18 @@ const EventsLanding = () => {
         <div className='eventslanding'>
             <h2 className='title'>SEMINARS</h2>
             <p className='subTitle'>The movie star the professor and Mary Ann here on Gilligans Isle. Just sit right back and youll hear.</p>
-            <div className='lg:flex w-full lg:w-5/6 mx-auto justify-between events-section'>
-                <div className='eventCard' data-aos="fade-down" data-aos-delay="100" data-aos-anchor-placement="center-center">
+            <div className='events-section'>
+                <div className='eventCard' data-aos="fade-down" data-aos-delay="100">
                     <img src='/event 1.jpg' alt=''/>
                     <div className='cardTexts'>
-                        <h2>EXPLORE RESEARCH FOR FUTURE IN USA</h2>
+                        <h2>EXPLORE RESEARCH FOR FUTURE</h2>
                         <p>Melbourne, Australia</p>
                         <p>DEC 10, 2022 - MAR 13, 2023</p>
                         <p className='mt-4'>Embarking on a journey to EXPLORE RESEARCH FOR FUTURE IN USA opens doors to a world of opportunities. </p>
                         <Button>Know More</Button>
                     </div>
                 </div>
-                <div className='eventCard' data-aos="fade-down" data-aos-delay="300" data-aos-anchor-placement="center-center">
+                <div className='eventCard' data-aos="fade-down" data-aos-delay="300">
                     <img src='/event 3.jpg' alt=''/>
                     <div className='cardTexts'>
                         <h2>CAREER AT FAANG IUTIAN ROADMAP</h2>

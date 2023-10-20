@@ -87,7 +87,7 @@ const Heromain = () => {
                 <span className='arrowIcons' onClick={imageSlideRight}><BsChevronRight className='my-auto mx-auto text-4xl lg:text-2xl 2xl:text-3xl' /></span>
                 
             </div>
-            <div className="mx-auto flex justify-between items-center heromainButtonBar" data-aos="fade-down" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
+            <div className="mx-auto flex justify-between items-center heromainButtonBar" data-aos="fade-down" data-aos-delay="100">
                 <Button>Continue</Button>
                 <Button>Explore</Button>
             </div>

@@ -35,23 +35,19 @@
     }
 
     .events-section {
-        height: fit-content;
+        width: 60%;
+        margin:auto;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 8vh;
     }
 
     .eventCard {
-        height: fit-content;
-        display: flex;
-        flex-flow: column;
-        object-fit: contain;
-        width: 35%;
-        justify-content: space-around;
+        width: 45%;
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 1vw;
         transition: linear 0.15s;
         overflow: hidden;
-        margin: auto 5vw;
-        margin-bottom: 4vh;
-
     }
 
     .eventCard:hover {
@@ -60,13 +56,11 @@
     }
 
     .eventCard img {
-        height: 100%;
-
+        height: 46%;
+        width: 100%;
     }
-
     .cardTexts {
-
-        padding: 3vh 2vw;
+        padding: 2vh 2vw;
     }
 }
 
@@ -134,25 +128,20 @@
         display: flex;
         flex-flow: column;
         object-fit: contain;
-        width: 92%;
+        width: 90%;
         justify-content: space-around;
         border: 1px solid rgba(0, 0, 0, 0.2);
-        border-radius: 1vw;
+        border-radius: 2vw;
         transition: linear 0.15s;
         overflow: hidden;
         margin: auto 5vw;
         margin-bottom: 4vh;
-
     }
-
     .eventCard img {
         height: 100%;
-
     }
-
     .cardTexts {
-
-        padding: 3vh 2vw;
+        padding: 3vh 5vw;
     }
 
 }

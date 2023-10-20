@@ -29,21 +29,9 @@ export const ExecutiveCommittee = () => {
 
                 <div id="student-body" data-aos="fade-up">
                     <h3 id="student" className='font-semibold'>StudentBody</h3>
-                    {/* <div className="committee-images">
-                            {studentData.map((student, index) => (
-                                <div className="image-container" key={index}>
-                                    <img className="profile-img" src={student.image} alt={`Student ${index + 1}`} loading="lazy" />
-                                    <div className="overlay">
-                                        <h3>{student.name}</h3>
-                                        <p>{student.title}</p>
-                                        <p>{student.division}</p>
-                                    
-                                    </div>
-                                </div>
-                            ))}
-                        </div> */}
-                    <div style={{ marginTop: '5vh' }}>
-                        <h3 className='font-semibold student-section-title'>Administration</h3>
+
+                    <div style={{ marginTop: '3vh' }}>
+                        <h3 className='font-semibold student-section-title'>Administration Executive</h3>
                         <div className="committee-images">
                             {studentData.slice(0, 6).map((student, index) => (
                                 <div className="image-container" key={index}>
@@ -58,8 +46,7 @@ export const ExecutiveCommittee = () => {
                         </div>
                     </div>
 
-                    <div className="student-section">
-
+                    <div className="mt-[15vh] student-section">
                         <h3 className='font-semibold student-section-title'>Event Management Executive</h3>
                         <div className="committee-images">
                             {studentData.slice(7, 16).map((student, index) => (
@@ -75,7 +62,7 @@ export const ExecutiveCommittee = () => {
                         </div>
                     </div>
 
-                    <div className="student-section">
+                    <div className="mt-[15vh] student-section">
                         <h3 className='font-semibold student-section-title'>Publication Executive</h3>
                         <div className="committee-images">
 
@@ -90,7 +77,7 @@ export const ExecutiveCommittee = () => {
 
                         </div>
                     </div>
-                    <div className="student-section">
+                    <div className="mt-[15vh] student-section">
                         <h3 className='font-semibold student-section-title'>Web Development Executive</h3>
                         <div className="committee-images">
 
