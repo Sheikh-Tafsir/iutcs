@@ -88,10 +88,10 @@ export const Card = () => {
                 <AiOutlineUser className="auth_icon" />{item.author}
               </div>
               <button className="card_title_link">
-                <h3>{item.title}</h3>
+                <h3 className='text-black'>{item.title}</h3>
               </button>
               <p>{item.content.slice(0, 65)}...</p>
-              <div className="date">
+              {/* <div className="date">
                 <AiOutlineClockCircle className="icon" /> <label htmlFor="">{item.date}</label>
                 <AiOutlineShareAlt
                   className="icon"
@@ -101,6 +101,9 @@ export const Card = () => {
                   }}
                 />
                 <label htmlFor="">SHARE</label>
+              </div> */}
+              <div className="mb-4 text-blue-600 date">
+                <h2>Read Blog</h2>
               </div>
             </div>
           </div>

@@ -2,9 +2,11 @@ import React, { useState,useEffect } from 'react'
 import '../../styles/Heromain.css'
 import { Button } from 'react-bootstrap';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Heromain = () => {
+    const navigate = useNavigate();
     var imgCount = 0;
     const autoChangeImage = () => {
         imgCount = (imgCount + 1) % 3; // Cycle through the array of image slides
@@ -72,6 +74,10 @@ const Heromain = () => {
         document.querySelectorAll(".heromainSlideButton")[1].style.backgroundColor ='transparent';
         document.querySelectorAll(".heromainSlideButton")[2].style.backgroundColor = 'white';
     }
+    const scrollToWorks = () => {
+        const worksElement = document.getElementById('works');
+        worksElement.scrollIntoView({ behavior: 'smooth' });
+      }
   return (
     <div className='heromain'>
         <div className="heromainslider">
@@ -88,8 +94,12 @@ const Heromain = () => {
                 
             </div>
             <div className="mx-auto flex justify-between items-center heromainButtonBar" data-aos="fade-down" data-aos-delay="100">
-                <Button>Continue</Button>
-                <Button>Explore</Button>
+                {/* <Button>
+                    <a href="#works">Continue</a>
+                </Button> */}
+                <Button onClick={()=>scrollToWorks()}>Continue</Button>
+                <Button><a href='https://www.facebook.com/IUTCS' target='_blank' rel='noopener noreferrer'>Explore</a></Button>
+               
             </div>
             <div className="heromainSlideButtonBar" data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
                 <span className="heromainSlideButton" onClick={imageSlide1}></span>

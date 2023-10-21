@@ -20,24 +20,26 @@ const About = () => {
                     <p>Our History</p>
                 </div>
             </div>
+
+            <div className='aboutLastSection'  data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
+                {/* <BiQuoteRight/> */}
+                <BiSolidQuoteRight className='quoteRight'/>
+                <p>IUTCS is more than just a club; it's a community of passionate individuals who are dedicated to advancing their skills, promoting technology education, and making a meaningful contribution to the world of computer science and technology.</p>
+            </div>
+            <History />
             <div className='aboutSection'>
                 <div className='my-auto aboutSubSection'  data-aos="zoom-out" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
                     <div className='aboutTextbar'>
                         <h2>IUTCS: Igniting Innovation in Computer Science.</h2>
                         <p>IUTCS, which stands for Islamic University of Technology Computer Science Club, is a vibrant and dynamic student organization dedicated to fostering a passion for computer science and technology among its members. Located at the Islamic University of Technology (IUT), this club serves as a hub for like-minded individuals who share an enthusiasm for all things related to computer science and engineering.</p>
-                        <Button>KNOW MORE </Button>
+                        <a href="https://www.facebook.com/IUTCS" target="_blank" rel="noopener noreferrer"><Button>KNOW MORE </Button></a>
                     </div>
                     <div className='aboutImageBar'>
                         <img src='/event.jpg' alt='' className='h-full w-full'/>
                     </div>
                 </div>
             </div>
-            <History />
-            <div className='aboutLastSection'  data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
-                {/* <BiQuoteRight/> */}
-                <BiSolidQuoteRight className='quoteRight'/>
-                <p>IUTCS is more than just a club; it's a community of passionate individuals who are dedicated to advancing their skills, promoting technology education, and making a meaningful contribution to the world of computer science and technology.</p>
-            </div>
+            
             <Footer />
         </div>
     </>

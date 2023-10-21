@@ -64,7 +64,7 @@ const Competitions = () => {
     <>
         <Navbar />
         <div>
-            <h2 className='competitions-headerTitle' data-aos="fade-down" data-aos-delay="100" data-aos-anchor-placement="center-bottom">All Competitions</h2>
+            <h2 className='competitions-headerTitle' data-aos="fade-down" data-aos-delay="100" data-aos-anchor-placement="center-bottom">All Segments</h2>
             <div className='competition-box'>
                 {competitionData.map((competition) => (
                     // eslint-disable-next-line react/jsx-key

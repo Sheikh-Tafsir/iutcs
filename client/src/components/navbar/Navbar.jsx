@@ -10,9 +10,10 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
 import '../../styles/Navbar.css';
-import {Link} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 
 const Navbar = () => {
+    const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = useState(null);
     const [submenuAnchorEl, setSubmenuAnchorEl] = useState(null);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,24 +50,40 @@ const Navbar = () => {
                 <AppBar position="static" className="navMenuBar" elevation={0}>
                     <Toolbar className='navMenuSubBar' >
                         <div className='desktopMenu'>
-                          <Button color="inherit" data-aos="fade-right" data-aos-delay="0" data-aos-anchor-placement="center-bottom">
-                              <Link to='/'>HOME</Link>
+                          <Button color="inherit" data-aos="fade-right" data-aos-delay="0" data-aos-anchor-placement="center-bottom"
+                          onClick={() => navigate('/')}>
+                             HOME
                           </Button>
-                          <Button color="inherit" data-aos="fade-right" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
-                            <Link to='/events'>Competitions</Link>
+                          <Button color="inherit"  data-aos="fade-right" data-aos-delay="50" data-aos-anchor-placement="center-bottom"
+                            onClick={() => navigate('/about')}>
+                              About
                           </Button>
-                          <Button color="inherit" data-aos="fade-right" data-aos-delay="200" data-aos-anchor-placement="center-bottom">
-                              <Link to='/blogs'>Blogs</Link>
+                          <Button color="inherit" data-aos="fade-right" data-aos-delay="100" data-aos-anchor-placement="center-bottom"
+                            onClick={() => navigate('/activities')}>
+                              Activities
                           </Button>
-                          <Button color="inherit" onClick={handleSubmenuClick}  data-aos="fade-right" data-aos-delay="300" data-aos-anchor-placement="center-bottom">
+                          <Button color="inherit" data-aos="fade-right" data-aos-delay="150" data-aos-anchor-placement="center-bottom"
+                            onClick={() => navigate('/achievements')}>
+                              Achievements
+                          </Button>
+                          <Button color="inherit" data-aos="fade-right" data-aos-delay="200" data-aos-anchor-placement="center-bottom"
+                            onClick={() => navigate('/blogs')}>
+                              Blogs
+                          </Button>
+                          <Button color="inherit" data-aos="fade-right" data-aos-delay="250" data-aos-anchor-placement="center-bottom"
+                            onClick={() => navigate('/executives')}>
+                              Executives
+                          </Button>
+                          <Button color="inherit" data-aos="fade-right" data-aos-delay="300" data-aos-anchor-placement="center-bottom"
+                            onClick={() => navigate('/events')}>
+                            <Link to='/events' className='bg-white text-black px-3 py-2 rounded-lg'>Competitions</Link>
+                          </Button>
+                          {/* <Button color="inherit" onClick={handleSubmenuClick}  data-aos="fade-right" data-aos-delay="300" data-aos-anchor-placement="center-bottom">
                               Programs
-                          </Button>
-                          <Button color="inherit"  data-aos="fade-right" data-aos-delay="400" data-aos-anchor-placement="center-bottom">
-                            <Link to='/about'>about us</Link>
-                          </Button>
-                          <Button color="inherit"  data-aos="fade-right" data-aos-delay="500" data-aos-anchor-placement="center-bottom">
+                          </Button> */}
+                          {/* <Button color="inherit"  data-aos="fade-right" data-aos-delay="500" data-aos-anchor-placement="center-bottom">
                             <Link to='/contacts'>contacts</Link>
-                          </Button>
+                          </Button> */}
                          
                           <Menu
                               anchorEl={submenuAnchorEl}
@@ -103,7 +120,7 @@ const Navbar = () => {
                     <MenuItem onClick={handleMenuToggle}><Link to='/activities'>ACTIVITIES</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/achievements'>ACHIEVEMENTS</Link></MenuItem>
                     <MenuItem onClick={handleMenuToggle}><Link to='/executives'>EXECUTIVES</Link></MenuItem>
-                    <MenuItem onClick={handleMenuToggle}><Link to='/contacts'>CONTACTS</Link></MenuItem>
+                    {/* <MenuItem onClick={handleMenuToggle}><Link to='/contacts'>CONTACTS</Link></MenuItem> */}
                   </div>
                 </Drawer>
             </div>

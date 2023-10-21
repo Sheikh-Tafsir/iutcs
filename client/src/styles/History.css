@@ -33,6 +33,9 @@
     .writingsPara{
         width: 73%;
     }
+    .history img{
+        object-fit: cover;
+    }
 }
 @media screen and (max-width: 991px) {
     .history{

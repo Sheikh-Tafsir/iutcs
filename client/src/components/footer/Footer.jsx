@@ -22,19 +22,19 @@ const Footer = () => {
                 <div className='my-auto footer1Menu'>
                     <p className='footer-heading'>Quick Links</p>
                     <span>
-                        <a href="">Home</a><br></br>
+                        <Link to='/'>Home</Link><br></br>
                     </span>
                     <span>
-                        <a href="">Achievements</a><br></br>
+                        <Link to='/about'>About</Link><br></br>
                     </span>
                     <span>
-                        <a href="">Events</a><br></br>
+                        <Link to='/blogs'>Blogs</Link><br></br>
                     </span>
                     <span>
-                        <a href="">Blogs</a><br></br>
+                        <Link to='/achievements'>Achievements</Link><br></br>
                     </span>
                     <span>
-                        <a href="">Our Story</a><br></br>
+                        <Link to='/activities'>Activities</Link><br></br>
                     </span>
                 </div>
                 

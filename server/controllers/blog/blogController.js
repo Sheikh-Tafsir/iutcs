@@ -13,6 +13,7 @@ const addBlog = async (req, res) => {
     const values = [title, imageLink, videoLink, content, author, created_at];
 
     const result = await pool.query(query, values);
+    //console.log(result)
     res.status(201).json(result.rows[0]);
   } catch (error) {
     console.error("Error adding blog entry:", error);

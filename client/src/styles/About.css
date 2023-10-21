@@ -2,16 +2,17 @@
     width: 100%;
     overflow: hidden;
 }
-.topBarAbout{
-    height: 43vh;
-    width: 100%;
-    text-align: center;
-    background-image: url('/topbar3.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 
 @media screen and (min-width: 992px) {
+    .topBarAbout{
+        height: 43vh;
+        width: 100%;
+        text-align: center;
+        background-image: url('/topbar3.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .textBar{
         height: 86%;
         padding-top:6%;
@@ -26,9 +27,14 @@
     }
 }
 @media screen and (max-width: 991px) {
+    .topBarAbout{
+        width: 100%;
+        text-align: center;
+        background-image: url('/topbar3.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .textBar{
-        height: 86%;
-        /* padding-top: 10%; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -36,13 +42,14 @@
         margin: auto;
     }
     .textBar h2{
-        margin-top: 20%;
+        margin-top: 15%;
         margin-bottom: 4%;
-        font-size: 4vh;
+        font-size: 6vw;
         font-weight: 600;
     }
     .textBar p{
-        font-size: 2vh;
+        font-size: 2.6vw;
+        padding-bottom: 10%;
     }
     .aboutSection{
         height: fit-content;
