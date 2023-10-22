@@ -46,6 +46,30 @@ const pool = require("../../db"); // Import the pool object from your db.js file
 //   }
 // }
 
+async function updateTeamsPoints(req, res) {
+  //console.log(req.body);
+  const { id, updatePoints } = req.body;
+  try {
+    // Update team_points in the database
+    const updateResult = await pool.query(
+      "UPDATE teams SET team_point = team_point + $1 WHERE id = $2 RETURNING *",
+      [updatePoints, id]
+    );
+
+    // Check if the team was updated successfully
+    if (updateResult.rows.length > 0) {
+      const updatedTeam = updateResult.rows[0];
+      res.status(200).json({ success: true, team: updatedTeam });
+    } else {
+      res.status(404).json({ success: false, message: 'Team not found' });
+    }
+  } catch (error) {
+    console.error('Error updating team points:', error);
+    res.status(500).json({ success: false, message: 'Internal server error' });
+  }
+
+}
+
 async function addTeam(req, res) {
   console.log(req.body.teamData);
   const { team_name, competition_id, team_point, university_name, users } =
@@ -108,4 +132,5 @@ async function getTeamsByCompetition(req, res) {
 module.exports = {
   addTeam,
   getTeamsByCompetition,
+  updateTeamsPoints,
 };

@@ -87,9 +87,11 @@ const AdminCompetitionsCreate = () => {
       }
       ).then((response) =>{
           console.log(response.data);
-          if(response.data)setBlogUploadStatus('upload successful');
+          if(response.data)setBlogUploadStatus('competition upload successful');
+          else setBlogUploadStatus('competition creation failed');
       }).catch(error => {
         console.log(error);
+        setBlogUploadStatus('competition creation failed');
       });
     }
     useEffect(() => {

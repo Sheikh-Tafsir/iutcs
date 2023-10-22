@@ -43,9 +43,9 @@ export const Card = () => {
   const loadMore = () => {
     const additionalPosts = 6;
     const newRangeEnd = postsToShow + additionalPosts;
-    const sorted = [...sortedPosts].slice(0, newRangeEnd);
+    //const sorted = [...sortedPosts].slice(0, newRangeEnd);
     setPostsToShow(newRangeEnd);
-    setSortedPosts(sorted);
+    //setSortedPosts(sorted);
   };
 
   // Function to generate the share link
@@ -111,11 +111,16 @@ export const Card = () => {
       </div>
       {postsToShow < sortedPosts.length && (
         <div className="load-more-container">
-          <button onClick={loadMore} className="load-more-button">
+          <button onClick={()=>loadMore()} className="load-more-button">
             Load More
           </button>
         </div>
       )}
+      {/* <div className="load-more-container">
+          <button onClick={()=>loadMore()} className="load-more-button">
+            Load More {postsToShow} {sortedPosts.length}
+          </button>
+        </div> */}
     </section>
   );
 };

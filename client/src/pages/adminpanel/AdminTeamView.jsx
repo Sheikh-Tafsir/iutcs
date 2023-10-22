@@ -64,7 +64,7 @@ if (loading) {
                     <th className='leaderteamName'>TEAM</th>
                     <th className='leaderuniversityName'>UNIVERSITY</th>
                     <th className='leaderteamPoints'>POINTS</th>
-                    <th className='leaderteamPoints'>Update</th>
+                    {/* <th className='leaderteamPoints'>Update</th> */}
                 </tr>
                 {teamData.map((team, index) => ( 
                     <tr onClick={() => navigate('/admin/user/view', { state: { team } })}>
@@ -72,7 +72,7 @@ if (loading) {
                         <td className='leaderteamName'>{team.team_name}</td>
                         <td className='leaderuniversityName'>{team.university_name}</td>
                         <td className='leaderteamPoints'>{team.team_point}</td>
-                        <td className='leaderBoardAddPoints'></td>
+                        {/* <td className='leaderBoardAddPoints'></td> */}
                     </tr>
                 ))}
                 

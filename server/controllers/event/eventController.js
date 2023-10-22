@@ -15,13 +15,13 @@ async function getAllEvents(req, res) {
 
 // Create a new event
 async function createEvent(req, res) {
-  const { name, start_date, end_date, event_details, event_type } =
+  const { name, image_link, start_date, end_date, event_details, event_type } =
     req.body.newEvent;
   try {
     // Insert the new event into the database
     const result = await pool.query(
-      "INSERT INTO events (name, start_date, end_date, event_details, event_type) VALUES ($1, $2, $3, $4, $5) RETURNING *",
-      [name, start_date, end_date, event_details, event_type]
+      "INSERT INTO events (name, image_link, start_date, end_date, event_details, event_type) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
+      [name, image_link, start_date, end_date, event_details, event_type]
     );
     // Send the newly created event as the response
     res.status(201).json({ event: result.rows[0] });

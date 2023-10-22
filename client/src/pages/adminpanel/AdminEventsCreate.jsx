@@ -14,12 +14,16 @@ const AdminEventsCreate = () => {
         start_date: '',
         end_date: '',
         event_details: '',
-        event_type: '',
+        event_type: 'Intra University',
     });
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        // setFormData({ ...formData, [name]: value });
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: name === 'event_type' ? e.target.value : value,
+        }));
     };
 
 
@@ -48,25 +52,26 @@ const AdminEventsCreate = () => {
             start_date: '',
             end_date: '',
             event_details: '',
-            event_type: '',
+            event_type: 'Intra University',
         });
     };
 
     const uploadBlog = async (newEvent) => {
       const apipath = `${import.meta.env.VITE_BASE_URL}/event/create`;
       //const apipath = `http://localhost:3001/event/create`;
-      //console.log(newEvent);
+      //const apipath = ``;
+      console.log(newEvent);
       await axios.post(apipath,
       {
         newEvent: newEvent
       }
       ).then((response) =>{
           console.log(response.data);
-          if(response.data)setBlogUploadStatus('upload successful');
-          else setBlogUploadStatus('upload failed');
+          if(response.data)setBlogUploadStatus('event creation successful');
+          else setBlogUploadStatus('event creation failed');
       }).catch(error => {
         console.log(error);
-        setBlogUploadStatus('upload failed');
+        setBlogUploadStatus('event creation failed');
       });
     }
   return (

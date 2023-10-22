@@ -19,23 +19,27 @@ const AdminUserView = () => {
   const [updatePointsStatus, setUpdatePointsStatus] = useState('');
 
   const UpdatePoints = async () => {
-    const apipath = `${import.meta.env.VITE_BASE_URL}/blog/add`;
-
+    const apipath = `${import.meta.env.VITE_BASE_URL}/team/points/update`;
+    //const apipath = `http://localhost:3001/team/points/update`;
     await axios.post(apipath,
     {
-      updatePoints:updatePoints
+      id: team.id,
+      updatePoints:updatePoints,
     }
     ).then((response) =>{
         console.log(response.data);
         if(response.data)setUpdatePointsStatus('update successful');
+        else setUpdatePointsStatus('update failed');
     }).catch(error => {
       console.log(error);
+      setUpdatePointsStatus('update error');
     });
   }
 
   useEffect(() => {
     //console.log(team.id);
     //alert(today);
+    // alert(JSON.stringify(team));
     const fetchData = async () => {
         try {
             //const apiPath = `http://localhost:3001/user/all/${team.id}`;
@@ -100,7 +104,7 @@ if (loading) {
                 onChange={(event) => {setUpdatePoints(event.target.value);} }
               />
               <p>{updatePointsStatus}</p>
-              <Button>Update</Button>
+              <Button onClick={()=> UpdatePoints()}>Update</Button>
             </div>
         </div>
         
