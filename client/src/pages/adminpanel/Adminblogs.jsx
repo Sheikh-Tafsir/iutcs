@@ -161,7 +161,7 @@ export const Adminblogs = () => {
                 Create Post
               </button>
             </form>
-            <p className='text-red-600 text-lg'>{blogUploadStatus}</p>
+            <p className='text-red-600 text-lg mx-auto'>{blogUploadStatus}</p>
           </div>
         </section>
         <Footer/>

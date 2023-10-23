@@ -8,6 +8,7 @@ import axios from 'axios';
 const InterCompetition = () => {
   const location = useLocation();
   const { competition } = location.state;
+  const [registrationStatus, setRegistrationStatus] = useState('');
   // console.log(competition)
   
   useEffect(() => {
@@ -54,6 +55,15 @@ const InterCompetition = () => {
         })),
       };
       uploadTeam(teamData);
+
+      // Clear the form after submission
+    //   setRegistrationStatus({
+    //     competitionId: competition.id,
+    //     universityName: "",
+    //     teamName: "",
+    //     numberOfParticipants: competition.no_of_team_member_min, // Set the initial value here
+    //     teamMembers: [],
+    // });
       // Send a POST request to add the team
       // const response = await axios.post(`http://localhost:3001/team/add`, teamData);
       // const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/team/add`, {teamData: teamData});
@@ -75,17 +85,19 @@ const InterCompetition = () => {
 
   const uploadTeam = async (teamData) => {
     //console.log(teamData);
-        //const apipath = `${import.meta.env.VITE_BASE_URL}/team/add`;
-        const apipath = `http://localhost:3001/team/add`;
+        const apipath = `${import.meta.env.VITE_BASE_URL}/team/add`;
+        //const apipath = `http://localhost:3001/team/add`;
         await axios.post(apipath,
         {
           teamData: teamData
         }
         ).then((response) =>{
             console.log(response.data);
-            // if(response.data)setBlogUploadStatus('upload successful');
+            if(response.data)setRegistrationStatus('registration successful');
+            else setRegistrationStatus('registration failed');
         }).catch(error => {
           console.log(error);
+          setRegistrationStatus('registration error');
         });
   }
 
@@ -246,6 +258,7 @@ const InterCompetition = () => {
           </div>
           {renderTeamMemberInputs()}
           <button type="submit">Register</button>
+          <p className="text-red-600 text-lg c">{registrationStatus}</p>
         </form>
       </div>
       <Footer/>
