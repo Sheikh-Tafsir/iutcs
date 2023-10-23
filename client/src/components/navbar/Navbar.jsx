@@ -113,14 +113,14 @@ const Navbar = () => {
                   onClose={handleMenuToggle}
                 >
                   <div className='mobileNavSideBar'>
-                    <MenuItem onClick={handleMenuToggle}><Link to='/'>HOME</Link></MenuItem>
-                    <MenuItem onClick={handleMenuToggle}><Link to='/blogs'>BLOGS</Link></MenuItem>
-                    <MenuItem onClick={handleMenuToggle}><Link to='/about'>ABOUT</Link></MenuItem>
-                    <MenuItem onClick={handleMenuToggle}><Link to='/events'>COMPETITION</Link></MenuItem>
-                    <MenuItem onClick={handleMenuToggle}><Link to='/activities'>ACTIVITIES</Link></MenuItem>
-                    <MenuItem onClick={handleMenuToggle}><Link to='/achievements'>ACHIEVEMENTS</Link></MenuItem>
-                    <MenuItem onClick={handleMenuToggle}><Link to='/executives'>EXECUTIVES</Link></MenuItem>
-                    {/* <MenuItem onClick={handleMenuToggle}><Link to='/contacts'>CONTACTS</Link></MenuItem> */}
+                    <MenuItem onClick={handleMenuToggle} onClick={() => navigate('/')}>HOME</MenuItem>
+                    <MenuItem onClick={handleMenuToggle} onClick={() => navigate('/blogs')}>BLOGS</MenuItem>
+                    <MenuItem onClick={handleMenuToggle} onClick={() => navigate('/about')}>ABOUT</MenuItem>
+                    <MenuItem onClick={handleMenuToggle} onClick={() => navigate('/activities')}>ACTIVITIES</MenuItem>
+                    <MenuItem onClick={handleMenuToggle} onClick={() => navigate('/achievements')}>ACHIEVEMENTS</MenuItem>
+                    <MenuItem onClick={handleMenuToggle} onClick={() => navigate('/executives')}>EXECUTIVES</MenuItem>
+                    <MenuItem onClick={handleMenuToggle} onClick={() => navigate('/contacts')}>CONTACTS</MenuItem>
+                    <MenuItem onClick={handleMenuToggle}><Link to='/events' className='bg-white text-black px-3 py-2 rounded-lg'>COMPETITION</Link></MenuItem>
                   </div>
                 </Drawer>
             </div>

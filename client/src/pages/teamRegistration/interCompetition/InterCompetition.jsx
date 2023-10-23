@@ -97,7 +97,11 @@ const InterCompetition = () => {
             else setRegistrationStatus('registration failed');
         }).catch(error => {
           console.log(error);
-          setRegistrationStatus('registration error');
+          if (error.response && error.response.status === 400 && error.response.data.error === 'Team name must be unique.') {
+            // Team name already taken
+            setRegistrationStatus('Team name is already taken.');
+          }
+          else setRegistrationStatus('registration error: ');
         });
   }
 

@@ -20,10 +20,10 @@ const Contacts = () => {
                             <p className="mt-1 lg:text-sm 2xl:text-base"></p>
                             <p className="mt-1 lg:text-sm 2xl:text-base">Link Share and Subscribe</p>
                             <div className="flex mt-5 w-4/5 lg:w-1/2 2xl:w-2/5 justify-between">
-                                <a href="" target="_blank" className="lg:h-9 w-9 2xl:h-11 2xl:w-11 bg-red-600 text-white rounded-md flex justify-centet items-center"><FaFacebookF className="mx-auto lg:h-4 lg:w-4 2xl:h-5 2xl:w-5"/></a>
-                                <a href="" target="_blank" className="lg:h-9 w-9 2xl:h-11 2xl:w-11 bg-red-600 text-white rounded-md flex justify-centet items-center"><FaGithub className="mx-auto lg:h-4 lg:w-4 2xl:h-5 2xl:w-5"/></a>
-                                <a href="" target="_blank" className="lg:h-9 w-9 2xl:h-11 2xl:w-11 bg-red-600 text-white rounded-md flex justify-centet items-center"><FaInstagram className="mx-auto lg:h-4 lg:w-4 2xl:h-5 2xl:w-5"/></a>
-                                <a href="" target="_blank" className="lg:h-9 w-9 2xl:h-11 2xl:w-11 bg-red-600 text-white rounded-md flex justify-centet items-center"><FaLinkedinIn className="mx-auto lg:h-4 lg:w-4 2xl:h-5 2xl:w-5"/></a>
+                                <a href="" target="_blank" className="h-9 w-9 2xl:h-11 2xl:w-11 bg-red-600 text-white rounded-md flex justify-centet items-center"><FaFacebookF className="mx-auto lg:h-4 lg:w-4 2xl:h-5 2xl:w-5"/></a>
+                                <a href="" target="_blank" className="h-9 w-9 2xl:h-11 2xl:w-11 bg-red-600 text-white rounded-md flex justify-centet items-center"><FaGithub className="mx-auto lg:h-4 lg:w-4 2xl:h-5 2xl:w-5"/></a>
+                                <a href="" target="_blank" className="h-9 w-9 2xl:h-11 2xl:w-11 bg-red-600 text-white rounded-md flex justify-centet items-center"><FaInstagram className="mx-auto lg:h-4 lg:w-4 2xl:h-5 2xl:w-5"/></a>
+                                <a href="" target="_blank" className="h-9 w-9 2xl:h-11 2xl:w-11 bg-red-600 text-white rounded-md flex justify-centet items-center"><FaLinkedinIn className="mx-auto lg:h-4 lg:w-4 2xl:h-5 2xl:w-5"/></a>
                             </div>
                         </div>
                 </div>

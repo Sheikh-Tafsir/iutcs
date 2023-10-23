@@ -105,8 +105,13 @@ async function addTeam(req, res) {
       },
     });
   } catch (error) {
-    console.error("Error adding team:", error);
-    res.status(500).json({ error: "Error adding team" });
+    if (error.constraint === "teams_team_name_unique") {
+      // Handle unique constraint violation error
+      res.status(400).json({ error: "Team name must be unique." });
+    } else {
+      console.error("Error adding team:", error);
+      res.status(500).json({ error: "Error adding team" });
+    }
   }
 }
 
